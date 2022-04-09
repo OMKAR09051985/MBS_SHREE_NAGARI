@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Mini Statement Report Form -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@mipmap/act_bg"
+    android:orientation="vertical"
+    android:weightSum="8" >
+
+    <include
+        android:id="@+id/inc_id"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header" />
+    <!-- Account Label -->
+
+    <mbLib.CusFntTextView
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_marginTop="15dip"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:text="@string/lbl_acc_no"
+        android:textColor="@color/sbk_text_clr"
+        android:textSize="16sp" >
+    </mbLib.CusFntTextView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.5"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <mbLib.CusFntTextView
+            android:id="@+id/txt_actype"
+            android:layout_width="0dip"
+            android:layout_height="30dip"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/sbk_text_clr"
+            android:textSize="20sp" >
+        </mbLib.CusFntTextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.5"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <mbLib.CusFntTextView
+            android:id="@+id/cur_bal_lbl"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:text="@string/lbl_avail_balance"
+            android:textColor="@color/sbk_text_clr"
+            android:textStyle="bold"
+            android:textSize="16sp" >
+        </mbLib.CusFntTextView>
+
+        <mbLib.CusFntTextView
+            android:id="@+id/availbal_lbl"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:text="@string/current_balance"
+            android:textColor="@color/sbk_text_clr"
+            android:textStyle="bold"
+            android:textSize="16sp" >
+        </mbLib.CusFntTextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.5"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <mbLib.CusFntTextView
+            android:id="@+id/cur_bal"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:textColor="@color/sbk_text_clr"
+            android:textSize="19sp" >
+        </mbLib.CusFntTextView>
+
+        <mbLib.CusFntTextView
+            android:id="@+id/avil_bal"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:textColor="@color/sbk_text_clr"
+            android:textSize="19sp" >
+        </mbLib.CusFntTextView>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:layout_marginTop="10dip"
+        android:layout_weight="6"
+        android:dividerHeight="3dip"
+        android:isScrollContainer="true"
+        android:minHeight="160dip"
+        android:paddingTop="3dip"
+        android:scrollbars="vertical" >
+
+        <!-- android:divider="@color/sub_head_color" -->
+    </ListView>
+    <!-- </ScrollView> -->
+
+
+    <!-- Get Back button -->
+
+    <mbLib.CustomButton
+        android:id="@+id/btnBack"
+        style="@style/button_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/button_style"
+        android:text="@string/lbl_back"
+        android:visibility="invisible" />
+
+</LinearLayout> <!-- Mini Statement Report Form Ends -->
+
+
+<!-- </LinearLayout> -->

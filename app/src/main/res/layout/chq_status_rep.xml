@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"   
+    android:fillViewport="true" 
+    android:background="@mipmap/act_bg">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <!-- Cheque Status Report Report Header -->
+		<include android:id="@+id/inc_hd" 
+		    layout="@layout/header"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical" 
+            android:layout_below="@id/inc_hd">
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="5dip"
+                android:gravity="center_horizontal"
+                android:text="Cheque Status Report"
+                android:textColor="@color/formnm_txtcolor"
+                android:textStyle="bold" android:visibility="invisible" />
+
+             <LinearLayout
+                android:id="@+id/header2"
+                android:layout_width="fill_parent"
+                android:layout_height="28dip"
+                android:layout_marginTop="0dip"
+                android:background="@color/bhingar_yellow"
+                 android:weightSum="2"
+                 android:orientation="horizontal">
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/item1"
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:height="10dip"
+                    android:width="0dip" />
+
+                 <mbLib.CusFntTextView
+                     android:id="@+id/item2"
+                     android:layout_width="0dip"
+                     android:layout_height="fill_parent"
+                     android:layout_weight="0.5"
+                     android:textStyle="bold"
+                     android:gravity="center|left"
+                     android:text="@string/lbl_date"
+                     android:paddingLeft="5dp"
+                     android:textSize="16sp"
+                     />
+
+                 <mbLib.CusFntTextView
+                    android:id="@+id/item3"
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                     android:gravity="center|left"
+                     android:textStyle="bold"
+                    android:text="@string/lbl_narration"
+                     android:textSize="16sp"
+
+                    />
+
+                 <mbLib.CusFntTextView
+                     android:id="@+id/item4"
+                     android:layout_width="0dip"
+                     android:layout_height="fill_parent"
+                     android:layout_weight="0.5"
+                     android:textStyle="bold"
+                     android:gravity="center|left"
+                     android:text="@string/lbl_amount"
+                     android:textSize="16sp"
+                     />
+
+				<!--<mbLib.CusFntTextView
+                    android:id="@+id/item4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:height="30dip"
+                    android:text="@string/cheque_no"
+                    android:textColor="#FFFFFF"
+                    android:width="70dip" />
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/tv_drcrAmt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:height="30dip"
+                    android:text="@string/lbl_amount"
+                    android:textColor="#FFFFFF"
+                    android:gravity="right"
+                    android:width="50dip" />-->
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/lst_chk_status"
+                android:layout_width="fill_parent"
+                style="@style/submenuStyle"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#FFFFFF"
+                android:dividerHeight="10dip">
+            </ListView>
+
+
+            <!-- <Button
+                android:id="@+id/btn_chkstat_back"
+                style="@style/button_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/button_style"
+                android:text="Back" /> -->
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

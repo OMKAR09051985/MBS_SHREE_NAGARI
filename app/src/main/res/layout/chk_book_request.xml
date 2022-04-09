@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@mipmap/act_bg"
+    android:fillViewport="true" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <include
+            android:id="@+id/inc_id"
+            layout="@layout/header" />
+
+        <LinearLayout
+            android:id="@+id/linearlayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inc_id"
+            android:orientation="vertical" >
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="15dip"
+                android:gravity="center_horizontal"
+                android:text="@string/lbl_title_cheque_book_request"
+                android:textColor="@color/sbk_text_clr"
+                android:textStyle="bold"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/txt_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="10dip"
+                    android:text="@string/lbl_acc_no"
+                    android:textColor="@color/sbk_text_clr" 
+                    android:textStyle="bold">
+                </mbLib.CusFntTextView>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@drawable/rounded_corner_spinner"
+                    android:orientation="horizontal"
+                    android:weightSum="4" >
+
+                    <Spinner
+                        android:id="@+id/spi_accounts"
+                        style="@style/spinnerStyle"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dropdown"
+                        android:layout_gravity="center|center_horizontal"
+                        android:layout_weight="3.2"
+                        android:background="@drawable/rounded_corner_spinner" />
+
+                    <ImageButton
+                        android:id="@+id/spinner_btn"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.8"
+                        android:background="@color/shreenagri_blue"
+                        android:src="@mipmap/spinner_down" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="10dip"
+                    android:text="@string/lbl_no_of_pages"
+                    android:textColor="@color/sbk_text_clr"
+                    android:textStyle="bold" >
+                </mbLib.CusFntTextView>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@drawable/rounded_corner_spinner"
+                    android:orientation="horizontal"
+                    android:weightSum="4" >
+
+                    <Spinner
+                        android:id="@+id/txt_noof_chkbook"
+                        style="@style/spinnerStyle"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dropdown"
+                        android:layout_gravity="center|center_horizontal"
+                        android:layout_weight="3.2"
+                        android:background="@drawable/rounded_corner_spinner" />
+
+                    <ImageButton
+                        android:id="@+id/spinner_btn2"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.8"
+                        android:background="@color/shreenagri_blue"
+                        android:src="@mipmap/spinner_down" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6" />
+
+                <mbLib.CustomButton
+                    android:id="@+id/btn_submit_cbr"
+                    style="@style/button_text"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.8"
+                    android:background="@drawable/roundedbutton"
+                    android:text="@string/lbl_submit_btn" >
+                </mbLib.CustomButton>
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal" >
+
+                <ProgressBar
+                    android:id="@+id/pb_wait3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="invisible" >
+                </ProgressBar>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dip"
+                    android:orientation="vertical" >
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

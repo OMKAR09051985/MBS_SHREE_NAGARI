@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/outLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:background="@color/bg_color"
+    android:fillViewport="true" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:orientation="vertical" >
+
+            <mbLib.CusFntTextView
+                android:id="@+id/txt_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="10dip"
+                android:text="@string/lbl_acc_no" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/rounded_corner_spinner"
+                android:orientation="horizontal" >
+
+                <!--
+                  <ListView
+                    android:id="@+id/spi_accounts"
+                    style="@style/spinnerStyle"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_horizontal"
+                    android:layout_weight="3.2"                    
+                    android:background="@drawable/rounded_corner_spinner" />
+                -->
+                <!--
+                     <Spinner
+                        android:id="@+id/spi_accounts"
+                        style="@style/spinnerStyle"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|center_horizontal"
+                        android:layout_weight="3.2"
+                        android:background="@drawable/rounded_corner_spinner" />
+                -->
+
+                <ListView
+                    android:id="@+id/acnt_listView"
+                    style="@style/submenuStyle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="150dip"
+                    android:cacheColorHint="#FFFFFF" />
+
+                <!--
+                <ImageButton
+                    android:id="@+id/spinner_btn"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.8"
+                    android:background="@color/spinner_bg_color"
+                    android:src="@drawable/spinner_down" />
+                -->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5" />
+
+                <mbLib.CustomButton
+                    android:id="@+id/btn_getbal"
+                    style="@style/button_text"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:background="@drawable/roundedbutton"
+                    android:text="@string/lbl_get_balance" />
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/pb_wait1"
+                android:layout_width="wrap_content"
+                android:layout_height="50dip"
+                android:layout_gravity="center_horizontal"
+                android:visibility="invisible" >
+            </ProgressBar>
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

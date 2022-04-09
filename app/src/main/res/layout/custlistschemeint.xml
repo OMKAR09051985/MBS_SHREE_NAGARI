@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/custListschemeintLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:weightSum="2" >
+
+    <mbLib.CusFntTextView
+        android:id="@+id/loantypeid"
+        android:layout_width="0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="1"
+        android:textSize="12sp" />
+
+    <mbLib.CusFntTextView
+        android:id="@+id/rateid"
+        android:layout_width="0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="1"
+        android:textSize="12sp" />
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_color"
+    android:fillViewport="true" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <include
+            android:id="@+id/inc_hd"
+            layout="@layout/header" />
+
+        <LinearLayout
+            android:id="@+id/fd_account_layout"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/inc_hd"
+            android:layout_marginBottom="30dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+           
+
+            <mbLib.CusFntTextView
+                android:id="@+id/Branch_Name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="@string/lbl_Branch_Name"
+                android:textColor="#372c24" >
+            </mbLib.CusFntTextView>
+
+            <mbLib.CustomEditText
+                android:id="@+id/ed_Branch_Namet"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+              
+                android:editable="false">
+            </mbLib.CustomEditText>
+
+            <mbLib.CusFntTextView
+                android:id="@+id/Branch_Address"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="@string/lbl_Branch_Address"
+                android:textColor="#372c24"
+                 >
+            </mbLib.CusFntTextView>
+
+            <mbLib.CustomEditText
+                android:id="@+id/ed_Branch_Address"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+               
+                 android:editable="false">
+            </mbLib.CustomEditText>
+
+            
+             <mbLib.CusFntTextView
+                android:id="@+id/Branch_District"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="@string/lbl_Branch_District"
+                android:textColor="#372c24" >
+            </mbLib.CusFntTextView>
+
+            <mbLib.CustomEditText
+                android:id="@+id/ed_Branch_District"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                 android:editable="false" >
+            </mbLib.CustomEditText>
+            
+           
+
+            <mbLib.CusFntTextView
+                android:id="@+id/Branch_State"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="@string/lbl_Branch_State"
+                android:textColor="#372c24" >
+            </mbLib.CusFntTextView>
+
+            <mbLib.CustomEditText
+                android:id="@+id/ed_Branch_State"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:editable="false">
+            </mbLib.CustomEditText>
+            
+            
+              <mbLib.CusFntTextView
+                android:id="@+id/Branch_Manager"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="@string/lbl_Branch_Manager"
+                android:textColor="#372c24" >
+            </mbLib.CusFntTextView>
+
+            <mbLib.CustomEditText
+                android:id="@+id/ed_Branch_Manager"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                  android:editable="false">
+            </mbLib.CustomEditText>
+             <mbLib.CusFntTextView
+                android:id="@+id/Branch_coNumber"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="@string/lbl_Branch_coNumber"
+                android:textColor="#372c24" >
+            </mbLib.CusFntTextView>
+
+            <mbLib.CustomEditText
+                android:id="@+id/ed_Branch_coNumber"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                 android:editable="false">
+            </mbLib.CustomEditText>
+            
+             <mbLib.CusFntTextView
+                android:id="@+id/Branch_IFSC"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="@string/lbl_Branch_IFSC"
+                android:textColor="#372c24" >
+            </mbLib.CusFntTextView>
+
+            <mbLib.CustomEditText
+                android:id="@+id/ed_Branch_IFSC"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                  android:editable="false">
+            </mbLib.CustomEditText>
+            <ProgressBar
+                android:id="@+id/emi_bar"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_gravity="center"
+                android:visibility="invisible" >
+            </ProgressBar>
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

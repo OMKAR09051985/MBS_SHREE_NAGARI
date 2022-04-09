@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@mipmap/act_bg"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/inc_hd"
+        layout="@layout/header" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:orientation="vertical" >
+
+        <mbLib.CusFntTextView
+            android:id="@+id/bank_email"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:gravity="left|center_vertical"
+            android:text="@string/lbl_bank_email"
+            android:textColor="@color/sbk_text_clr" 
+            android:textStyle="bold">
+        </mbLib.CusFntTextView>
+
+        <mbLib.CusFntTextView
+            android:id="@+id/txt_bank_email"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:editable="false"
+            android:gravity="left|center_vertical"
+            android:textColor="#372c24"
+            android:background="@color/bhingar_yellow"
+            android:textSize="20sp" >
+        </mbLib.CusFntTextView>
+
+        <mbLib.CusFntTextView
+            android:id="@+id/bank_phone_number"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:gravity="left|center_vertical"
+            android:text="@string/lbl_bank_phone_number"
+            android:textColor="@color/sbk_text_clr" 
+            android:textStyle="bold">
+        </mbLib.CusFntTextView>
+
+        <mbLib.CusFntTextView
+            android:id="@+id/txt_bank_phone_number"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:editable="false"
+            android:gravity="left|center_vertical"
+            android:textColor="#372c24"
+            android:background="@color/bhingar_yellow"
+            android:textSize="20sp" >
+        </mbLib.CusFntTextView>
+
+        <mbLib.CusFntTextView
+            android:id="@+id/bank_web_url"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:gravity="left|center_vertical"
+            android:text="@string/lbl_bank_web_url"
+            android:textColor="@color/sbk_text_clr"
+            android:textStyle="bold" >
+        </mbLib.CusFntTextView>
+
+        <mbLib.CusFntTextView
+            android:id="@+id/txt_bank_web_url"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:editable="false"
+            android:gravity="left|center_vertical"
+            android:textColor="#372c24"
+            android:background="@color/bhingar_yellow"
+            android:textSize="20sp" >
+        </mbLib.CusFntTextView>
+        
+        <LinearLayout 
+            android:id="@+id/branch_dtls"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:background="@color/bhingar_yellow"
+            android:weightSum="1">
+            <mbLib.CusFntTextView 
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.8"
+                android:gravity="left|center_vertical"
+                android:text="@string/lbl_branch_det"
+                android:textColor="@color/sbk_text_clr"
+                android:textSize="20sp"
+            	android:textStyle="bold"/>
+            <ImageButton 
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.2"
+                android:clickable="false"
+                android:background="@color/white"
+                android:src="@mipmap/splash_btn"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@mipmap/act_bg"
+    android:fillViewport="true" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <include
+            android:id="@+id/inc_hd"
+            layout="@layout/header" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inc_hd"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:orientation="vertical" >
+
+            <!-- Title -->
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="15dip"
+                android:gravity="center_horizontal"
+                android:text="@string/frmtitle_add_same_bnk_bnf"
+                android:textColor="@color/sbk_text_clr"
+                android:textStyle="bold"
+                android:visibility="invisible" />
+
+            <!-- Design for Account no -->
+
+            <mbLib.CusFntTextView
+                android:id="@+id/lbl_accountNo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/lbl_acc_no"
+                android:textColor="@color/sbk_text_clr" 
+                android:textStyle="bold">
+            </mbLib.CusFntTextView>
+
+            <mbLib.CustomEditText
+                android:id="@+id/txtAccNo2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:inputType="number"
+                style="@style/SBKEditTextStyle"
+                android:text="" >            
+            </mbLib.CustomEditText>
+
+            <!-- design for Fetch Name -->
+
+            <mbLib.CustomButton
+                android:id="@+id/btn_fetchName2"
+                style="@style/button_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_style"
+                android:gravity="center"
+                android:text="@string/lbl_fetchnm_btn"
+                android:visibility="gone" >
+            </mbLib.CustomButton>
+
+            <mbLib.CusFntTextView
+                android:id="@+id/lblName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:layout_weight="2"
+                android:text="@string/lbl_acc_holder_nm"
+                android:textColor="@color/sbk_text_clr"
+                android:textStyle="bold" >
+            </mbLib.CusFntTextView>
+
+            <mbLib.CustomEditText
+                android:id="@+id/txtName2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:maxLines="2"
+                style="@style/SBKEditTextStyle"
+                android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:text="" >
+
+           
+            </mbLib.CustomEditText>
+
+            <mbLib.CusFntTextView
+                android:id="@+id/lblmobNo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:layout_weight="2"
+                android:text="@string/lbl_mob_no"
+                android:textColor="@color/sbk_text_clr"
+                android:textStyle="bold" >
+            </mbLib.CusFntTextView>
+
+            <mbLib.CustomEditText
+                android:id="@+id/txtmobNo2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:enabled="true"
+                android:inputType="phone"
+                style="@style/SBKEditTextStyle"
+                android:text="" >
+
+               
+            </mbLib.CustomEditText>
+
+            <mbLib.CusFntTextView
+                android:id="@+id/lblEmail"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:layout_weight="2"
+                android:text="@string/lbl_email"
+                android:textColor="@color/sbk_text_clr"
+                android:textStyle="bold" >
+            </mbLib.CusFntTextView>
+
+            <mbLib.CustomEditText
+                android:id="@+id/txtEmail2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:enabled="true"
+                android:inputType="textEmailAddress"
+                style="@style/SBKEditTextStyle"
+                android:text="" >
+
+              
+            </mbLib.CustomEditText>
+
+            <mbLib.CusFntTextView
+                android:id="@+id/lblNick_Name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:layout_weight="2"
+                android:text="@string/lbl_nickname"
+                android:textColor="@color/sbk_text_clr"
+                android:textStyle="bold" >
+            </mbLib.CusFntTextView>
+
+            <mbLib.CustomEditText
+                android:id="@+id/txtNick_Name2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:enabled="true"
+                style="@style/SBKEditTextStyle"
+                android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+                android:text="" >
+            </mbLib.CustomEditText>
+
+            <!-- Design for submit button -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dip"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3" >
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6" />
+
+                    <mbLib.CustomButton
+                        android:id="@+id/btn_submit2"
+                        style="@style/button_text"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.8"                   
+                        android:gravity="center"
+                        android:textSize="20sp"
+                        android:text="@string/lbl_submit_btn" >
+                    </mbLib.CustomButton>
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6" />
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/pro_bar"
+                    android:layout_width="50.0dip"
+                    android:layout_height="50.0dip"
+                    android:indeterminate="true"
+                    android:textColor="@color/formnm_txtcolor"
+                    android:visibility="invisible" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dip"
+                    android:orientation="vertical" >
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

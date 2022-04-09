@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="list_item_title">#000000</color>
+    <color name="list_background">#fff</color>
+ <!-- 303030 -->
+    <color name="list_background_pressed">#db6715</color>
+ <!-- 992416 -->
+    <color name="list_divider">#272727</color>
+ <!-- 272727 -->
+    <color name="counter_text_bg">#626262</color>
+    <color name="counter_text_color">#c5c4c4</color>
+<!--    <color name="sbk_text_clr">#386c46</color>-->
+    <color name="sbk_text_clr">#000000</color>
+    <color name="navy_blue">#000080</color>
+    <color name="navy_blue_1">#000070</color>
+    <color name="transparent">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="green">#0f0</color>
+    <color name="ministmnt_green">#0c980c</color>
+    <color name="light_blues">#059BD8</color>
+    <color name="light_gold">#e3be46</color>
+    <color name="dark_gold">#fbb829</color>
+    <color name="fluro_blue">#01ffdd</color>
+    <color name="red_color">#ff0000</color>
+    <color name="list_divider_nav">#272727</color>
+    <color name="symptom_color_selected">#003366</color>
+    <color name="reaction_color_selected">#003366</color>
+    <color name="static_text_color">#003366</color>
+    <color name="journal_entry_listitem_text_color">#003366</color>
+    <color name="note_text_disabled">#333333</color>
+    <color name="blue">#0000FF</color>
+    <color name="navy">#6699FF</color>
+    <color name="sky">#0099CC</color>
+    <color name="gray">#808080</color>
+    <color name="lightgray1">#E9EBEC</color>
+    <color name="lightgray">#e7e7e7</color>
+    <color name="lightgray02">#a19d9d</color>
+    <color name="dark">#000015</color>
+    <color name="lightgreen">#008000</color>
+    <color name="orrange">#e33d1b</color>
+    <!-- <color name="orange">#db6715</color> -->
+    <color name="orange">#e31e25</color>
+    <color name="darkorrange">#cc2303</color>
+    <color name="darkblue">#10306B</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="red2">#ff4444</color>
+    <color name="bg_gradient_start">#0d2252</color>
+    <color name="bg_gradient_end">#07132e</color>
+    <color name="bg_forgot_pwd_gradient_start">#003300</color>
+    <color name="bg_forgot_pwd_gradient_end">#001900</color>
+    <color name="bg_button">#000c00</color>
+    <color name="cyan">#15f4ee</color>
+    <color name="edittext_trans_focus">#80ffffff</color>
+    <color name="edittext_trans">#35ffffff</color>
+    <color name="menutext">#6ec7e1</color>
+    <color name="spinnerbg">#304e57</color>
+    <color name="dark_navy_blue">#08425a</color>
+    <!--
+    red
+    <color name="bg_forgot_pwd_gradient_start">#b21331</color>
+    <color name="bg_forgot_pwd_gradient_end">#820d2a</color>
+    <color name="bg_button_login">#380813</color>
+
+    -->
+<color name="dash_bg">#f8fbed</color>
+<color name="dash_text">#d62626</color>
+
+    <color name="colorPrimary">#F50057</color>
+    <color name="colorPrimaryDark">#C51162</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="navigationBarColor">#000000</color>
+    <color name="colorAccent">#FF80AB</color>
+    <color name="dtb_red">#EA224B</color>
+    <color name="dtb_trans_fields_bg">#90ffffff</color>
+
+    <string name="lbl_ok">Ok</string>
+
+    <color name="formnm_bgcolor">#F2F2F2</color>
+    <color name="formnm_txtcolor">#000</color>
+    <color name="headbgcolor">#db6715</color>
+    <!-- <color name="spinner_bg_color">#2eadd1</color> -->
+    <!-- <color name="spinner_bg_color">#db6715</color> -->
+   <!--  <color name="spinner_bg_color">#FFEB7F</color> -->
+   <color name="spinner_bg_color">#0686d8</color>
+  
+ <!-- 10306B -->
+    <color name="custnm_txtcolor">#000000</color>
+    <color name="rep_txt_color">#06546b</color>
+    <color name="darkest_green">#386c46</color>
+	<color name="darkest_orange">#924209</color>
+	<color name="welcome_txt_color">#340c6f</color>
+	<color name="prjct_name_txt_color">#898686</color>
+	<color name="bg_color">#FFFFFF</color>
+	<color name="splash_bg_color">#386c46</color>
+	<!-- <color name="sub_head_color">#FF2323</color> -->
+	<color name="sub_head_color">#386c46</color> 
+	<!-- <color name="sub_head_color">#eda209</color> -->
+	
+	<color name="button_bg_color">#ff2323</color>
+	<color name="samarth_text_color">#386c46</color>
+	
+	<color name="zxing_possible_result_points">#c0ffbd21</color> <!-- Android standard ICS color -->
+  <color name="zxing_result_view">#b0000000</color>
+  <color name="zxing_status_text">#ffffffff</color>
+  <color name="zxing_transparent">#00000000</color>
+  <color name="zxing_viewfinder_laser">#ffcc0000</color> <!-- Android standard ICS color -->
+  <color name="zxing_viewfinder_mask">#60000000</color>
+
+  <color name="zxing_custom_possible_result_points">#903A89CF</color>
+  <color name="zxing_custom_result_view">#b0000000</color>
+  <color name="zxing_custom_viewfinder_laser">#1976D2</color>
+  <color name="zxing_custom_viewfinder_mask">#60000000</color>
+  <color name="default_text_color">#386c46</color>
+  <color name="mpin_color">#a6c52b</color>
+  <color name="bhingar_yellow">#fff8ad</color>
+
+  <color name="shreenagri_blue">#0686d8</color>
+
+
+</resources>

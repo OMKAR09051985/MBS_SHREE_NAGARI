@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    tools:context=".ChangeMobileNo" 
+    android:background="@mipmap/act_bg">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+    <include
+        android:id="@+id/inc_hd"
+        layout="@layout/header" />
+
+    <LinearLayout
+        android:id="@+id/chng_mobno_layout"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/inc_hd"
+        android:layout_marginBottom="30dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <mbLib.CusFntTextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:text="@string/lbl_customer_id"
+            android:textColor="@color/sbk_text_clr"
+            android:textStyle="bold" >
+        </mbLib.CusFntTextView>
+
+        <mbLib.CustomEditText
+            android:id="@+id/txt_cust_id"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="" >
+        </mbLib.CustomEditText>
+
+        <mbLib.CusFntTextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:text="@string/lbl_old_mobile_no"
+            android:textColor="@color/sbk_text_clr" 
+            android:textStyle="bold">
+        </mbLib.CusFntTextView>
+
+        <mbLib.CustomEditText
+            android:id="@+id/txt_old_mobno"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:text="" >
+        </mbLib.CustomEditText>
+
+        <mbLib.CusFntTextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:text="@string/lbl_new_mobile_no"
+            android:textColor="@color/sbk_text_clr" 
+            android:textStyle="bold">
+        </mbLib.CusFntTextView>
+
+        <mbLib.CustomEditText
+            android:id="@+id/txt_new_mobno"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:inputType="number"
+            android:text="" >
+        </mbLib.CustomEditText>
+
+        <mbLib.CusFntTextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:text="@string/lbl_security_que"
+            android:textColor="@color/sbk_text_clr"
+            android:textStyle="bold" >
+        </mbLib.CusFntTextView>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_corner_spinner"
+            android:orientation="horizontal" 
+            android:layout_marginBottom="10dip">
+
+            <mbLib.CusFntTextView
+                android:id="@+id/txt_security_que"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dip"
+                android:layout_marginTop="10dip"
+                android:textSize="15dip"
+                android:textStyle="italic" >
+            </mbLib.CusFntTextView>
+        </LinearLayout>
+
+        <mbLib.CustomEditText
+            android:id="@+id/txt_ans"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:text="" >
+        </mbLib.CustomEditText>
+
+        <mbLib.CusFntTextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:text="@string/enter_pass"
+            android:textColor="@color/sbk_text_clr"
+            android:textStyle="bold" >
+        </mbLib.CusFntTextView>
+
+        <mbLib.CustomEditText
+            android:id="@+id/txt_mpin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip"
+            android:inputType="numberPassword"
+            android:text="" >
+        </mbLib.CustomEditText>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" />
+
+            <mbLib.CustomButton
+                android:id="@+id/btn_chng_mobno"
+                style="@style/button_text"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="80dip"
+                android:layout_weight="2.6"
+                  android:background="@drawable/roundedbutton"
+                android:gravity="center"
+                android:text="@string/lbl_change_btn" >
+            </mbLib.CustomButton>
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/sameBnkTranpro_bar"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_gravity="center"
+            android:visibility="invisible" >
+        </ProgressBar>
+    </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_color"
+    android:fillViewport="true" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+         <include
+            android:id="@+id/inc_hd"
+            layout="@layout/header" />
+
+
+        <LinearLayout
+            android:id="@+id/linearlayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/inc_hd"
+            android:orientation="vertical"
+            android:weightSum="8" >
+  
+         <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.3"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" >
+
+        <mbLib.CusFntTextView
+            android:id="@+id/Maturity_Period"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:text="@string/lbl_scheme"
+            android:textSize="15sp" />
+
+             <mbLib.CusFntTextView
+                 android:id="@+id/datess"
+                 android:layout_width="0dip"
+                 android:layout_height="fill_parent"
+
+                 android:layout_weight="0.8"
+                 android:gravity="center"
+                 android:text="@string/lbl_Maturity_Period"
+                 android:textSize="15sp" />
+
+        <mbLib.CusFntTextView
+            android:id="@+id/Regular"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.4"
+            android:gravity="center"
+            android:text="@string/lbl_roi"
+            android:textSize="15sp" />
+
+       <!--  <mbLib.CusFntTextView
+            android:id="@+id/Senior_Citizen"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/lbl_Senior_Citizen"
+            android:textSize="15sp" /> -->
+
+      
+    </LinearLayout>
+            
+            <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_weight="6.7"
+        android:background="@drawable/border_logo"
+        android:orientation="horizontal" >
+
+               
+
+                <ListView
+                    android:id="@+id/listView1"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                   
+                   
+                    android:layout_weight="6"
+                    android:dividerHeight="2dip"
+                    android:isScrollContainer="true"
+                    android:minHeight="130dip"
+            
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:scrollbars="vertical"
+                     >
+                </ListView>
+
+               
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal" >
+
+                <ProgressBar
+                    android:id="@+id/pb_wait3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="invisible" >
+                </ProgressBar>
+
+               
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

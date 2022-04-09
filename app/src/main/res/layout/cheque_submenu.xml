@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@mipmap/act_bg"
+    android:orientation="vertical" >
+
+   
+	<include layout="@layout/header"/>
+    <ListView
+        android:id="@+id/listView1"
+        style="@style/submenuStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="#FFFFFF"
+        android:dividerHeight="3dp" />
+
+</LinearLayout>

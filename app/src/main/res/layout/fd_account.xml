@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_color"
+    android:fillViewport="true" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <include
+            android:id="@+id/inc_hd"
+            layout="@layout/header" />
+
+        <LinearLayout
+            android:id="@+id/fd_account_layout"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/inc_hd"
+            android:layout_marginBottom="30dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <mbLib.CusFntTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:text="@string/lbl_debite_acc"
+                    android:textColor="@color/sbk_text_clr"
+                    android:textStyle="bold" >
+                </mbLib.CusFntTextView>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rounded_corner_spinner"
+                    android:orientation="horizontal"
+                    android:weightSum="4" >
+
+                    <Spinner
+                        android:id="@+id/spi_debit_account"
+                        style="@style/spinnerStyle"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dropdown"
+                        android:layout_gravity="center|center_horizontal"
+                        android:layout_weight="3.2"
+                        android:background="@drawable/rounded_corner_spinner" />
+
+                    <ImageButton
+                        android:id="@+id/spinner_btn_debit_acc"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.8"
+                        android:background="@color/spinner_bg_color"
+                        android:src="@mipmap/spinner_down" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <mbLib.CusFntTextView
+                android:id="@+id/lblBalance"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="@string/current_balance"
+                android:textColor="@color/sbk_text_clr"
+                android:textStyle="bold" >
+            </mbLib.CusFntTextView>
+
+            <mbLib.CustomEditText
+                android:id="@+id/sameBnkTrantxtBal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:editable="false" >
+            </mbLib.CustomEditText>
+
+            <LinearLayout
+                android:id="@+id/layout_text3"
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_marginLeft="10dip"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/lbl_int_rates"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:gravity="top"
+                    android:text="@string/lbl_rates"
+                    android:textColor="@color/sbk_text_clr"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <mbLib.CusFntTextView
+                android:id="@+id/lbl_PincipalAmt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="@string/lbl_PincipalAmt"
+                android:textColor="@color/sbk_text_clr"
+                android:textStyle="bold" >
+            </mbLib.CusFntTextView>
+
+            <mbLib.CustomEditText
+                android:id="@+id/ed_Amt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:text="" >
+            </mbLib.CustomEditText>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/lbl_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:text="@string/lbl_duration"
+                    android:textColor="@color/sbk_text_clr"
+                    android:textStyle="bold" >
+                </mbLib.CusFntTextView>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dip"
+                    android:orientation="horizontal"
+                    android:weightSum="3.4" >
+
+                    <!-- 1 -->
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_corner_spinner"
+                        android:orientation="horizontal"
+                        android:weightSum="4" >
+
+                        <Spinner
+                            android:id="@+id/spi_duration1"
+                            style="@style/spinnerStyle"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:spinnerMode="dropdown"
+                            android:layout_gravity="center|center_horizontal"
+                            android:layout_weight="3.2"
+                            android:background="@drawable/rounded_corner_spinner" />
+
+                        <ImageButton
+                            android:id="@+id/spinner_btn_scheme"
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.8"
+                            android:background="@color/spinner_bg_color"
+                            android:src="@mipmap/spinner_down" />
+                    </LinearLayout>
+                    <!-- space -->
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.2"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.2" />
+                    </LinearLayout>
+
+                    <!-- 2 -->
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_corner_spinner"
+                        android:orientation="horizontal"
+                        android:weightSum="4" >
+
+                        <Spinner
+                            android:id="@+id/spi_duration2"
+                            style="@style/spinnerStyle"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:spinnerMode="dropdown"
+                            android:layout_gravity="center|center_horizontal"
+                            android:layout_weight="3.2"
+                            android:background="@drawable/rounded_corner_spinner" />
+
+                        <ImageButton
+                            android:id="@+id/spinner_btn_scheme2"
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.8"
+                            android:background="@color/spinner_bg_color"
+                            android:src="@mipmap/spinner_down" />
+                    </LinearLayout>
+
+                    <!-- space -->
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.2"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.2" />
+                    </LinearLayout>
+
+                    <!-- 3 -->
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_corner_spinner"
+                        android:orientation="horizontal"
+                        android:weightSum="4" >
+
+                        <Spinner
+                            android:id="@+id/spi_duration3"
+                            style="@style/spinnerStyle"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:spinnerMode="dropdown"
+                            android:layout_gravity="center|center_horizontal"
+                            android:layout_weight="3.2"
+                            android:background="@drawable/rounded_corner_spinner" />
+
+                        <ImageButton
+                            android:id="@+id/spinner_btn_scheme1"
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.8"
+                            android:background="@color/spinner_bg_color"
+                            android:src="@mipmap/spinner_down" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Interest type -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <mbLib.CusFntTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:text="@string/lbl_type"
+                    android:textColor="@color/sbk_text_clr"
+                    android:textStyle="bold" >
+                </mbLib.CusFntTextView>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rounded_corner_spinner"
+                    android:orientation="horizontal"
+                    android:weightSum="4" >
+
+                    <Spinner
+                        android:id="@+id/spi_interest_type"
+                        style="@style/spinnerStyle"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dropdown"
+                        android:layout_gravity="center|center_horizontal"
+                        android:layout_weight="3.2"
+                        android:background="@drawable/rounded_corner_spinner" />
+
+                    <ImageButton
+                        android:id="@+id/spinner_btn_interest"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.8"
+                        android:background="@color/spinner_bg_color"
+                        android:src="@mipmap/spinner_down" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- Tax Saver -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <mbLib.CusFntTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:text="@string/lbl_tax"
+                    android:textColor="@color/sbk_text_clr"
+                    android:textStyle="bold" >
+                </mbLib.CusFntTextView>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rounded_corner_spinner"
+                    android:orientation="horizontal"
+                    android:weightSum="4" >
+
+                    <Spinner
+                        android:id="@+id/spi_tax"
+                        style="@style/spinnerStyle"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dropdown"
+                        android:layout_gravity="center|center_horizontal"
+                        android:layout_weight="3.2"
+                        android:background="@drawable/rounded_corner_spinner" />
+
+                    <ImageButton
+                        android:id="@+id/spinner_btn_tax"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.8"
+                        android:background="@color/spinner_bg_color"
+                        android:src="@mipmap/spinner_down" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- On Maturity -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <mbLib.CusFntTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:text="@string/lbl_maturity_action"
+                    android:textColor="@color/sbk_text_clr"
+                    android:textStyle="bold" >
+                </mbLib.CusFntTextView>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rounded_corner_spinner"
+                    android:orientation="horizontal"
+                    android:weightSum="4" >
+
+                    <Spinner
+                        android:id="@+id/spi_maturity_action"
+                        style="@style/spinnerStyle"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dropdown"
+                        android:layout_gravity="center|center_horizontal"
+                        android:layout_weight="3.2"
+                        android:background="@drawable/rounded_corner_spinner" />
+
+                    <ImageButton
+                        android:id="@+id/spinner_btn_maturity"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.8"
+                        android:background="@color/spinner_bg_color"
+                        android:src="@mipmap/spinner_down" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- Debit Account -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip"
+                android:orientation="horizontal"
+                android:weightSum="3" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2" />
+
+                <Button
+                    android:id="@+id/fd_account_submit"
+                    style="@style/button_text"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="80dip"
+                    android:layout_weight="2.6"
+                      android:background="@drawable/roundedbutton"
+                    android:gravity="center"
+                    android:text="@string/lbl_submit_btn" >
+                </Button>
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/sameBnkTranpro_bar"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_gravity="center"
+                android:visibility="invisible" >
+            </ProgressBar>
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

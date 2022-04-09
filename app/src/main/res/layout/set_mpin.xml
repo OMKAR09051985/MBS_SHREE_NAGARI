@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_color"
+    android:fillViewport="true" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <include
+            android:id="@+id/inc_hd"
+            layout="@layout/header" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/inc_hd"
+            android:layout_marginBottom="30dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:orientation="vertical" 
+            >
+
+            <LinearLayout
+                 android:id="@+id/lyt_usrnm_lbl"
+               android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                 <mbLib.CusFntTextView
+                android:id="@+id/lbl_Pref_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:inputType="text"
+                android:layout_marginBottom="5dip"
+                android:textColor="@color/sbk_text_clr"
+               android:text="@string/enter_prefer">
+            </mbLib.CusFntTextView>
+            
+             <LinearLayout
+            android:id="@+id/lyt_usrnm_txt"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+          
+            <mbLib.CustomEditText
+                android:id="@+id/txt_prefer_usrname"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.6"
+                android:inputType="text"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+                
+                android:text="" >
+            </mbLib.CustomEditText>
+
+            <mbLib.CusFntTextView
+                android:id="@+id/check_availability"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.4"
+                android:paddingLeft="5dip"
+                android:textColor="@color/sbk_text_clr"
+                android:gravity="center_vertical"
+                android:text="@string/enter_avail">
+            </mbLib.CusFntTextView>
+        </LinearLayout>
+            
+            </LinearLayout>
+			
+            <mbLib.CusFntTextView
+                android:id="@+id/lbl_pass"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:inputType="text"
+                android:textColor="@color/sbk_text_clr"
+                android:text="@string/enter_pass"
+                tools:ignore="DuplicateIds">
+            </mbLib.CusFntTextView>
+            
+            <mbLib.CustomEditText
+                android:id="@+id/txt_enter_pass"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberPassword"
+                android:hint="Enter 6 Digit PIN"
+                android:text="" >
+            </mbLib.CustomEditText>
+         
+            <mbLib.CusFntTextView
+                android:id="@+id/lbl_re_enter_pass"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:inputType="text"
+                android:textColor="@color/sbk_text_clr"
+                android:text="@string/re_enter_pass"
+                tools:ignore="DuplicateIds">
+            </mbLib.CusFntTextView>
+
+           
+            <mbLib.CustomEditText
+                 android:id="@+id/txt_re_enter_pass"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberPassword"
+                android:hint="Re-Enter 6 Digit PIN"
+                android:text="" >
+            </mbLib.CustomEditText>
+  
+            <mbLib.CusFntTextView
+                android:id="@+id/lbl_password"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:textColor="@color/sbk_text_clr"
+                android:text="@string/enter_password"
+                 android:inputType="text">
+            </mbLib.CusFntTextView>
+
+            <mbLib.CustomEditText
+                android:id="@+id/txt_password"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                 android:inputType="numberPassword"
+                android:hint="Enter 6 Digit Password"
+                android:text="">
+            </mbLib.CustomEditText>
+            
+            <mbLib.CusFntTextView
+                android:id="@+id/lbl_new_password"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:inputType="text"
+               android:text="@string/enter_new_password"
+                android:textColor="@color/sbk_text_clr" >
+            </mbLib.CusFntTextView>
+
+            <mbLib.CustomEditText
+                 android:id="@+id/txt_new_password"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                 android:inputType="numberPassword"
+                 android:hint="Re-Enter 6 Digit Password"
+                android:text="" >
+            </mbLib.CustomEditText>
+            
+             <mbLib.CusFntTextView
+                android:id="@+id/lbl_pass"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:inputType="text"
+               android:text="@string/lbl_new_tran_mpin"
+                android:textColor="@color/sbk_text_clr" 
+                android:visibility="gone"
+                 tools:ignore="DuplicateIds">
+            </mbLib.CusFntTextView>
+
+            <mbLib.CustomEditText
+                 android:id="@+id/txt_enter_tran_pass"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                 android:inputType="numberPassword"
+                 android:hint="Enter 6 Digit Tran PIN"
+                android:text="" 
+                android:visibility="gone">
+            </mbLib.CustomEditText>
+
+            <mbLib.CusFntTextView
+                android:id="@+id/lbl_re_enter_pass"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:inputType="text"
+               android:text="@string/lbl_retype_tran_mpin"
+                android:textColor="@color/sbk_text_clr" 
+                android:visibility="gone"
+                tools:ignore="DuplicateIds">
+            </mbLib.CusFntTextView>
+
+            <mbLib.CustomEditText
+                 android:id="@+id/txt_re_enter_tran_pass"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                 android:inputType="numberPassword"
+                 android:hint="Enter 6 Digit Tran PIN"
+                android:text="" 
+                android:visibility="gone">
+            </mbLib.CustomEditText>
+            
+            <LinearLayout
+            android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+            android:orientation="horizontal"
+           android:weightSum="3" >
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" />
+
+            <Button
+                android:id="@+id/btn_save_pass"
+                style="@style/button_text"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2.6"
+                  android:background="@drawable/roundedbutton"
+                android:gravity="center"
+                android:text="@string/lbl_submit_btn"
+                android:textSize="20dip" >
+            </Button>
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+           android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" />
+
+            <Button
+                android:id="@+id/btn_reset"
+               style="@style/button_text"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2.6"
+                  android:background="@drawable/roundedbutton"
+                android:gravity="center"
+                android:text="@string/lbl_reset"
+                android:textSize="20dip" >
+            </Button>
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" />
+        </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

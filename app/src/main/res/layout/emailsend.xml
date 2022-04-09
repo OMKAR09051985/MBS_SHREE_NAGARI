@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@mipmap/act_bg"
+    android:fillViewport="true" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <include
+            android:id="@+id/inc_hd"
+            layout="@layout/header" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/inc_hd"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:orientation="vertical"
+            android:weightSum="10" >
+
+            <mbLib.CusFntTextView
+                android:id="@+id/txt_debit_account"
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_marginTop="10dip"
+                android:layout_weight="1"
+                android:paddingLeft="5dip"
+                android:gravity="bottom"
+                android:text="@string/lbl_acc_number"
+                android:textColor="@color/sbk_text_clr"
+                android:textStyle="bold" >
+            </mbLib.CusFntTextView>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corner_spinner"
+                android:orientation="horizontal"
+                android:weightSum="4" >
+
+                <Spinner
+                    android:id="@+id/spi_account_no"
+                    style="@style/spinnerStyle"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dropdown"
+                    android:layout_gravity="center|center_horizontal"
+                    android:layout_weight="3.2"
+                    android:background="@drawable/rounded_corner_spinner" />
+
+                <ImageButton
+                    android:id="@+id/spinner_btn1"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.8"
+                    android:background="@color/shreenagri_blue"
+                    android:src="@mipmap/spinner_down" />
+            </LinearLayout>
+
+           
+
+           
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="10dip"
+                android:layout_weight="1"
+                android:gravity="left|bottom"
+                android:paddingLeft="5dip"
+                android:text="@string/lbl_from_date"
+                android:textColor="@color/sbk_text_clr"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="3" >
+
+                <mbLib.CustomEditText
+                    android:id="@+id/txt_from_dt"
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2.5"
+                    android:enabled="false"
+                    android:hint="@string/dt_format"
+                    android:inputType="date"
+                    android:nextFocusDown="@+id/txt_MobileNo" />
+
+                <mbLib.CustomButton
+                    android:id="@+id/btn_from_date"
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/calenderr"
+                    android:clickable="true"
+                    android:focusable="true" />
+            </LinearLayout>
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="10dip"
+                android:layout_weight="1"
+                android:gravity="left|bottom"
+                android:paddingLeft="5dip"
+                android:text="@string/lbl_to_date"
+                android:textColor="@color/sbk_text_clr"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="3" >
+
+                <mbLib.CustomEditText
+                    android:id="@+id/txt_to_dt"
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2.5"
+                    android:enabled="false"
+                    android:hint="@string/dt_format"
+                    android:inputType="date" />
+
+                <mbLib.CustomButton
+                    android:id="@+id/btn_to_date"
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/calenderr"
+                    android:clickable="true"
+                    android:focusable="true" />
+            </LinearLayout>
+            
+               <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="10dip"
+                android:layout_weight="1"
+                android:gravity="center|bottom"
+                android:paddingLeft="5dip"
+                android:text="@string/lblalt_send_email"
+                android:textColor="@color/red_color"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="3" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6" />
+
+                <mbLib.CustomButton
+                    android:id="@+id/btn_send_email"
+                    style="@style/button_text"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.8"
+                    android:background="@drawable/roundedbutton"
+                    android:text="@string/lbl_send_statement" >
+                </mbLib.CustomButton>
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

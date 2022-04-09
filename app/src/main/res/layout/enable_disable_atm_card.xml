@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@mipmap/act_bg"
+    android:fillViewport="true" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <include
+            android:id="@+id/inc_hd"
+            layout="@layout/header" />
+
+        <LinearLayout
+            android:id="@+id/fd_account_layout"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/inc_hd"
+            android:layout_marginBottom="30dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <mbLib.CusFntTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:text="@string/select_acc" 
+                    android:textColor="@color/sbk_text_clr"
+                    android:textStyle="bold">
+                </mbLib.CusFntTextView>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rounded_corner_spinner"
+                    android:orientation="horizontal"
+                    android:weightSum="4" >
+
+                    <Spinner
+                        android:id="@+id/spi_debit_account"
+                        style="@style/spinnerStyle"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dropdown"
+                        android:layout_gravity="center|center_horizontal"
+                        android:layout_weight="3.2"
+                        android:background="@drawable/rounded_corner_spinner" />
+
+                    <ImageButton
+                        android:id="@+id/spinner_btn_debit_acc"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.8"
+                        android:background="@color/spinner_bg_color"
+                        android:src="@mipmap/spinner_down" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <mbLib.CusFntTextView
+                android:id="@+id/card_no"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="@string/lbl_card_no"
+                android:textColor="@color/sbk_text_clr"
+                android:textStyle="bold">
+            </mbLib.CusFntTextView>
+
+            <mbLib.CustomEditText
+                android:id="@+id/atmcardno"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="16">
+            </mbLib.CustomEditText>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dip"
+                android:orientation="horizontal"
+                android:weightSum="4" >
+                
+                <mbLib.CusFntTextView
+	                android:id="@+id/lblBalance"
+	                android:layout_width="0dip"
+	                android:layout_weight="1.5"
+	                android:layout_height="match_parent"
+	                android:text="@string/lbl_current_status"
+	                android:textColor="@color/sbk_text_clr"
+                    android:textStyle="bold" >
+            	</mbLib.CusFntTextView>
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2.5"
+                    android:background="@drawable/rounded_corner_spinner"
+                    android:orientation="horizontal"
+                    android:weightSum="4" >
+
+                <Spinner
+                    android:id="@+id/spi_status"
+                    style="@style/spinnerStyle"
+                    android:layout_width="0dip"
+                    android:spinnerMode="dropdown"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_horizontal"
+                    android:layout_weight="3.2"
+                    android:background="@drawable/rounded_corner_spinner" />
+
+                <ImageButton
+                    android:id="@+id/spinner_btn_status"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.8"
+                    android:background="@color/spinner_bg_color"
+                    android:src="@mipmap/spinner_down" />
+            </LinearLayout>
+               <!-- <Switch
+                    android:id="@+id/switch1"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:textOff="Disable"
+                    android:scaleX="1"
+            		android:scaleY="1.5"
+                    android:textOn="Enable" />-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip"
+                android:orientation="horizontal"
+                android:weightSum="3" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6" />
+
+                <Button
+                    android:id="@+id/fd_account_submit"
+                    style="@style/button_text"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="80dip"
+                    android:layout_weight="1.8"
+                      android:background="@drawable/roundedbutton"
+                    android:gravity="center"
+                    android:text="@string/lbl_submit_btn" >
+                </Button>
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/sameBnkTranpro_bar"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_gravity="center"
+                android:visibility="invisible" >
+            </ProgressBar>
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

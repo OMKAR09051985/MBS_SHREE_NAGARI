@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="340dp"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <!-- android:background="@color/darkest_blue" -->
+
+    <mbLib.CusFntTextView
+        android:id="@+id/txt_dia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:text="@string/lbl_interest_details"
+        android:textColor="@android:color/black"
+        android:textStyle="bold" >
+    </mbLib.CusFntTextView>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="@color/gray" />
+
+    <ListView
+        android:id="@+id/listView1"
+        style="@style/submenuStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#FFFFFF"
+        android:dividerHeight="5px" >
+    </ListView>
+
+    <Button
+        android:id="@+id/btnOK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="OK"
+        android:textColor="@color/black" />
+    <!-- </LinearLayout> -->
+
+</LinearLayout>

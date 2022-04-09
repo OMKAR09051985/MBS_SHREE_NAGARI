@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+          <shape>
+                <solid android:color="@color/lightgray1" /> 
+               
+          </shape>
+    </item>
+
+    <!-- This is the line -->
+    <item android:right="0dp" android:left="0dp" >
+         <shape>
+              <!--  <solid android:color="@color/bg_color" /> -->
+              <gradient 
+                        android:centerColor="#a6c52a" 
+                        android:dither="true" 
+                        android:endColor="#a6c52a" 
+                        android:startColor="#a6c52a"
+                        android:tileMode="repeat" ></gradient>
+         </shape>
+    </item>
+
+</layer-list>

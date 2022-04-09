@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <mbLib.CusFntTextView
+     android:textStyle="bold"
+     android:textColor="#ffffffff"
+     android:gravity="center_vertical" 
+     android:id="@id/txtHeader" 
+     android:background="@color/darkest_orange"
+     android:padding="10.0dip" 
+     android:layout_width="fill_parent" 
+     android:layout_height="fill_parent" 
+     android:text="@string/lbl_manage_beneficiary"
+     android:layout_alignParentTop="true" 
+     android:layout_alignParentBottom="true" android:visibility="invisible"  />
+</LinearLayout>

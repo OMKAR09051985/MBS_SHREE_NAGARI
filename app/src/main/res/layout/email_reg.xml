@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true" 
+    android:background="@mipmap/act_bg">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/header"
+            android:id="@+id/inc_id"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="30dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_below="@id/inc_id"
+            android:orientation="vertical" >
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="15dip"
+                android:gravity="left"
+                android:textColor="@color/sbk_text_clr" 
+        		android:textStyle="bold"
+                android:text="@string/select_acc"/>
+
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rounded_corner_spinner"
+                    android:orientation="horizontal"
+                    android:weightSum="4" >
+
+                    <Spinner
+                        android:id="@+id/spnr_account"
+                        style="@style/spinnerStyle"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dropdown"
+                        android:layout_gravity="center|center_horizontal"
+                        android:layout_weight="3.2"
+                        android:background="@drawable/rounded_corner_spinner" />
+
+                    <ImageButton
+                        android:id="@+id/spinner_acc_btn"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.8"
+                        android:background="@color/shreenagri_blue"
+                        android:src="@mipmap/spinner_down" />
+                </LinearLayout>
+                
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="4" >
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/txt_email_status"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_weight="1.5"
+                    android:text="@string/lbl_currently"
+                    android:textColor="@color/sbk_text_clr"
+                    android:textStyle="bold">
+                </mbLib.CusFntTextView>
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/email_status_val"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="2.5"
+                    android:text="" 
+                    android:textColor="@color/sbk_text_clr"
+                    android:textStyle="bold">
+                </mbLib.CusFntTextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/txt_email_chng"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:text="@string/lbl_change" 
+                    android:textColor="@color/sbk_text_clr"
+                    android:textStyle="bold">
+                </mbLib.CusFntTextView>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rounded_corner_spinner"
+                    android:orientation="horizontal"
+                    android:weightSum="4" >
+
+                    <Spinner
+                        android:id="@+id/spi_email_chg"
+                        style="@style/spinnerStyle"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dropdown"
+                        android:layout_gravity="center|center_horizontal"
+                        android:layout_weight="3.2"
+                        android:background="@drawable/rounded_corner_spinner" />
+
+                    <ImageButton
+                        android:id="@+id/spinner_btn"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.8"
+                        android:background="@color/shreenagri_blue"
+                        android:src="@mipmap/spinner_down" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <mbLib.CusFntTextView
+                android:id="@+id/txt_email"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_email"
+                android:layout_marginTop="10dip"
+                android:textColor="@color/sbk_text_clr"
+                android:textStyle="bold" >
+            </mbLib.CusFntTextView>
+
+            <mbLib.CustomEditText
+                android:id="@+id/email_val"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                >
+            </mbLib.CustomEditText>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/txt_email_freq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:text="@string/lbl_frequency"
+                    android:textColor="@color/sbk_text_clr"
+                    android:textStyle="bold" >
+                </mbLib.CusFntTextView>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rounded_corner_spinner"
+                    android:orientation="horizontal"
+                    android:weightSum="4" >
+
+                    <Spinner
+                        android:id="@+id/spi_email_freq"
+                        style="@style/spinnerStyle"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dropdown"
+                        android:layout_gravity="center|center_horizontal"
+                        android:layout_weight="3.2"
+                        android:background="@drawable/rounded_corner_spinner" />
+
+                    <ImageButton
+                        android:id="@+id/spinner_btn2"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.8"
+                        android:background="@color/shreenagri_blue"
+                        android:src="@mipmap/spinner_down" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- <mbLib.CusFntTextView
+                android:id="@+id/txt_mpin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_mpin"
+                android:layout_marginTop="10dip"
+                android:textColor="#372c24" >
+            </mbLib.CusFntTextView>
+
+            <mbLib.CustomEditText
+                android:id="@+id/mpin_val"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:layout_marginBottom="10dip">
+            </mbLib.CustomEditText> -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dip"
+                android:orientation="horizontal" 
+                android:weightSum="3" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2" />
+            <mbLib.CustomButton
+                android:id="@+id/btn_submit_emailreg"
+                style="@style/button_text"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2.6"
+                android:background="@drawable/roundedbutton"
+                android:gravity="center"
+                android:text="@string/lbl_submit_btn"
+                android:textSize="20dip" >
+            </mbLib.CustomButton>
+            <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/pb_wait6"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_gravity="center"
+                android:visibility="invisible" >
+            </ProgressBar>
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@mipmap/act_bg"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:weightSum="5"
+    tools:context=".LocateUs" >
+ <include
+        android:id="@+id/inc_hd"
+        layout="@layout/header" />
+    <!-- <mbLib.CusFntTextView
+        android:layout_width="fill_parent"
+       android:layout_height="0dip"
+        android:layout_marginLeft="60dip"
+        android:layout_marginRight="60dip"
+        android:layout_marginTop="10dip"
+        android:layout_weight="1"
+        android:background="@color/bg_color"
+        android:gravity="center"
+        android:text="@string/lbl_locate_us"
+        android:textColor="@color/white" >
+    </mbLib.CusFntTextView> -->
+ <!-- android:layout_height="35dip" -->
+
+   <!--  <LinearLayout
+        android:id="@+id/locate_us_frm"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="5"
+        android:orientation="vertical"
+        android:paddingLeft="30dip"
+        android:paddingRight="30dip"
+        android:weightSum="1" > -->
+
+        <fragment
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="5"
+            class="com.google.android.gms.maps.SupportMapFragment" >
+        </fragment>
+    </LinearLayout>
+
+    <!-- <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/locate_us_frm"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+        <include layout="@layout/footer" />
+    </LinearLayout> 
+
+</LinearLayout>-->

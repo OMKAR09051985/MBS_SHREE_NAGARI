@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@mipmap/act_bg"
+    android:fillViewport="true" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <include
+            android:id="@+id/inc_hd"
+            layout="@layout/header" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/inc_hd"
+            android:orientation="vertical"
+            android:weightSum="16" >
+
+            <!-- <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border_logo"
+                android:gravity="left|center_vertical"
+                android:text="Login" />
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border_logo"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="30dip"
+                android:text="MPIN Login" />
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border_logo"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="30dip"
+                android:text="Password Login" />
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border_logo"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="60dip"
+                android:text="Register" />
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border_logo"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="60dip"
+                android:text="Forgot MPIN" />
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border_logo"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="60dip"
+                android:text="Contact Us" />
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border_logo"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="60dip"
+                android:text="Locate Us" /> -->
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border_logo"
+                android:gravity="left|center_vertical"
+                android:text="Dashboard" />
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/bhingar_yellow"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="30dip"
+                android:text="@string/lbl_demand_deposit" />
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border_logo"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="60dip"
+                android:text="Demand Deposit Details" />
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/bhingar_yellow"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="30dip"
+                android:text="Deposit" />
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border_logo"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="60dip"
+                android:text="Deposit Details" />
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/bhingar_yellow"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="30dip"
+                android:text="@string/lbl_loan" />
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border_logo"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="60dip"
+                android:text="Loan Account Details" />
+
+         <!--    <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/bhingar_yellow"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="30dip"
+                android:text="@string/lbl_fund_transfer" />
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border_logo"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="60dip"
+                android:text="@string/lbl_own_account_trans" />
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border_logo"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="60dip"
+                android:text="@string/lbl_same_bnk_trans" />
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border_logo"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="60dip"
+                android:text="@string/tabtitle_other_bank_fund_trans_rtgs" />
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border_logo"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="60dip"
+                android:text="@string/frmtitle_other_bank_fund_trans_imps" />
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border_logo"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="60dip"
+                android:text="@string/lbl_qr_send" />
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border_logo"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="60dip"
+                android:text="@string/lbl_qr_receive" />
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border_logo"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="60dip"
+                android:text="@string/lbl_transfer_history" />
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/bhingar_yellow"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="30dip"
+                android:text="@string/lbl_manage_beneficiary" />
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border_logo"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="60dip"
+                android:text="@string/lbl_list_benf" />
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border_logo"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="60dip"
+                android:text="@string/lbl_same_bnk_benf" />
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border_logo"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="90dip"
+                android:text="@string/frmtitle_add_same_bnk_bnf" />
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border_logo"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="90dip"
+                android:text="@string/frmtitle_edit_same_bnk_bnf" />
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border_logo"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="60dip"
+                android:text="@string/lbl_other_bnk_benf" />
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border_logo"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="90dip"
+                android:text="@string/frmtitle_add_other_bnk_bnf" />
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border_logo"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="90dip"
+                android:text="@string/frmtitle_edit_other_bnk_bnf" />
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border_logo"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="60dip"
+                android:text="@string/lbl_remove_benf" />
+ -->
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/bhingar_yellow"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="30dip"
+                android:text="@string/lbl_mini_statement" />
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/bhingar_yellow"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="30dip"
+                android:text="@string/lbl_cheque_related" />
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border_logo"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="60dip"
+                android:text="@string/chq_bk_req" />
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border_logo"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="60dip"
+                android:text="@string/chq_bk_status" />
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border_logo"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="60dip"
+                android:text="@string/chq_bk_status" />
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/bhingar_yellow"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="30dip"
+                android:text="@string/lbl_atm" />
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/bhingar_yellow"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="30dip"
+                android:text="@string/lbl_other_srvce" />
+
+           <!-- <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border_logo"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="60dip"
+                android:text="@string/alert_fd0" />-->
+            
+             <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border_logo"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="60dip"
+                android:text="@string/lbl_title_email_registration" />
+             
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border_logo"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="60dip"
+                android:text="@string/lbl_send_email" />
+             
+             <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                  android:background="@color/bhingar_yellow"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="30dip"
+                android:text="@string/lbl_change_mpin" />
+
+            <!-- <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border_logo"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="60dip"
+                android:text="@string/lbl_mmid" /> 
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/bhingar_yellow"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="30dip"
+                android:text="@string/lbl_recharge" />-->
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

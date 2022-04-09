@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_color"
+    android:fillViewport="true" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <include
+            android:id="@+id/inc_id"
+            layout="@layout/header" />
+
+        <LinearLayout
+            android:id="@+id/linearlayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inc_id"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:orientation="vertical" >
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="0dip"
+                android:gravity="center_horizontal"
+                android:text="@string/lbl_chq_intimation"
+                android:textColor="@color/formnm_txtcolor"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                />
+
+            <mbLib.CusFntTextView
+                android:id="@+id/txt_accountno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="@string/lbl_acc_no"
+                android:textColor="#372c24"
+                >
+            </mbLib.CusFntTextView>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dip"
+                android:background="@drawable/rounded_corner_spinner"
+                android:orientation="horizontal"
+                android:weightSum="4" >
+
+                <Spinner
+                    android:id="@+id/spi_accounts"
+                    style="@style/spinnerStyle"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dropdown"
+                    android:layout_gravity="center|center_horizontal"
+                    android:layout_weight="3.2"
+                    android:background="@drawable/rounded_corner_spinner" />
+
+                <ImageButton
+                    android:id="@+id/spinner_btn"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.8"
+                    android:background="@color/shreenagri_blue"
+                    android:src="@mipmap/spinner_down" />
+            </LinearLayout>
+
+
+
+
+            <!-- <mbLib.CustomEditText
+                 android:id="@+id/cheqno"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:inputType="number" >
+             </mbLib.CustomEditText>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <mbLib.CusFntTextView
+                android:id="@+id/txt_nooftran"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:gravity="left"
+                android:text="@string/lbl_nooftran"
+                android:textColor="#372c24" >
+            </mbLib.CusFntTextView>
+
+            <mbLib.CustomEditText
+                android:id="@+id/nooftran"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number">
+            </mbLib.CustomEditText>
+
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dip"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="3" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2" />
+
+                <mbLib.CustomButton
+                    android:id="@+id/btn_proceed"
+                    style="@style/button_text"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dip"
+                    android:layout_weight="2.6"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:gravity="center"
+                    android:text="@string/lbl_proceed"
+                    android:textColor="@color/bg_color"
+                    android:textSize="20dip" />
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

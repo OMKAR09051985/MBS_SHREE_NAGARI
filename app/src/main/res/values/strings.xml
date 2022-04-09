@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <string name="hello">Hello World!</string>
+    <!-- sbk static ip -->
+    <!-- OUR 54 <string name="url">http://172.100.30.56:8086/axis2/services/MobileInterWebService</string>
+     -->
+    <!-- UAT Bhingar BANK
+    <string name="url">http://117.242.10.113:8285/axis2/services/MobileWebServicesSequrity</string>-->
+    <!--     <string name="url">http://listsoftware.zapto.org:8087/axis2/services/FrontLineWebServices</string> -->
+    <!---->
+    <string name="url">http://listspl.ddns.net:8087/axis2/services/FrontLineWebServices</string>
+    <!--   live -->
+    <!--  <string name="url">https://www.bhingarbank.co.in:11032/axis2/services/FrontLineWebServices</string>-->
+    <string name="alert_accleng">16</string>
+    <string name="alert_sup">The Application Does Not Support This Device.</string>
+    <string name="bank_name">Shri Nagari Sahkari Pat Sanstha Maryadit,Dapodi</string>
+    <string name="app_name">Shri Nagari Mobile Banking</string>
+    <string name="txt_but_exit">Exit</string>
+    <string name="txt_but_back">Back</string>
+    <string name="lbl_bank_cd">DEENDAYL</string>
+    <string-array name="email_chng">
+        <item>Register</item>
+        <item>De-Register</item>
+    </string-array>
+    <string-array name="email_freq">
+        <item>Monthly</item>
+        <item>Quarterly</item>
+        <item>Half Yearly</item>
+        <item>Yearly</item>
+    </string-array>
+    <string name="chq_bk_req">Cheque Book Request</string>
+    <string name="chq_bk_status">View Cheque Status</string>
+    <string-array name="check_related">
+        <item>@string/chq_bk_req</item>
+        <item>@string/chq_bk_status</item>
+    </string-array>
+    <string name="email_hint">Please Enter Valid E-mail ID</string>
+    <color name="disablebg">#ffffff</color>
+    <string name="frmtitle_add_same_bnk_bnf">Add Beneficiary</string>
+    <string name="frmtitle_edit_same_bnk_bnf">Edit Beneficiary</string>
+    <string name="lbl_acc_holder_nm">Name:</string>
+    <string name="lbl_mob_no">Mobile No:</string>
+    <string name="lbl_email">Email:</string>
+    <string name="lbl_nickname">Nick Name:</string>
+    <string name="lbl_fetchnm_btn">Fetch Name</string>
+    <string name="lbl_submit_btn">Submit</string>
+    <string name="lbl_acc_no">Account No :</string>
+    <string name="lbl_fromacc_no">From Account No :</string>
+    <string name="lbl_toacc_msg">To Account No :</string>
+    <string name="lbl_frommob_no">From Mobile:</string>
+    <string name="lbl_tomob_msg">To Mobile:</string>
+    <string name="lbl_tommid_msg">To Virtual Account Number :</string>
+    <string name="lbl_locate_us">Locate Us</string>
+    <string name="alert_signledaylmt">Your Single Transaction Amount Limit Exceeds</string>
+    <string name="lbl_home">Home</string>
+    <string name="frmtitle_add_other_bnk_bnf">Add Beneficiary</string>
+    <string name="frmtitle_edit_other_bnk_bnf">Edit Beneficiary</string>
+    <string name="frmtitle_other_bank_fund_trans_ifsc">Other Bank Transfer(IFSC)</string>
+    <string name="tabtitle_other_bank_fund_trans_ifsc">Fund Transfer P2A (Person To Account)</string>
+    <string name="tabtitle_other_bank_fund_trans_imps">Fund Transfer P2P</string>
+    <string name="frmtitle_other_bank_fund_trans_imps">Other Bank Transfer(IMPS)</string>
+    <string name="tabtitle_other_bank_fund_trans_uid">Fund Transfer P2U</string>
+    <string name="lbl_ifsc_code">IFSC Code:</string>
+    <string name="lbl_lien_amt">Lien Amount:</string>
+    <string name="lbl_bank">Bank:</string>
+    <string name="lbl_branch">Branch:</string>
+    <string name="lbl_loanDates">Dates</string>
+    <string name="lbl_MMID">Virtual Account Number:</string>
+    <string name="lbl_fetch_bnk_brn">Fetch Bank and Branch</string>
+    <string name="frmtitle_rem_bnf">Remove Beneficiary</string>
+    <string name="lbl_remove_btn">Remove</string>
+    <string name="frmtitle_list_beneficiary">Beneficiary</string>
+    <string name="lbl_acc_number">Account Number</string>
+    <string name="lbl_nm_nicknm">Nickname</string>
+    <string name="lbl_nm_nm">Name</string>
+    <string name="lbl_same_bnk_trans">Same Bank Transfer</string>
+    <string name="lbl_fd_acc">Open FD Account</string>
+    <string name="lbl_debite_acc">Debit Account:</string>
+    <string name="lbl_amount">Amount :</string>
+    <string name="lbl_remark">Remarks :</string>
+    <string name="lbl_get_balance">Get Balance</string>
+    <string name="lbl__title_balance_rpt">Balance Report</string>
+    <string name="lbl__account_type">Account Type:</string>
+    <string name="lbl_scheme_and_acc_No">Scheme And Acc No:</string>
+    <string name="lbl_scheme">Schemes</string>
+    <string name="lbl_name">Name:</string>
+    <string name="lbl_title_change_mobile_number">Change Mobile Number</string>
+    <string name="lbl_old_mobile_no">Old Mobile No:</string>
+    <string name="lbl_new_mobile_no">New Mobile No:</string>
+    <string name="lbl_retype_mobile_no">Retype Mobile No:</string>
+    <string name="lbl_change_btn">Change</string>
+    <string name="lbl_title_change_mpin">Change MPIN</string>
+    <string name="lbl_old_mpin">Old MPIN:</string>
+    <string name="lbl_new_mpin">New MPIN:</string>
+    <string name="lbl_retype_mpin">Retype MPIN:</string>
+    <string name="lbl_title_cheque_status_query">Cheque Status Query</string>
+    <string name="lbl_debit_rdo">Debit</string>
+    <string name="lbl_credit_rdo">Credit</string>
+    <string name="lbl_serial">Cheque Serial No.</string>
+    <string name="lbl_from">From Cheque No.</string>
+    <string name="lbl_to">To Cheque No.</string>
+    <string name="lbl_chq_no">Cheque No:</string>
+    <string name="lbl_date">Date</string>
+    <string name="lbl_get_status_btn">Get Status</string>
+    <string name="lbl_title_cheque_status_report">Cheque Status Report</string>
+    <string name="lbl_narration">Narration</string>
+    <string name="cheque_no">Cheque No</string>
+    <string name="lbl_debit_short">DR</string>
+    <string name="lbl_credit_short">CR</string>
+    <string name="lbl_title_cheque_book_request">Cheque Book Request</string>
+    <string name="lbl_no_of_pages">No of Pages:</string>
+    <string name="lbl_title_email_registration">Email Registration</string>
+    <string name="lbl_currently">Current Status:</string>
+    <string name="lbl_change">Change Status:</string>
+    <string name="lbl_frequency">Frequency:</string>
+    <string name="lbl_mpin">MPIN:</string>
+    <string name="lbl_manage_beneficiary">Manage Beneficiary</string>
+    <string name="lbl_transfer_funds">Transfer Funds</string>
+    <string name="lbl_add_ben">Select Beneficiary </string>
+    <string name="lbl_welcome_to">Welcome </string>
+    <string name="lbl_ideal_mobile_banking">DNS Mobile Banking</string>
+    <string name="lbl_customer_id">Customer Id :</string>
+    <string name="lbl_password">Password</string>
+    <string name="lbl_login">Sign In</string>
+    <string name="lbl_maturity_amnt">Maturity Amount</string>
+    <string name="lbl_maturity_date">Maturity Date</string>
+    <string name="lbl_interest_rate">Interest Rate</string>
+    <string name="lbl_opening_amnt">Opening Amount</string>
+    <string name="lbl_maturity_amnt_value">1,12,000 Rs</string>
+    <string name="lbl_maturity_date_value">20-06-2016</string>
+    <string name="lbl_interest_rate_value">10 %</string>
+    <string name="lbl_opening_amnt_value">1,00,000 Rs</string>
+    <string name="lbl_balance_eport">Balance Report :</string>
+    <string name="lbl_account_type">Account Type :</string>
+    <string name="lbl_clear_balance">Clear Balance (In Rs.):</string>
+    <string name="lbl_unclear_balance">Unclear Balance (In Rs.):</string>
+    <string name="lbl_show_details">Show Details</string>
+    <string name="lbl_instl_amt">Installment Amount</string>
+    <string name="lbl_instl_frq">Installment Frequency</string>
+    <string name="lbl_get_custID">Get Customer Id</string>
+    <string name="alert_000">Network Unavailable. Please Try Again.</string>
+    <string name="alert_001">Please Enter Valid Account Number.</string>
+    <string name="alert_002">Please Enter Valid Mobile Number.</string>
+    <string name="alert_003">Please Enter Nickname.</string>
+    <string name="alert_004">You Can Not Use Blank Spaces In Nickname.</string>
+    <string name="alert_005">Please Enter Nickname With Minimum 4 And Maximum 15 characters.</string>
+    <string name="alert_006">Please Enter Valid Mobile Number.</string>
+    <string name="alert_007">Please Enter Valid E-mail Id.</string>
+    <string name="alert_008">Invalid Account Number.</string>
+    <string name="alert_009">This Beneficiary Is Already Added.</string>
+    <string name="alert_010">Failed To Add Same Bank Beneficiary Due To Duplicate Account Number.</string>
+    <string name="alert_011">Failed To Add Same Bank Beneficiary Due To Duplicate Nickname.</string>
+    <string name="alert_012">Failed To Add Same Bank Beneficiary Due To Server Problem.</string>
+    <string name="alert_013">Same Bank Beneficiary Added Successfully.</string>
+    <string name="alert_014">Network Disconnected. Please Check Network Settings.</string>
+    <string name="alert_015">Enter MPIN.</string>
+    <string name="alert_016">Failed To Update Same Bank Beneficiary Due To Server Problem.</string>
+    <string name="alert_017">Beneficiary Detail Updated Successfully.</string>
+    <string name="alert_err">Error Occured</string>
+    <string name="alert_018">Invalid IFSC Code.</string>
+    <string name="alert_019">Failed To Add Other Bank Beneficiary Due To Duplicate Account Number.</string>
+    <string name="alert_020">Failed To Add Other Bank Beneficiary Due To Duplicate Nickname.</string>
+    <string name="alert_021">Failed To Add Other Bank Beneficiary Due To Server Problem.</string>
+    <string name="alert_022">Other Bank Beneficiary Added Successfully.</string>
+    <string name="alert_023">Please Enter IFSC Code.</string>
+    <string name="alert_024">Please Enter Either IFSC Code Or Virtual Account Number.</string>
+    <string name="alert_025">Please Enter 7-digits Virtual Account Number.</string>
+    <string name="alert_026">Failed To Update Other Bank Beneficiary Due To Duplicate Account Number.</string>
+    <string name="alert_027">Failed To Update Other Bank Beneficiary Due To Duplicate Nickname.</string>
+    <string name="alert_028">Failed To Update Other Bank Beneficiary Due To Server Problem.</string>
+    <string name="alert_028_1">Failed To Update Same Bank Beneficiary.</string>
+    <string name="alert_029">Other Bank Beneficiary Updated Successfully.</string>
+    <string name="alert_030">Fund Transfer Successful.</string>
+    <string name="alert_031">Fund Transfer Amount Exceeds Limite.</string>
+    <string name="alert_032">Fund Transfer Failed due to server problem.</string>
+    <string name="alert_033">Please Enter Amount.</string>
+    <string name="alert_034">Please Enter Amount Greater Than Zero</string>
+    <string name="alert_035">Please Enter Remarks</string>
+    <!-- <string name="alert_036">Enter Valid MPIN</string> -->
+    <string name="alert_037">MPIN Must Be Of 6 Character</string>
+    <!-- <string name="alert_038">Enter Valid MPIN</string> -->
+    <!-- <string name="alert_039">Error Occured</string> -->
+    <string name="alert_040">Failed To Load Beneficiary Due To Server Problem.</string>
+    <string name="alert_041">Beneficiary Not Available, Add Beneficiary.</string>
+    <string name="alert_042">Beneficiary Removed Successfully.</string>
+    <!-- <string name="alert_043">Failed To Remove Beneficiary Due To Server Problem.</string> -->
+    <string name="alert_043">Transactions Exists For This Beneficiary,Can Not Delete.</string>
+    <string name="alert_044">Please Fill All Fields!</string>
+    <string name="alert_045">New Mobile No. And Retype New Mobile No. must be same!</string>
+    <string name="alert_046">Enter Correct Old Mobile No.!</string>
+    <string name="alert_047">Mobile Number Changed successfully.</string>
+    <string name="alert_048">Error While Changing Mobile Number</string>
+    <string name="alert_049">New MPIN and Retype New MPIN must be same!</string>
+    <string name="alert_050">Enter Correct Old MPIN!</string>
+    <string name="alert_051">No Cheques Found For Given Criteria.</string>
+    <string name="alert_052">Please Enter From Cheque No. Or Date</string> <!--Or Amount-->
+    <string name="alert_053">To No. Of Cheque Must Be Greater Than From No.</string>
+    <string name="alert_054">To Amount Must Be Greater Than From Amount.</string>
+    <string name="alert_055">Please Enter Valid From Date.</string>
+    <string name="alert_056">Please Enter Valid To Date.</string>
+    <string name="alert_057">To Date Must Be Greater Than From Date.</string>
+    <string name="alert_058">Your request Has Been Registered With No:</string>
+    <string name="alert_059">Your Request Could Not Be Registered</string>
+    <string name="alert_060">Please Enter E-mail Id</string>
+    <string name="alert_061">You Have Registered To The Statement On Email Facility</string>
+    <string name="alert_062">You Have Deregistered The Statement On Email Facility</string>
+    <string name="alert_063">Your Request Could Not Be Registered</string>
+    <string name="alert_064">Please Enter From No. of Cheque Book</string>
+    <string name="alert_065">No Such Cheques Issued</string>
+    <string name="alert_066">Enter Valid Email</string>
+    <string name="alert_067">Account number is empty,Because Beneficiary not available</string>
+    <string name="alert_068">is Blank</string>
+    <string name="alert_069">Problem to Fetch Beneficiary</string>
+    <string name="alert_070">MPIN Changed Successfully.</string>
+    <string name="alert_071">Cheque Book Request Already Sent.</string>
+    <string name="alert_172_1">New PASSWORD and Retype New PASSWORD must be same!</string>
+    <string name="alert_pass">PASSWORD Changed Successfully.</string>
+    <string name="alert_072">Enter Valid Customer Id</string>
+    <string name="alert_073">Enter Valid Mobile Number</string>
+    <string name="alert_074">OTP Has Been Sent To Your Registered Mobile Number With Reference Id :</string>
+    <string name="alert_075">OTP Must Be Of Lenght 6!</string>
+    <string name="alert_076">Invalid OTP</string>
+    <string name="alert_076_01">Enter OTP</string>
+    <string name="alert_076_02">No More Attempts Remaining. Please Regenerate Otp.</string>
+    <string name="alert_077">OTP Validated Successfully</string>
+    <string name="alert_078">Select Two Different Questions!</string>
+    <string name="alert_079">Enter Answers For Security Questions!</string>
+    <string name="alert_080">Select Question!</string>
+    <string name="alert_081">Entered And Re-Entered MPIN Must Be Same</string>
+    <string name="alert_082">Enter MPIN</string>
+    <string name="alert_083">Re-Enter MPIN</string>
+    <string name="alert_084">Problem Retrieving Security Questions</string>
+    <string name="alert_085">Could Not Set MPIN</string>
+    <string name="alert_085_1">Could Not Set Password</string>
+    <string name="alert_086">Please Enter MPIN Of Length 6</string>
+    <string name="alert_086_01">Please Enter Password Of Length 6</string>
+    <string name="alert_087">Wrong Answer</string>
+    <string name="alert_088">Failed To Save Cheque Book Request</string>
+    <string name="alert_089">No Record Found</string>
+    <string name="alert_090">No Record Updated</string>
+    <string name="alert_091">Customer Already Registered</string>
+    <string name="alert_092">Account Details Not Available!</string>
+    <string name="alert_093">MPIN Set Successfully!</string>
+    <string name="alert_094">Problem Generating OTP, Please Try Again </string>
+    <string name="alert_095">Please Enter Name Having Length Less Than 100 Characters</string>
+    <string name="alert_096">Please Enter Name</string>
+    <string name="alert_097">Please Enter Remarks Having Length Less Than 200 Characters</string>
+    <string name="alert_098">Please Select Beneficiary</string>
+    <string name="alert_099">Mobile No. Changed Successfully</string>
+    <string name="alert_100">Incorrect Answer</string>
+    <string name="alert_101">Incorrect New Mobile No.</string>
+    <string name="alert_102">Incorrect Old Mobile No.</string>
+    <string name="alert_103">You Are Successfully Registered To Mobile Banking!</string>
+    <string name="alert_104">Please Enter Non-Zero Number Of Transactions</string>
+    <string name="alert_105">Enter No. Of Transactions</string>
+    <string name="alert_106">Please Enter Transactions No. Upto 25</string>
+    <string name="alert_107">Can Not Transfer To Same Account</string>
+    <string name="alert_108">Changes Updated Successfully</string>
+    <string name="alert_109">Customer Id Or Account No. Is Wrong</string>
+    <string name="alert_110">Unable To Process Your Request</string>
+    <string name="alert_111">Enter Transaction MPIN</string>
+    <string name="alert_112">Re-Enter Transaction MPIN</string>
+    <string name="alert_113">Please Enter Transaction MPIN Of Length 6</string>
+    <string name="alert_114">Entered And Re-Entered Transaction MPIN Must Be Same</string>
+    <string name="alert_115">Enter Correct Old Transaction MPIN!</string>
+    <string name="alert_116">Enter Transaction MPIN.</string>
+    <string name="alert_117">Transaction MPIN Must Be Of 6 Character.</string>
+    <string name="alert_118">Wrong Transaction MPIN</string>
+    <string name="alert_119">Your Request Is Already Registered With Request Id </string>
+    <string name="alert_120">Please Check SMS After Some Time.</string>
+    <string name="alert_121">Request Id</string>
+    <string name="alert_122">You Have Used This MPIN Recently, Please Choose Different One.</string>
+    <string name="alert_123">You Have Used This Transaction MPIN Recently, Please Choose Different One.</string>
+    <string name="alert_123_01">You Have Used This Password Recently, Please Choose Different One.</string>
+    <!-- By SAM  <string name="alert_124">MPIN and Transaction MPIN Must Be Different.</string> -->
+    <string name="alert_124">Old MPIN and New MPIN Must Be Different.</string>
+    <string name="alert_124_1">MPIN and Password Must Be Different.</string>
+    <string name="alert_124_2">Password and Transaction MPIN Must Be Different.</string>
+    <string name="alert_125">Wrong MPIN</string>
+    <string name="alert_125_1">Wrong Transaction Pin</string>
+    <string name="alert_125_2">Attempts Remaining</string>
+    <string name="alert_126">Problem Retrieving Bank Names</string>
+    <string name="alert_127">Problem Retrieving States</string>
+    <string name="alert_128">Problem Retrieving Districts</string>
+    <string name="alert_129">Problem Retrieving Cities</string>
+    <string name="alert_130">Problem Retrieving Branches</string>
+    <string name="alert_131">Problem Retrieving IFSC</string>
+    <string name="alert_132">Enter Beneficiary Name</string>
+    <string name="alert_133">Problem Retrieving Configuration</string>
+    <string name="alert_134">Problem Loading Map</string>
+    <string name="alert_135">Please Enter Customer Id Of Length 10!</string>
+    <!-- <string name="alert_136">Please Enter Customer Id</string> -->
+    <string name="alert_137">User Name Is Available</string>
+    <string name="alert_138">User Name Is Not Available</string>
+    <string name="alert_139">Enter From Date Less Than Todays Date</string>
+    <string name="alert_140">Enter To Date Less Than Todays Date</string>
+    <string name="alert_141">Enter From Date Less Than To Date</string>
+    <string name="alert_142">You Can Get Statement Of Last 90 Days</string>
+    <string name="alert_143">Problem Retrieving Transfer History</string>
+    <string name="alert_144">Invalid IFSC, Please Contact To Bank!</string>
+    <string name="alert_145">Account Number and IFSC Code Are Mandatory.</string>
+    <string name="alert_146">Please Enter Either Account Number Or Virtual Account Number.</string>
+    <string name="alert_147">Please Enter Amount Less Than  2 Lac For NEFT.</string>
+    <string name="alert_148">Amount Is Below Required Limit</string>
+    <string name="alert_148_1">Please Enter Amount Greater Than 2 Lac For RTGS.</string>
+    <string name="alert_149">Amount Exceeds Required Limit</string>
+    <string name="alert_150">Your request is register successfully with Request ID: </string>
+    <string name="alert_151">Account Number/IFSC or Virtual Account Number/Mobile No Is Compulsary</string>
+    <string name="alert_152">Account Number and IFSC Is Compulsary</string>
+    <string name="alert_153">Virtual Account Number and Mobile No Is Compulsary</string>
+    <string name="alert_156">Please Enter The UID Number</string>
+    <string name="alert_157">Transaction UID Number Must Be Of 12 Digits.</string>
+    <string name="alert_158">Unable To Generate  Virtual Account Number</string>
+    <string name="alert_159">Your Virtual Account Number Will Send Through SMS To Your Register Mobile Number And Your Request Is Registered With Request Id</string>
+    <string name="alert_160">Unable To Generate  Virtual Account Number.Your Request Is Registered With Request Id Is  </string>
+    <string name="alert_161">Please Select The Account </string>
+    <string name="alert_162">Fund Transfer Failed due to server problem.Your Request Is </string>
+    <string name="alert_163">Your request is register successfully </string>
+    <string name="alert_166">IFSC Code Must Be Of 11 Character.</string>
+    <string name="login_alert_002">MPIN is Expired</string>
+    <string name="login_alert_003">Your Last Session Is Not Closed Yet</string>
+    <string name="login_alert_004">Invalid User Name or MPIN</string>
+    <string name="login_alert_005">Your Account Has Been Locked For Today</string>
+    <string name="login_alert_006">Your Account Has Been Locked. Please Contact Bank.</string>
+    <string name="login_alert_007">Registered Mobile No. Does not Match.</string>
+    <string name="login_alert_008">Something went Wrong.</string>
+    <string name="login_alert_009">You Are Trying To Login With Different Device.</string>
+    <string name="login_alert_010">Enter Valid Customer Id</string>
+    <string name="login_alert_011">Enter Valid MPIN</string>
+    <string name="alert_200">Credentials Verified Successfully</string>
+    <string name="alert_154">Please Check User Name Availability!</string>
+    <string name="alert_154_01">User Id Has Been Changed, Please Check Availability.</string>
+    <string name="alert_136">Please Enter Customer Id or User Name </string>
+    <string name="alert_155">Please Enter User Id Of Length Between 5 To 9!</string>
+    <string name="alert_164">User Name Must Be Alphanumeric</string>
+    <string name="alert_164_01">User Name Must Be Entered</string>
+    <string name="alert_165">Please Enter Remarks</string>
+    <string name="alert_169">Entered And Re-Entered Password Must Be Same</string>
+    <string name="alert_169_01">Enter Password</string>
+    <string name="alert_169_02">Enter New Password</string>
+    <string name="alert_175">Account Number Must Be Of 16 Digits.</string>
+    <!-- <string name="alert_137">Customer Id Available</string> -->
+    <!-- <string name="alert_138">Customer Id Not Available</string> -->
+    <string name="trnsfr_alert_001">Transfer Failed Please Contact To Your Bank</string>
+    <string name="lbl_same_bnk_benf">Same Bank Beneficiary</string>
+    <string name="lbl_other_bnk_benf">Other Bank Beneficiary</string>
+    <string name="lbl_remove_benf">Remove Beneficiary</string>
+    <string name="lbl_list_benf">List Beneficiary</string>
+    <!--  <string name="lbl_payment_options">Payment Options</string> -->
+    <string name="lbl_change_mpin">Change MPIN</string>
+    <string name="lbl_change_mobile_no">Change Mobile No</string>
+    <string name="lbl_bal_enq">Balance Enquiry</string>
+    <string name="lbl_mini_statement">Mini Statement</string>
+    <string name="lbl_cheque_related">Cheque Related</string>
+    <string name="lbl_email_registration">Email Registration</string>
+    <string name="lbl_fund_transfer">Fund Transfer</string>
+    <string name="lbl_settings">Settings</string>
+    <string name="lbl_exitmenu">Exit</string>
+    <string name="lbl_do_you_want_to_exit">Do you want to exit</string>
+    <string name="alert_login_succ">You are logged in successfully.</string>
+    <string name="alert_login_fail">Invalid Login Credentials.</string>
+    <string name="alert_prblm_login">Problem In Login.</string>
+    <string name="alert_regi_fail">Invalid Registration Credentials.</string>
+    <string name="alert_prblm_regi">Problem In Registration.</string>
+    <string name="lbl_exit">Really Want To Exit?(Y/N)</string>
+    <string name="lbl_dialog_title">Arista Mobile Banking</string>
+    <string name="lbl_cheque_book">Cheque Book</string>
+    <string name="lbl_stop_payment">Stop Payment</string>
+    <string name="lbl_cheque_status">Cheque Status</string>
+    <string name="lbl_back">Back</string>
+    <string name="lbl_mmid">Generate Virtual Account Number</string>
+    <string name="lbl_ur_mmid">Your Virtual Account Number</string>
+    <string name="lbl_mmid_acc">Virtual Account Number For A/C </string>
+    <string name="lbl_bnfname">Beneficiary Name</string>
+    <string name="lbl_title_mini_statement">Mini Statement</string>
+    <string name="lbl_get_statement">Get Statement</string>
+    <string name="lbl_title_mini_statement_report">Mini Statement Report</string>
+    <string name="lbl_acc_type">Acc Type</string>
+    <string name="lbl_schmaccno">SchmAccNo:</string>
+    <string name="lbl_available_balance">Available Balance : ₹</string>
+    <string name="lbl_available_balance_value">INR 12,00,500.54</string>
+    <string name="lbl_from_date">From Date</string>
+    <string name="lbl_to_date">To Date</string>
+    <string name="lbl_amount_from">From Amount</string>
+    <string name="lbl_amount_to">To Amount</string>
+    <string name="lbl_rate_of_interest">Rate Of Interest</string>
+    <string name="lbl_sanction_limit">Sanctioned Limit</string>
+    <string name="lbl_drawing_power">Drawing Power</string>
+    <string name="alert_oldversionupdate">Latest Version Of Your Application Is Available On Play Store Do You Want To Update ?</string>
+    <string name="lblalt_send_email">Select Date Range Upto 90 Days. </string>
+    <string name="lbl_send_email">Email Statement</string>
+    <!--
+       	<string-array name="nav_drawer_items">
+        <item>Home</item>
+        <item>Balance Enquiry</item>
+        <item>Mini Statement</item>
+        <item>Cheque Related</item>
+        <item>Email Registration</item>
+        <item>Transfer</item>
+        <item>Settings</item>
+        <item>Contact Us</item>     
+    </string-array>
+    
+  	 <array name="nav_drawer_icons">
+        <item>@drawable/menu_info</item>
+        <item>@drawable/menu_info</item>
+        <item>@drawable/menu_info</item>
+        <item>@drawable/menu_info</item>
+        <item>@drawable/menu_info</item>
+        <item>@drawable/menu_info</item>
+        <item>@drawable/menu_info</item>
+        <item>@drawable/menu_info</item>        
+    </array>
+
+    -->
+    <string-array name="othrSrvcMenu">
+        <!--  <item>Change MPIN</item> -->
+        <!-- <item>Interest Calculation</item> -->
+        <!--  <item>Generate Virtual Account Number</item> -->
+        <!--<item>Open FD Account</item>-->
+        <!-- <item>Enable/Disable ATM Card</item> -->
+        <!--  <item>FD Account Open</item> -->
+        <item>Stmt. On Email Registration</item>
+        <item>Email Statement</item>
+        <item>Positive Pay Cheque Intimation</item>
+        <item>Positive Pay Cheque History</item>
+    </string-array>
+
+    <string-array name="ppsmenu">
+        <item>Positive Pay Cheque Intimation</item>
+        <item>Positive Pay Cheque History</item>
+    </string-array>
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item>Home</item>
+        <item>Mini Statement</item>
+        <item>Cheque Related</item>
+        <item>Statement On Email Registration</item>
+        <item>Transfer</item>
+        <item>Change Mpin</item>
+        <item>Logout</item>
+    </string-array>
+    <!-- Nav Drawer List Item Icons -->
+    <!-- Keep them in order as the titles are in -->
+    <!--
+    <array name="nav_drawer_icons">
+        <item>@drawable/ic_home</item>
+        <item>@drawable/ic_mini_stmt</item>
+        <item>@drawable/ic_chq_related</item>
+        <item>@drawable/ic_stmt_email</item>
+        <item>@drawable/ic_transfer</item>
+        <item>@drawable/ic_changepin</item>
+        <item>@drawable/ic_logout</item>           
+    </array>
+    <array name="nav_drawer_dicons">
+        <item>@drawable/ic_home_d</item>
+        <item>@drawable/ic_mini_stmt_d</item>
+        <item>@drawable/ic_chq_related_d</item>
+        <item>@drawable/ic_stmt_email_d</item>
+        <item>@drawable/ic_transfer_d</item>
+        <item>@drawable/ic_changepin_d</item>
+        <item>@drawable/ic_logout_d</item>           
+    </array>
+    -->
+    <string name="desc_list_item_icon">Item Icon</string>
+    <string name="action_settings">Settings</string>
+    <string name="lbl_issued"> Issued</string>
+    <string name="lbl_deposited"> Deposited</string>
+    <string name="lbl_district">Select District</string>
+    <string name="lbl_city">Select City</string>
+    <string name="lbl_saving_and_current">Saving &amp; Current</string>
+    <string name="lbl_deposits">Deposits</string>
+    <string name="lbl_loan">Loan/Advances</string>
+    <string name="lbl_acc_details">Account Details</string>
+    <string name="mini_statement">Mini Statement</string>
+    <string name="current_balance">Current Balance</string>
+    <string name="account_type">Account Type -</string>
+    <string name="lbl_statement">Statement</string>
+    <string name="lbl_transfer">Transfer</string>
+    <string name="lbl_cheque">Cheque</string>
+    <string name="lbl_account">Account</string>
+    <string name="lbl_reason">Reason</string>
+    <string name="lbl_to_cheque_no">To Cheque No</string>
+    <string name="lbl_from_cheque_no">From Cheque No</string>
+    <string name="cheque_serial">Cheque Serial</string>
+    <string name="lbl_enter_bankname">Enter Bankname</string>
+    <!-- <string name="lbl_list_benfi">List Beneficiary</string> -->
+    <!-- Added by SSP on 31/03/2016 -->
+    <string name="namespace">http://frontline.list</string>
+    <string name="lbl_state">Select State</string>
+    <string name="soap_action">FrontLineWebServices</string>
+    <string name="currency">Rs.</string>
+    <string name="continue_lbl">Click To Continue!</string>
+    <!-- <string name="project_name">SBK Nagari Sah.Bank Marya.Ambajogai Mobile Application</string> -->
+    <string name="lbl_term_deposite">Term Deposit</string>
+    <string name="lbl_Maturity_Period">Period</string>
+    <string name="lbl_Regular">Regular</string>
+    <string name="lbl_fdInterest_Rates">FD Interest Rates</string>
+    <string name="lbl_LoanRates">Loan Rates</string>
+    <string name="lbl_LoanType">Loan Type</string>
+    <string name="lbl_rate">Rate</string>
+    <string name="lbl_roi">ROI</string>
+    <string name="lbl_loan_Rates">Loan Rates</string>
+    <string name="lbl_DepositRates">Deposit Rates</string>
+    <string name="lbl_Interest_Rates1">Interest Rates</string>
+    <string name="lbl_mobile_no">Registered Mobile No.</string>
+    <string name="lbl_validate">Validate &amp; Send OTP</string>
+    <string name="lbl_validateOTP">Validate</string>
+    <string name="resend_OTP">Resend</string>
+    <string name="lbl_ref_id">Reference Id</string>
+    <string name="lbl_OTP">OTP</string>
+    <string name="lbl_security_que1">Security Question 1</string>
+    <string name="lbl_security_que2">Security Question 2</string>
+    <string name="enter_pass">Enter MPIN:</string>
+    <string name="enter_password">Enter Password:</string>
+    <string name="enter_new_password">Re-Enter Password:</string>
+    <string name="lbl_old_pass">Old PASSWORD:</string>
+    <string name="lbl_new_pass">New PASSWORD:</string>
+    <string name="lbl_retype_pass">Retype PASSWORD:</string>
+    <string name="enter_prefer">Preferred User Name</string>
+    <string name="lbl_bank_name">Bank Name</string>
+    <string name="lbl_transfer_history">Transfer History</string>
+    <string name="lbl_transfer_type">Transfer Type</string>
+    <string name="enter_avail">Check Availability</string>
+    <string name="re_enter_pass">Re-Enter MPIN</string>
+    <string name="lbl_reset">Reset</string>
+    <string name="lbl_proceed">Proceed</string>
+    <string name="lbl_confirm">Confirmation</string>
+    <string name="lbl_from_msg">From :</string>
+    <string name="lbl_to_msg">To :</string>
+    <string name="lbl_to_msg1">UID :</string>
+    <string name="lbl_confirm_msg">Please Confirm Below Details</string>
+    <string name="confirm">Confirm</string>
+    <string name="back">Back</string>
+    <string name="lbl_charges">Charges (If Any) :</string>
+    <string name="forgot_mpin">Forgot MPIN</string>
+    <string name="register">Register</string>
+    <string name="lbl_other_srvce">Other Services</string>
+    <string name="lbl_bank_nm">Select Bank Name</string>
+    <string name="lbl_branch_nm">Select Branch</string>
+    <string name="lbl_get_ifsc">Get IFSC</string>
+    <string name="lbl_underliened">Underliened</string>
+    <string name="lbl_add_othr_bnk_benf">Add Other Bank Beneficiary</string>
+    <string name="lbl_otp_validtn">OTP validation</string>
+    <string name="lbl_mpin1">Mpin</string>
+    <string name="enter_customer_id">Enter Customer Id</string>
+    <string name="lbl_security_que">Security Question:</string>
+    <string name="no_of_tran">No. Of Transaction</string>
+    <string name="select_acc">Select Account No.</string>
+    <string name="lbl_reg_mobno">Re-register Mobile No.</string>
+    <string name="lbl_set_mpin">Set MPIN</string>
+    <string name="lbl_opng_dt">Opening Date</string>
+    <string name="lbl_not_registered">Not Registered</string>
+    <string name="lbl_registered">Registered</string>
+    <string name="lbl_not_registeredstmt">Account Not Registered For Email Statement.</string>
+    <string name="lbl_registeredstmt">Account Registered For Email Statement.</string>
+    <string name="reset_mpin">Reset MPIN</string>
+    <string name="lbl_old_tran_mpin">Old Transaction MPIN:</string>
+    <string name="lbl_new_tran_mpin">New Transaction MPIN:</string>
+    <string name="lbl_retype_tran_mpin">Retype Transaction MPIN:</string>
+    <string name="lbl_entr_tran_mpin">Enter Transaction MPIN</string>
+    <string name="lbl_tranid">Transaction Id:</string>
+    <string name="lbl_drawable_amt">Withdrawable Amount</string>
+    <string name="lbl_pnd_instl">Pending Installments</string>
+    <string name="lbl_fix_intrvl_int">Fix Interval Interest</string>
+    <string name="lbl_intrvl_int_frq">Interest Frequency</string>
+    <string name="lbl_select_phone">Select Phone Number</string>
+    <string name="lbl_dial">Dial</string>
+    <string name="map_key">AIzaSyB3z-E-zchBsS1Q9Vq2RKaP2h1CnUZ5scM</string>
+    <string name="lbl_status">Posting Status</string>
+    <string name="dt_format">dd/mm/yyyy</string>
+    <string name="lbl_show_history">Show History</string>
+    <string name="lbltxt_MMID">Virtual Account Number:</string>
+    <string name="lbl_uid">UID Number </string>
+    <string name="lbl_tran_uid">Fund Transfer P2U</string>
+    <!--
+    Content Description 
+    <string name="app_name">Slider Menu</string>
+   
+    <string name="hello_world">Hello world!</string>
+    <string name="drawer_open">Slider Menu Opened</string>
+    <string name="drawer_close">Slider Menu Closed</string>
+
+    -->
+    <string name="lbl_qr_send">Send Money Via QR Code</string>
+    <string name="lbl_qr_receive">Receive Money Via QR Code</string>
+    <string name="lbl_qr_code">QR Code</string>
+    <string name="zxing_app_name">QR Code Scanner</string>
+    <string name="zxing_button_ok">OK</string>
+    <string name="zxing_msg_camera_framework_bug">Sorry, the Android camera encountered a problem. You may need to restart the device.</string>
+    <string name="zxing_msg_default_status">Place a QR Code inside the viewfinder rectangle to scan it.</string>
+    <string name="lbl_logout_y">Yes</string>
+    <string name="lbl_logout_n">No</string>
+    <string name="lbl_bank_email">Bank Email Id</string>
+    <string name="lbl_bank_phone_number">Bank Phone Number</string>
+    <string name="lbl_bank_web_url">Bank Web Url</string>
+    <string name="lbl_scan_opt">Select Scan Option</string>
+    <!-- <string name="alert_133">Problem Retrieving Configuration</string> -->
+    <!-- <string name="alert_134">Problem Loading Map</string> -->
+    <!--
+    Content Description 
+    <string name="app_name">Slider Menu</string>
+   
+    <string name="hello_world">Hello world!</string>
+    <string name="drawer_open">Slider Menu Opened</string>
+    <string name="drawer_close">Slider Menu Closed</string>
+
+    -->
+    <item name="zxing_decode" type="id" />
+    <item name="zxing_decode_failed" type="id" />
+    <item name="zxing_decode_succeeded" type="id" />
+    <item name="zxing_possible_result_points" type="id" />
+    <item name="zxing_back_button" type="id" />
+    <item name="zxing_prewiew_size_ready" type="id" />
+    <item name="zxing_camera_error" type="id" />
+    <declare-styleable name="zxing_view">
+        <attr name="zxing_scanner_layout" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="zxing_camera_preview">
+        <attr name="zxing_framing_rect_width" format="dimension" />
+        <attr name="zxing_framing_rect_height" format="dimension" />
+        <attr name="zxing_use_texture_view" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="zxing_finder">
+        <attr name="zxing_possible_result_points" format="color" />
+        <attr name="zxing_result_view" format="color" />
+        <attr name="zxing_viewfinder_laser" format="color" />
+        <attr name="zxing_viewfinder_mask" format="color" />
+    </declare-styleable>
+    <!-- for fd accounts -->
+    <string name="alert_fd0">Open FD Account</string>
+    <string name="alert_fd1">Interest Rates Not Available </string>
+    <string name="hint_accno">Enter 15 Digit Account Number </string>
+    <string-array name="Errorinwebservice">
+        <item>Success</item>
+        <!-- 0 -->
+        <item>Partial Success</item>
+        <item>Critical Error Occured</item>
+        <item>Incorrect Customer Id</item>
+        <item>Incorrect Secret Code</item>
+        <item>Incorrect Mobile No</item>
+        <item>Incorrect IMEI No</item>
+        <item>Incorrect OTP</item>
+        <item>Incorrect MPIN</item>
+        <item>No Accounts Available</item>
+        <item>Incorrect Acc No</item>
+        <item>No Reg.ed Email Address</item>
+        <item>Incorrect Period</item>
+        <item>NO Holidays</item>
+        <item>NullPointerException</item>
+        <item>SQLException</item>
+        <item>WSEXCEPTION</item>
+        <item>JSONEXCEPTION</item>
+        <item>Error</item>
+    </string-array>
+    <string name="alert_acno">Please Enter Account Number</string>
+    <string name="hint_regmobno">Registered Mobile Number</string>
+    <string name="text_submit">Submit</string>
+    <string name="alert_enter_mobile_number">Enter Mobile Number</string>
+    <string name="alert_invalid_mobile_number">Invalid Mobile Number</string>
+    <string name="alert_internet_connection_not_available">Internet Connection Is Not Available.</string>
+    <string name="alert_hint_accno">Please Enter 15 Digit Account Number </string>
+    <string name="alert_unable_to_getcustid">Account Number Or Mobile Number Is Incorrect </string>
+    <string name="alert_network_problem_pease_try_again">Network Problem. Please Try Again.</string>
+    <string name="ws_method_send_otp">sendOTP</string>
+    <string name="alert_send_custID">You Will Get Your Customer Id Through SMS. Please Check SMS After Some Time. </string>
+    <string name="alert_invalid_otp">Invalid OTP</string>
+    <string name="lbl_custid"><u>Know Your Customer ID ?</u></string>
+    <string name="lbl_welcome">Welome To sbk Nagari Sah.Bank Marya.Ambajogai</string>
+    <string name="button_delete">Cancel Virtual Account Number</string>
+    <string name="alert_167">Unable To Cancel  Virtual Account Number.</string>
+    <string name="alert_167_2">Invalid Account</string>
+    <string name="txt_terms"><u>I agree terms and conditions</u></string>
+    <string name="lbl_otp">Send OTP</string>
+    <string name="lbl_terms_cond">Terms and Condition</string>
+    <string name="alert_15009">Please Check Terms and Condition </string>
+    <string name="alert_168">Your Virtual Account Number Cancel Request Registered Successfully And Your Request Id Is</string>
+    <string name="alert_regi_fail_sub">You are not Subscribed for Mobile Banking</string>
+    <string name="lbl_nameApptype">F</string>
+    <string name="alert_regi_fail_type">This Facility Is Not Available For Corporate Customer</string>
+    <string name="lbl_radiompn">MPIN</string>
+    <string name="lbl_radiopass">PASSWORD</string>
+    <string name="lbl_radiotranmpn">TRANSACTION MPIN</string>
+    <string name="alert_tran">TRANSACTION MPIN Changed Successfully.</string>
+    <string name="alert_171"> Enter Correct Old Transaction Mpin</string>
+    <string name="alert_171_3"> Enter Correct Old Password</string>
+    <string name="lbl_trantype">Transfer Type:</string>
+    <string name="lbl_mmid_msg">Transfer Could Be Failed From This Account Because Virtual Account Number Is Not Generated. Do You Want To Generate Virtual Account Number ?</string>
+    <string name="alert_yes">Yes</string>
+    <string name="alert_no">No</string>
+    <string name="alert_oldversion">Your Application Version Is Outdated Please Update</string>
+    <string name="txt_timeout">Session Timeout</string>
+    <string name="alert_179">Problem At Server Please Contact To Bank.</string>
+    <string name="alert_180">Debit Account Is Invalid</string>
+    <string name="alert_181">Debit Account Is Closable</string>
+    <string name="alert_182">Debit Account Is Closed</string>
+    <string name="alert_183">Operation Is Stopped For This Debit Account</string>
+    <string name="alert_184">Transaction Amount Is Not Matching With Installment Amount</string>
+    <string name="alert_185">IFSC Code Not Fount In CBS. Please Contact To Bank</string>
+    <string name="alert_186">Minimum Amount Of Transfer Required For RTGS Is Rs. 2 Lakh </string>
+    <string name="alert_176">Insufficient Balance</string>
+    <string name="alert_174">Please Select Debit Account</string>
+    <string name="alert_187">Credit Account No. Must Be Numeric For P2A Transaction</string>
+    <string name="alert_172">Your Transaction Will Not Be Processed Due To End Of Working Day</string>
+    <string name="alert_190">Please Select From Date</string>
+    <string name="tabtitle_other_bank_fund_trans_rtgs">NEFT/RTGS Transfer</string>
+    <string name="alert_193">Your Transaction Amount Is Greater Than Single Transaction Limit</string>
+    <string name="alert_194">Your Daily Transaction Amount Limit Exceeds </string>
+    <string name="alert_mpinexp">Your Mpin Is Expired Within Next</string>
+    <string name="lbl_avail_balance">Account Balance</string>
+    <string name="alert_underconstruction">Under Construction</string>
+    <string name="alert_195">Please Enter Valid Amount</string>
+    <string name="lbl_card_no">Card No:</string>
+    <string name="lbl_current_status">Current Status</string>
+    <string name="lbl_interest_details">FD Interest Rate Details</string>
+    <string name="lbl_atm_enable_desable">Enable/Disable ATM Card</string>
+    <string name="lbl_doproceed">Really Want To Proceed?(Y/N)</string>
+    <string name="lbl_vadileatm">Incorrect ATM Card No</string>
+    <string name="lbl_enteratm">Enter ATM Card No</string>
+    <string name="alrt_selec_accno">Please Select Account No</string>
+    <string name="alert_restart">Please Restart The Application</string>
+    <string name="alrt_cardEnabledesableNoAtmIssue">No ATM Card Issue For This Account</string>
+    <string name="alrt_cardEnabledesableInvalidcardNo">Invalid Card Number.</string>
+    <string name="alrt_cardEnabledesableATMBlocked">Your ATM Card Is Blocked</string>
+    <string name="alrt_cardEnabledesableATMLoss">Your ATM Card Is Loss</string>
+    <string name="alrt_cardEnabledesableATMStolen">Your ATM Card Is Stolen</string>
+    <string name="alert_validcustid">Enter Valid Customer Id Or User Id</string>
+    <string name="alrt_mpin">MPIN and Transaction PIN Should Be Different </string>
+    <string name="alrt_mpin2"> Old MPIN and New MPIN Should Be Different </string>
+    <string name="alrt_tranpin">TranMPIN and Login PIN Should Be Different</string>
+    <string name="alert_for_fail">Invalid Customer Id.</string>
+    <string name="alert_usrav">User Name Available</string>
+    <string name="alert_usrunav">User Name Not Available</string>
+    <string name="alert_imps">Problem At Server Please Try After Sometime.</string>
+    <string name="login_alert_diffimei">You Are Trying To Login With Different Device.Please Contact Branch For More Information</string>
+    <string name="lbl_genotp_btn">Generate OTP</string>
+    <string name="alert_benfivalid">Beneficiary Details Invalid.</string>
+    <string name="alert_ivalidtransaction">Invalid Transaction.</string>
+    <string name="lbl_atm">ATM Related</string>
+    <string name="lbl_creditacc">Credit Account</string>
+    <string name="lbl_own_account_trans">Own Account Transfer</string>
+    <string name="alert_188">Credit Account Not Found</string>
+    <string name="lbl_rates">Click to See Interest Rates </string>
+    <!--  <string name="lbl_interest_details">FD Interest Rate Details</string> -->
+    <string name="lbl_payment_options">Payment Options</string>
+    <string name="lbl_title_fd_account">Open FD Account</string>
+    <string name="lbl_PincipalAmt">Principal Amount</string>
+    <string name="lbl_Int_Amt">Interest Amount</string>
+    <string name="lbl_duration">Duration : </string>
+    <string name="lbl_type">Interest Type : </string>
+    <string name="lbl_tax">Tax Saver ? : </string>
+    <string name="lbl_tax_saver">Tax Saver: </string>
+    <string name="lbl_maturity_action">On Maturity Action : </string>
+    <string name="alert_0981">Please Select Debit Account</string>
+    <string name="lbl_intrates">Interest Rates : </string>
+    <string name="lbl_maturity_dates">Maturity Dates : </string>
+    <string name="lbl_maturity_amt">Maturity Amount : </string>
+    <string name="lbl_recharge">Recharge And Bill Pay</string>
+    <string name="lbl_demand_deposit">My Accounts</string>
+    <string name="lbl_app_info">App Info</string>
+    <string name="lbl_Branch_Name">Branch Name</string>
+    <string name="lbl_Branch_Address">Address</string>
+    <string name="lbl_Branch_District">District</string>
+    <string name="lbl_Branch_State">State</string>
+    <string name="lbl_Branch_coNumber">Contact Number</string>
+    <string name="lbl_Branch_Manager">Branch Manager</string>
+    <string name="lbl_Branch_IFSC">IFSC</string>
+    <string name="lbl_branch_ne">Branches</string>
+    <string name="lbl_branch_det">Branch Detail</string>
+    <string name="alrt_bran_fail">Problem To Fetching Branches. Please Try Again.</string>
+    <string name="alert_197">Please Enter Valid E-Mail ID </string>
+    <string name="alert_179_1">Problem At Server Please Contact To Bank.</string>
+    <string name="alert_179_2">Problem At Server Please Try After Sometime.</string>
+    <string name="lbl_send_statement">Send Statement</string>
+    <string name="lbl_chq_intimation">Cheque Intimation</string>
+    <string name="lbl_instruNo">Instrument Number : </string>
+    <string name="lbl_instruDate">Instrument Date : </string>
+    <string name="lbl_trancode">Transaction Code : </string>
+    <string name="lbl_payeename">Payee Name : </string>
+    <string name="lbl_nooftran">Number Of Requests </string>
+
+    <string name="alert_202">Please Select Instrument Date</string>
+    <string name="alert_203">Please Enter Valid Transaction Code</string>
+    <string name="alert_204">Enter Valid Payee Name</string>
+    <string name="alert_205">Enter Valid Amount</string>
+    <string name="alert_206">Enter Amount Greater Than Zero</string>
+    <string name="alert_207">Cheque Intimation Done Successfully</string>
+    <string name="alert_208">Enter Valid Number Of Requests</string>
+    <string name="alert_209">Enter Number Of Requests Greater Than Zero</string>
+    <string name="alert_210">Enter Number Of Requests Less Than Six</string>
+    <string name="showppshistory">Cheque History</string>
+    <string name="lbl_chq_history">Request Cheque History</string>
+    <string name="alert_nodata">No Cheque Found.</string>
+    <string name="alert_ppscheque">Please Select Instrument Number</string>
+
+<!--    Added by Shubham-->
+    <string name="pps_menu_name">Positive Pay</string>
+    <string name="PPS_Actvity_Name">Positive Pay System</string>
+    <string name="Stop_Tran">Transfer Services Are Unavailable</string>
+    <string name="alert_limit_excd">Your Transaction Amount Limit Exceeds </string>
+    <string name="stop_transation">Transfer Services Are Unavailable</string>
+    <string name="alert_192">Fund Transfer Request Registered Successful</string>
+    <string name="alert_InsufficentBalance">Insufficient Balance</string>
+    <string name="alert_147_1">Please Enter Amount greater than 2 Lac For RTGS.</string>
+    <string name="timeOutInSecs">30000</string>
+    <string name="managebeneficiary">Manage Beneficiary</string>
+    <string name="alert_bef_rmv_succ">Beneficiary Removed Successfully.</string>
+    <string name="OTP_Generate_FUNCTION">callWebservice</string>
+    <string name="OTP_Validate_FUNCTION">callWebservice</string>
+    <string name="ans_here">Answer Here</string>
+</resources>

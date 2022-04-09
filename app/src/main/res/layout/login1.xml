@@ -1,0 +1,385 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical"
+    android:weightSum="5.5" >
+
+    
+    <ImageView
+        android:id="@+id/login_imageViewLogo"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_above="@+id/form_linearlayout"
+        android:layout_gravity="top"
+        android:layout_weight="2"
+        android:gravity="top"
+        android:src="@mipmap/new_logo" />
+   <LinearLayout
+        android:id="@+id/form_linearlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_weight="3.5"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="4" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:layout_marginTop="20dip"
+            android:weightSum="11" 
+	    >
+
+            <ImageView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:src="@mipmap/login_username"
+	        android:visibility="invisible"/>
+
+            <mbLib.CusFntTextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                 android:layout_weight="4"
+                android:text="@string/lbl_mpin"
+                android:textColor="#372c24" 
+                android:textSize="15dip"
+                android:layout_gravity="center">
+            </mbLib.CusFntTextView>
+            <mbLib.CustomEditText
+                android:id="@+id/etCustId"
+                style="@style/Login_EditTextStyle"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dip"
+                android:layout_weight="3"
+                android:hint="@string/lbl_customer_id"
+                android:inputType="textNoSuggestions"
+                android:nextFocusDown="@+id/Password"
+                android:nextFocusUp="@+id/LoginButton"
+                android:text="" 
+		android:visibility="invisible"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:weightSum="6" >
+
+         <!--   <ImageView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/login_password" />
+
+            <mbLib.CustomEditText
+                android:id="@+id/etMpin"
+                style="@style/Login_EditTextStyle"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:layout_weight="10"
+                android:hint="@string/lbl_mpin1"
+                android:inputType="numberPassword"
+                android:nextFocusDown="@id/Password"
+                android:nextFocusUp="@id/LoginButton"
+                android:text="" />-->
+            <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="6"
+	            android:orientation="horizontal" >
+         <!--  <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+            <EditText
+                    android:id="@+id/txt_mpin1"
+                    style="@style/MPIN_EditTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:digits="0123456789"
+                    android:gravity="center"
+                    android:inputType="numberPassword"
+                    android:maxLength="1"
+                    android:maxLines="1"
+                    android:textAlignment="center" >
+      <requestFocus />
+ </EditText>
+ </LinearLayout>
+<LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/txt_mpin2"
+                    style="@style/MPIN_EditTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dip"
+                    android:gravity="center"
+                    android:inputType="numberPassword"
+                    android:maxLength="1"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/txt_mpin3"
+                    style="@style/MPIN_EditTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dip"
+                    android:gravity="center"
+                    android:inputType="numberPassword"
+                    android:maxLength="1"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/txt_mpin4"
+                    style="@style/MPIN_EditTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dip"
+                    android:gravity="center"
+                    android:inputType="numberPassword"
+                    android:maxLength="1"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/txt_mpin5"
+                    style="@style/MPIN_EditTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dip"
+                    android:gravity="center"
+                    android:inputType="numberPassword"
+                    android:maxLength="1"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/txt_mpin6"
+                    style="@style/MPIN_EditTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dip"
+                    android:gravity="center"
+                    android:inputType="numberPassword"
+                    android:maxLength="1"
+                    android:textAlignment="center" />
+            </LinearLayout> -->
+<mbLib.CustomEditText
+                android:id="@+id/etMpin"
+                style="@style/Login_EditTextStyle"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:layout_weight="10"
+                android:hint="@string/lbl_mpin1"
+                android:inputType="numberPassword"
+                android:nextFocusDown="@id/Password"
+                android:nextFocusUp="@id/LoginButton"
+                android:text="" />
+        </LinearLayout>
+        </LinearLayout>
+
+        <!--
+             <mbLib.CustomButton
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dip"
+            android:background="@drawable/"
+            android:text="@string/lbl_login"
+            android:textSize="15dip" />
+
+        -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" />
+  
+  
+            <Button
+                android:id="@+id/button2"
+                style="@drawable/button_style"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dip"
+                android:layout_weight="2.6"
+                android:gravity="center"
+                android:text="@string/lbl_login"
+                  android:background="@drawable/roundedbutton"
+                android:textSize="20dip" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/pro_bar"
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:indeterminate="true"
+            android:textColor="@color/formnm_txtcolor"
+            android:visibility="invisible" />
+
+        <!--
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_weight="0.5"
+            android:gravity="center_vertical"
+            android:weightSum="2" >
+
+            <TextView
+                android:id="@+id/txt_forgot_pass"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingRight="5dip"
+                android:text="@string/forgot_mpin"
+                android:textColor="@color/gray" />
+
+            <View
+                android:layout_width="2dip"
+                android:layout_height="wrap_content"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/txt_register"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:paddingLeft="5dip"
+                android:text="@string/register"
+                android:textColor="@color/gray" />
+        </LinearLayout>
+        -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+	    android:weightSum="4.5"
+	    android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/contactus"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+		android:src="@mipmap/contact_us"
+                
+                android:layout_weight="1"
+		android:layout_gravity="center_horizontal"
+                android:background="@android:color/transparent" />
+
+            <TextView
+                android:id="@+id/txt_forgot_pass"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="2.5"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="5dip"
+                
+                android:text="@string/forgot_mpin"
+                android:paddingRight="5dip"
+                
+                android:textColor="@color/gray" />
+
+         <!--   <View
+                android:layout_width="2dip"
+                android:layout_height="wrap_content"
+                android:background="@android:color/darker_gray" />-->
+
+          <!--  <mbLib.CusFntTextView
+                android:id="@+id/txt_register"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dip"
+                android:layout_weight="1.25"
+                android:gravity="left"
+                android:paddingLeft="5dip"
+                android:text="@string/register"
+                android:textColor="@color/gray" />-->
+
+            <ImageButton
+                android:id="@+id/locateus"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+		android:src="@mipmap/locate_us"
+                
+                android:layout_weight="1"
+                android:layout_gravity="right"
+                android:background="@android:color/transparent"/>
+                
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
+

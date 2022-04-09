@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@mipmap/act_bg"
+    android:orientation="vertical"
+    android:weightSum="1" >
+
+    <!-- <include layout="@layout/header" /> -->
+
+    <mbLib.CusFntTextView
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:text="@string/lbl_confirm_msg"
+        android:textSize="14dip"
+        android:layout_marginTop="20dip" 
+        android:gravity="center_horizontal"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <mbLib.CusFntTextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/lbl_tranid" 
+            android:paddingRight="3dip"
+            android:gravity="right"/>
+
+        <mbLib.CusFntTextView
+            android:id="@+id/txt_tranid"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" 
+            android:inputType="numberDecimal"
+            android:paddingLeft="3dip"
+            android:gravity="left"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <mbLib.CusFntTextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/lbl_amount" 
+            android:paddingRight="3dip"
+            android:gravity="right"/>
+
+        <mbLib.CusFntTextView
+            android:id="@+id/txt_amount"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" 
+            android:inputType="numberDecimal"
+            android:paddingLeft="3dip"
+            android:gravity="left"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <mbLib.CusFntTextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/lbl_from_msg"
+            android:paddingRight="3dip" 
+            android:gravity="right"/>
+
+        <mbLib.CusFntTextView
+            android:id="@+id/txt_from"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="3dip" 
+            android:gravity="left"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <mbLib.CusFntTextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/lbl_to_msg"
+            android:paddingRight="3dip" 
+            android:gravity="right"/>
+
+        <mbLib.CusFntTextView
+            android:id="@+id/txt_to"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="3dip" 
+            android:gravity="left"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <mbLib.CusFntTextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/lbl_remark" 
+            android:paddingRight="3dip"
+            android:gravity="right"/>
+
+        <mbLib.CusFntTextView
+            android:id="@+id/txt_remark"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" 
+            android:paddingLeft="3dip"
+            android:text=""
+            android:gravity="left"/>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <mbLib.CusFntTextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/lbl_charges" 
+            android:paddingRight="3dip"
+            android:gravity="right"/>
+
+        <mbLib.CusFntTextView
+            android:id="@+id/txt_charges"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" 
+            android:paddingLeft="3dip"
+            android:text=""
+            android:gravity="left"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <!-- <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2" /> -->
+
+        <mbLib.CustomButton
+            android:id="@+id/btn_confirm"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            style="@drawable/button_style"
+            android:background="@drawable/roundedbutton"
+            android:layout_weight="1"
+            android:text="@string/confirm" />
+        
+        <mbLib.CustomButton
+            android:id="@+id/btn_confirm_back"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            style="@drawable/button_style"
+            android:background="@drawable/roundedbutton"
+            android:layout_weight="1"
+            android:text="@string/back" />
+
+        <!-- <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2" /> -->
+    </LinearLayout>
+
+</LinearLayout>

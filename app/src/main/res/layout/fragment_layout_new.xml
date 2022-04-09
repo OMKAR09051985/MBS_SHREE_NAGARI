@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shree_nagari.mbank.DashboardLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:weightSum="4" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_marginBottom="2dip"
+        android:layout_marginTop="5dip"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="2dip"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="1" >
+
+            <mbLib.CusFntTextView
+                style="@style/DashboardTextViewStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="0.3"
+                android:text="@string/lbl_saving_and_current" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="0.7"
+                android:background="@color/white"
+                android:padding="10dip"
+                android:src="@mipmap/saving" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="2dip"
+            android:layout_marginRight="2dip"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="1" >
+
+            <mbLib.CusFntTextView
+                style="@style/DashboardTextViewStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="0.3"
+                android:text="@string/lbl_deposits" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="0.7"
+                android:background="@color/white"
+                android:src="@mipmap/term_deposit" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_marginBottom="2dip"
+        android:layout_marginTop="2dip"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="2dip"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="1" >
+
+            <mbLib.CusFntTextView
+                style="@style/DashboardTextViewStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="0.3"
+                android:text="@string/lbl_loan" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="0.7"
+                android:background="@color/white"
+                android:padding="10dip"
+                android:src="@mipmap/loan" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="2dip"
+            android:layout_marginRight="2dip"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="1" >
+
+            <mbLib.CusFntTextView
+                style="@style/DashboardTextViewStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="0.3"
+                android:text="@string/lbl_mini_statement" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="0.7"
+                android:background="@color/white"
+                android:padding="10dip"
+                android:src="@mipmap/mini_statement" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_marginBottom="10dip"
+        android:layout_marginTop="2dip"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="2dip"
+            android:layout_weight="1"
+            android:background="@drawable/border_ui"
+            android:orientation="vertical"
+            android:weightSum="1" >
+
+            <mbLib.CusFntTextView
+                style="@style/DashboardTextViewStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="0.3"
+                android:text="@string/lbl_fund_transfer" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="0.7"
+                android:background="@color/white"
+                android:padding="10dip"
+                android:src="@mipmap/fund_trnsfer" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="2dip"
+            android:layout_marginRight="2dip"
+            android:layout_weight="1"
+            android:background="@drawable/border_ui"
+            android:orientation="vertical"
+            android:weightSum="1" >
+
+            <mbLib.CusFntTextView
+                style="@style/DashboardTextViewStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="0.3"
+                android:text="@string/lbl_manage_beneficiary" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="0.7"
+                android:background="@drawable/dashboard_new1"
+                android:padding="10dip"
+                android:src="@mipmap/benefeciary" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_marginBottom="10dip"
+        android:layout_marginTop="2dip"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="2dip"
+            android:layout_weight="1"
+            android:background="@drawable/border_ui"
+            android:orientation="vertical"
+            android:weightSum="1" >
+
+            <mbLib.CusFntTextView
+                style="@style/DashboardTextViewStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="0.3"
+                android:text="@string/lbl_cheque_related" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="0.7"
+                android:background="@color/white"
+                android:padding="10dip"
+                android:src="@mipmap/checkbkstatus" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="2dip"
+            android:layout_marginRight="2dip"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="1" >
+
+            <mbLib.CusFntTextView
+                style="@style/DashboardTextViewStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="0.3"
+                android:text="@string/lbl_other_srvce" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="0.7"
+                android:background="@drawable/border_ui"
+                android:padding="10dip"
+                android:src="@mipmap/other_services" />
+        </LinearLayout>
+    </LinearLayout>
+
+</shree_nagari.mbank.DashboardLayout>

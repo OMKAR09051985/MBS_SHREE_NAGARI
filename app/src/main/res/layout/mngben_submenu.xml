@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@mipmap/act_bg"
+    android:orientation="vertical"
+    android:weightSum="6" >
+
+    <include
+        android:id="@+id/inc_id"
+        layout="@layout/header" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.8"
+        android:orientation="horizontal"
+        android:weightSum="4" >
+
+        <ImageView
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/border_logo"
+            android:gravity="center_vertical"
+            android:src="@mipmap/arrow" />
+
+        <mbLib.CusFntTextView
+            android:id="@+id/list_benf"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="3.5"
+            android:gravity="center_vertical"
+            android:text="@string/lbl_list_benf"
+            android:textColor="@color/sbk_text_clr"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dip"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1.4"
+        android:orientation="vertical"
+        android:paddingTop="2dip"
+        android:weightSum="3" >
+
+        <mbLib.CusFntTextView
+            android:id="@+id/same_bnk_benf"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="0.4"
+            android:paddingLeft="5dip"
+            android:text="@string/lbl_same_bnk_benf"
+            android:textColor="@color/sbk_text_clr"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ListView
+            android:id="@id/listView1"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="2.6"
+            android:cacheColorHint="#ffffffff"
+            android:dividerHeight="3dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dip"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1.4"
+        android:orientation="vertical"
+        android:weightSum="3" >
+
+        <mbLib.CusFntTextView
+            android:id="@+id/other_bnk_benf"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="0.4"
+            android:paddingLeft="5dip"
+            android:text="@string/lbl_other_bnk_benf"
+            android:textColor="@color/sbk_text_clr"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ListView
+            android:id="@+id/listView2"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="2.6"
+            android:cacheColorHint="#ffffffff"
+            android:dividerHeight="3dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dip"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.8"
+        android:orientation="horizontal"
+        android:weightSum="4" >
+
+        <ImageView
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/border_logo"
+            android:gravity="center_vertical"
+            android:src="@mipmap/arrow" />
+
+        <mbLib.CusFntTextView
+            android:id="@+id/remove_benf"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="3.5"
+            android:gravity="center_vertical"
+            android:text="@string/lbl_remove_benf"
+            android:textColor="@color/sbk_text_clr"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

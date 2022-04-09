@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="shree_nagari.mbank"
+    android:versionCode="2"
+    android:installLocation="auto"
+    android:versionName="2.0" ><!-- android:installLocation="preferExternal"
+    android:isFeatureSplit="true" -->
+
+    <!--<uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="28" />-->
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" ></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" ></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" ></uses-permission>
+    <uses-permission android:name="android.permission.WAKE_LOCK" ></uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" ></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION" ></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" ></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" ></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" ></uses-permission>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_GPS"></uses-permission>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PRIVILEDGE_PHONE_STATE"></uses-permission>
+    <uses-feature  android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.flash" android:required="false" />
+    <uses-feature android:name="android.hardware.screen.landscape" android:required="false" />
+    <uses-feature android:name="android.hardware.wifi" android:required="false" />
+
+    <application
+        android:allowBackup="false"
+        android:debuggable="false"
+        android:requestLegacyExternalStorage="true"
+        android:usesCleartextTraffic="true"
+        android:icon="@mipmap/new_logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        tools:ignore="HardcodedDebugMode">
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="shree_nagari.mbank"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+        <activity
+            android:name="shree_nagari.mbank.LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoTitle" >
+        </activity>
+        <activity
+            android:name="shree_nagari.mbank.SplashPage"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoTitle" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="shree_nagari.mbank.NewDashboard"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoTitle">
+
+
+        </activity>
+        <activity
+            android:name="shree_nagari.mbank.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoTitle"/>
+        <activity
+            android:name="shree_nagari.mbank.LoginActivity1"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoTitle"/>
+        <activity
+            android:name="shree_nagari.mbank.GetTermsCondition"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoTitle"/>
+        <activity
+            android:name="shree_nagari.mbank.ValidateSecQueActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoTitle">
+
+        </activity>
+        <!--<activity
+            android:name="shree_nagari.mbank.MenuActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name" />-->
+        <activity
+            android:name="shree_nagari.mbank.DashboardDesignActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoTitle"/>
+        <activity
+            android:name="shree_nagari.mbank.Register"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle"/>
+        <activity
+            android:name="shree_nagari.mbank.SecurityQuestion"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle"> </activity>
+        <activity
+            android:name="shree_nagari.mbank.OTPActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle"/>
+        <activity
+            android:name="shree_nagari.mbank.SetMPIN"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle"/>
+        <activity
+            android:name="shree_nagari.mbank.ForgotPassword"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle"/>
+        <activity
+            android:name="shree_nagari.mbank.ChangeMobileNo"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle"/>
+        <activity
+            android:name="shree_nagari.mbank.GetCustID"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle" >
+        </activity>
+        <activity
+            android:name="shree_nagari.mbank.LocateUs"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle"
+            tools:ignore="Instantiatable" />
+
+        <activity
+            android:name="shree_nagari.mbank.ContactUs"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle"/>
+
+        <activity
+            android:name="shree_nagari.mbank.SessionOut"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoTitle"/>
+
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:clearTaskOnLaunch="true"
+            android:screenOrientation="sensorLandscape"
+            android:stateNotNeeded="true"
+            android:theme="@style/zxing_CaptureTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <activity
+            android:name="shree_nagari.mbank.ShowMMID"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle"
+            tools:ignore="Instantiatable" />
+
+        <activity
+            android:name="shree_nagari.mbank.EmailSend"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle"
+            android:windowSoftInputMode="stateUnchanged"
+            tools:ignore="Instantiatable" />
+
+        <activity
+            android:name="shree_nagari.mbank.SBKLoginActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle"/>
+        <activity
+            android:name="shree_nagari.mbank.BranchDetails"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle"/>
+
+        <activity
+            android:name="shree_nagari.mbank.BranchDetailShow"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle"/>
+
+        <activity
+            android:name="shree_nagari.mbank.LoanRateActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle"
+            tools:ignore="Instantiatable" />
+
+        <activity
+            android:name="shree_nagari.mbank.DepositRateActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle"
+            tools:ignore="Instantiatable" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="shree_nagari.mbank.MainActivity"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/map_key" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+    </application>
+
+</manifest>

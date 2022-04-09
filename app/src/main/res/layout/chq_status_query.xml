@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@mipmap/act_bg"
+    android:fillViewport="true" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <include
+            android:id="@+id/inc_id"
+            layout="@layout/header" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inc_id"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:orientation="vertical" >
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="15dip"
+                android:gravity="center_horizontal"
+                android:text="@string/lbl_title_cheque_status_query"
+                android:textColor="@color/sbk_text_clr"
+                android:textStyle="bold"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal" >
+
+                <RadioGroup
+                    android:id="@+id/radiogroup1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <mbLib.CustomRadioButton
+                        android:id="@+id/radio_debit"
+                        style="@style/radionbutton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="20dip"
+                        android:text="@string/lbl_issued"
+                        android:textColor="#372c24" >
+                    </mbLib.CustomRadioButton>
+
+                    <mbLib.CustomRadioButton
+                        android:id="@+id/radio_credit"
+                        style="@style/radionbutton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_deposited"
+                        android:textColor="#372c24" >
+                    </mbLib.CustomRadioButton>
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:orientation="vertical" >
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/txt_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dip"
+                    android:textColor="@color/sbk_text_clr"
+                    android:textStyle="bold"
+                    android:text="@string/lbl_acc_no" >
+                </mbLib.CusFntTextView>
+  
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="10dip"
+                    android:background="@drawable/rounded_corner_spinner"
+                    android:orientation="horizontal"
+                    android:weightSum="4" >
+
+                    <Spinner
+                        android:id="@+id/spi_accounts"
+                        style="@style/spinnerStyle"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dropdown"
+                        android:layout_gravity="center|center_horizontal"
+                        android:layout_weight="3.2"
+                        android:background="@drawable/rounded_corner_spinner" />
+
+                    <ImageButton
+                        android:id="@+id/spinner_btn"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.8"
+                        android:background="@color/shreenagri_blue"
+                        android:src="@mipmap/spinner_down" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:orientation="horizontal"
+                android:weightSum="3" >
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/lbl_ser"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dip"
+                    android:layout_marginRight="2dip"
+                    android:layout_weight="1"
+                    android:text="@string/lbl_serial"
+                    android:textColor="@color/sbk_text_clr" 
+                    android:textStyle="bold">
+                </mbLib.CusFntTextView>
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/txt_f"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dip"
+                    android:layout_marginRight="2dip"
+                    android:layout_weight="1"
+                    android:text="@string/lbl_from"
+                    android:textColor="@color/sbk_text_clr"
+                    android:textStyle="bold" >
+                </mbLib.CusFntTextView>
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/txt_t"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dip"
+                    android:layout_marginRight="2dip"
+                    android:layout_weight="1"
+                    android:text="@string/lbl_to"
+                    android:textColor="@color/sbk_text_clr" 
+                    android:textStyle="bold">
+                </mbLib.CusFntTextView>
+            </LinearLayout>
+
+            <!-- Chq no range -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3" >
+
+                <mbLib.CustomEditText
+                    android:id="@+id/txt_chk_ser"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dip"
+                    android:layout_marginRight="2dip"
+                    android:layout_weight="1"
+                    android:nextFocusRight="@+id/txt_chk_from"
+                    android:text="" >
+                </mbLib.CustomEditText>
+
+                <mbLib.CustomEditText
+                    android:id="@+id/txt_chk_from"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dip"
+                    android:layout_marginRight="2dip"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:nextFocusForward="@+id/txt_chk_to"
+                    android:text="" >
+                </mbLib.CustomEditText>
+
+                <mbLib.CustomEditText
+                    android:id="@+id/txt_chk_to"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dip"
+                    android:layout_marginRight="2dip"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:nextFocusForward="@+id/txt_amt_frm"
+                    android:text="" >
+                </mbLib.CustomEditText>
+            </LinearLayout>
+
+            <!-- Amount Range -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:visibility="visible">
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/lbl_amt_from"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dip"
+                    android:layout_marginRight="5dip"
+                    android:layout_weight="1"
+                    android:text="@string/lbl_amount_from"
+                    android:textColor="@color/sbk_text_clr"
+                    android:textStyle="bold" >
+                </mbLib.CusFntTextView>
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/lbl_amt_to"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dip"
+                    android:layout_marginRight="5dip"
+                    android:layout_weight="1"
+                    android:textColor="@color/sbk_text_clr"
+                    android:textStyle="bold"
+                    android:text="@string/lbl_amount_to" >
+                </mbLib.CusFntTextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:visibility="visible">
+
+                <mbLib.CustomEditText
+                    android:id="@+id/txt_amt_frm"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:layout_weight="1"
+                    android:inputType="numberDecimal"
+                    android:nextFocusRight="@+id/txt_amt_to"
+                    android:text="" >
+                </mbLib.CustomEditText>
+
+                <mbLib.CustomEditText
+                    android:id="@+id/txt_amt_to"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:layout_weight="1"
+                    android:inputType="numberDecimal"
+                    android:nextFocusRight="@+id/txt_date_frm"
+                    android:text="" >
+                </mbLib.CustomEditText>
+            </LinearLayout>
+
+            <!-- Date Range -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:orientation="horizontal"
+                android:weightSum="2" >
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/lbl_date_frm"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dip"
+                    android:layout_marginRight="5dip"
+                    android:layout_weight="1"
+                    android:inputType="date"
+                    android:textColor="@color/sbk_text_clr"
+                    android:textStyle="bold"
+                    android:text="@string/lbl_from_date" >
+                </mbLib.CusFntTextView>
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/lbl_date_to"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dip"
+                    android:layout_marginRight="5dip"
+                    android:layout_weight="1"
+                    android:inputType="date"
+                    android:textColor="@color/sbk_text_clr"
+                    android:textStyle="bold"
+                    android:text="@string/lbl_to_date" >
+                </mbLib.CusFntTextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2" >
+
+                <mbLib.CustomEditText
+                    android:id="@+id/txt_date_frm"
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:layout_weight="0.8"
+                    android:inputType="date"
+                    android:nextFocusRight="@+id/txt_date_to"
+                    android:text=""
+                    android:enabled="false" >
+                </mbLib.CustomEditText>
+                <Button
+                    android:id="@+id/btn_from_date"
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.2"
+                    android:background="@drawable/calenderr"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <mbLib.CustomEditText
+                    android:id="@+id/txt_date_to"
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:layout_weight="0.8"
+                    android:inputType="date"
+                    android:text="" 
+                    android:enabled="false">
+                </mbLib.CustomEditText>
+ <Button
+                    android:id="@+id/btn_to_date"
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.2"
+                    android:background="@drawable/calenderr"
+                    android:clickable="true"
+                    android:focusable="true" />
+            </LinearLayout>
+
+           <!--  <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dip"
+                android:orientation="vertical" > -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="3" >
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5" />
+
+                    <mbLib.CustomButton
+                        android:id="@+id/btn_getStaus"
+                        style="@style/button_text"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:background="@drawable/roundedbutton"
+                        android:text="@string/lbl_get_status_btn"/>
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5" />
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/pb_wait8"
+                    android:layout_width="50dip"
+                    android:layout_height="50dip"
+                    android:visibility="invisible" >
+                </ProgressBar>
+
+                <!-- <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dip"
+                    android:orientation="vertical" >
+                </LinearLayout> -->
+            <!-- </LinearLayout> -->
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

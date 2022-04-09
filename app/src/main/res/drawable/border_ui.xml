@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+          <shape>
+                <solid android:color="@color/lightgray1" /> 
+               
+          </shape>
+    </item>
+
+    <!-- This is the line -->
+    <item android:right="1dp" android:bottom="1dp" >
+         <shape>
+              <!--  <solid android:color="@color/bg_color" /> -->
+              <gradient 
+                        android:centerColor="#eee8f3" 
+                        android:dither="true" 
+                        android:endColor="#ffffff" 
+                        android:startColor="#eee8f3"
+                        android:tileMode="repeat" ></gradient>
+         </shape>
+    </item>
+
+</layer-list>
+<!-- <?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:shape="rectangle"
+    >
+  <solid android:color="@color/bg_color"/>
+   <stroke 
+       android:color="@color/gray" 
+       android:width="2dip"/>  
+</shape>
+ -->

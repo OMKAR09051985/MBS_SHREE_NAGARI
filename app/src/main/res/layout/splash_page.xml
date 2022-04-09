@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:weightSum="6" >
+
+    <!--
+         <ImageView
+        android:id="@+id/splash_logo"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:src="@drawable/splash_logo" />
+
+
+
+    -->
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.1" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.6"
+        android:background="@mipmap/bank_header" />
+
+    <ViewFlipper
+        android:id="@+id/view_flipper"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_centerHorizontal="true"
+        android:layout_weight="2"
+        android:autoStart="true"
+        android:flipInterval="4000"
+        android:scrollbars="horizontal"
+        android:splitMotionEvents="true"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:scaleX="1.0"
+            android:scaleY="0.9"
+            android:src="@drawable/one" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:scaleX="1.0"
+            android:scaleY="0.9"
+            android:src="@drawable/two" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:scaleX="1.0"
+            android:scaleY="0.9"
+            android:src="@drawable/three" />
+
+        <!--
+             <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:scaleX="1.0"
+            android:scaleY="0.9"
+            android:src="@drawable/four" />
+
+
+        -->
+    </ViewFlipper>
+
+    <mbLib.CusFntTextView
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0.2"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/welcome_txt_color"
+        android:textSize="40dip" />
+
+    <mbLib.CusFntTextView
+        android:id="@+id/welcome"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0.6"
+        android:gravity="center"
+        android:text="Welcome"
+        android:textColor="@color/black"
+        android:textSize="40dip" />
+  	<mbLib.CusFntTextView
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0.3"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/welcome_txt_color"
+        android:textSize="40dip" />
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="2.3"
+        android:src="@mipmap/new_logo" />
+
+    <mbLib.CusFntTextView
+        android:id="@+id/project_name"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:text="@string/bank_name"
+        android:textColor="@color/prjct_name_txt_color"
+        android:textSize="20dip"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="3" >
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2" />
+
+        <mbLib.CustomButton
+            android:id="@+id/continue_btn"
+            style="@drawable/button_style"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dip"
+            android:layout_weight="2.6"
+            android:gravity="center"
+            android:text="@string/continue_lbl"
+            android:textColor="@color/bg_color"
+            android:textSize="20dip" />
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.8"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="1" >
+
+            <mbLib.CusFntTextView
+                android:id="@+id/dynamicmsg"
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:ellipsize="marquee"
+                android:fadingEdge="horizontal"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:maxLines="1"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text=" "
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#e33d1b"
+                android:textSize="25dip"
+                tools:ignore="EllipsizeMaxLines" />
+        </LinearLayout>
+    </LinearLayout>
+<ImageView
+        android:id="@+id/continue_button"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.35"
+        android:src="@mipmap/splash_btn" >
+    </ImageView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.65"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="1" >
+
+            <mbLib.CusFntTextView
+                android:id="@+id/txt_version_no"
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingRight="10dip" />
+        </LinearLayout>
+    </LinearLayout>
+
+    
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+<shree_nagari.mbank.DashboardLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="1"
+    android:background="@color/bg_color" >
+
+    <mbLib.CustomButton
+        android:id="@+id/btn_saving_and_current"
+        style="@style/DashboardButton"
+        android:drawableTop="@mipmap/saving"
+        android:text="@string/lbl_saving_and_current" />
+
+    <mbLib.CustomButton
+        android:id="@+id/btn_term_deposite"
+        style="@style/DashboardButton"
+        android:drawableTop="@mipmap/term_deposit"
+        android:text="@string/lbl_deposits" />
+
+    <mbLib.CustomButton
+        android:id="@+id/btn_loan"
+        style="@style/DashboardButton"
+        android:drawableTop="@mipmap/loan"
+        android:text="@string/lbl_loan" />
+
+    <mbLib.CustomButton
+        android:id="@+id/btn_mini_stmt"
+        style="@style/DashboardButton"
+        android:drawableTop="@mipmap/mini_statement"
+        android:text="@string/lbl_mini_statement" />
+
+    <mbLib.CustomButton
+        android:id="@+id/btn_fund_tran"
+        style="@style/DashboardButton"
+        android:drawableTop="@mipmap/fund_trnsfer"
+        android:text="@string/lbl_fund_transfer" />
+
+    <mbLib.CustomButton
+        android:id="@+id/btn_manage_benf"
+        style="@style/DashboardButton"
+        android:drawableTop="@mipmap/benefeciary"
+        android:text="@string/lbl_manage_beneficiary" />
+
+    <mbLib.CustomButton
+        android:id="@+id/btn_chq_related"
+        style="@style/DashboardButton"
+        android:drawableTop="@mipmap/checkbkstatus"
+        android:text="@string/lbl_cheque_related" />
+
+    <mbLib.CustomButton
+        android:id="@+id/btn_other_srvces"
+        style="@style/DashboardButton"
+        android:drawableTop="@mipmap/other_services"
+        android:text="@string/lbl_other_srvce" />
+
+</shree_nagari.mbank.DashboardLayout>
