@@ -141,6 +141,7 @@ public class OwnAccountTransfer extends Fragment implements OnClickListener {
 
 		btn_home1 = (ImageView) rootView.findViewById(R.id.btn_home1);
 		btn_logout = (ImageView) rootView.findViewById(R.id.btn_logout);
+btn_logout.setVisibility(View.GONE);
 
 		confirm_layout = (LinearLayout) rootView
 				.findViewById(R.id.confirm_layout);

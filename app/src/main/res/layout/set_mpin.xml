@@ -123,6 +123,7 @@
                 android:layout_marginTop="10dip"
                 android:textColor="@color/sbk_text_clr"
                 android:text="@string/enter_password"
+                android:visibility="gone"
                  android:inputType="text">
             </mbLib.CusFntTextView>
 
@@ -132,6 +133,7 @@
                 android:layout_height="wrap_content"
                  android:inputType="numberPassword"
                 android:hint="Enter 6 Digit Password"
+                android:visibility="gone"
                 android:text="">
             </mbLib.CustomEditText>
             
@@ -142,6 +144,7 @@
                 android:layout_marginTop="10dip"
                 android:inputType="text"
                android:text="@string/enter_new_password"
+                android:visibility="gone"
                 android:textColor="@color/sbk_text_clr" >
             </mbLib.CusFntTextView>
 
@@ -152,6 +155,7 @@
                 android:layout_marginBottom="10dip"
                  android:inputType="numberPassword"
                  android:hint="Re-Enter 6 Digit Password"
+                android:visibility="gone"
                 android:text="" >
             </mbLib.CustomEditText>
             
@@ -163,7 +167,7 @@
                 android:inputType="text"
                android:text="@string/lbl_new_tran_mpin"
                 android:textColor="@color/sbk_text_clr" 
-                android:visibility="gone"
+                android:visibility="visible"
                  tools:ignore="DuplicateIds">
             </mbLib.CusFntTextView>
 
@@ -173,9 +177,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dip"
                  android:inputType="numberPassword"
-                 android:hint="Enter 6 Digit Tran PIN"
+                 android:hint="@string/tran_mpin"
                 android:text="" 
-                android:visibility="gone">
+                android:visibility="visible">
             </mbLib.CustomEditText>
 
             <mbLib.CusFntTextView
@@ -186,7 +190,7 @@
                 android:inputType="text"
                android:text="@string/lbl_retype_tran_mpin"
                 android:textColor="@color/sbk_text_clr" 
-                android:visibility="gone"
+                android:visibility="visible"
                 tools:ignore="DuplicateIds">
             </mbLib.CusFntTextView>
 
@@ -196,9 +200,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dip"
                  android:inputType="numberPassword"
-                 android:hint="Enter 6 Digit Tran PIN"
+                 android:hint="@string/re_tran_mpin"
                 android:text="" 
-                android:visibility="gone">
+                android:visibility="visible">
             </mbLib.CustomEditText>
             
             <LinearLayout

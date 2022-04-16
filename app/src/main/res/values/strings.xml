@@ -11,7 +11,7 @@
     <string name="url">http://listspl.ddns.net:8087/axis2/services/FrontLineWebServices</string>
     <!--   live -->
     <!--  <string name="url">https://www.bhingarbank.co.in:11032/axis2/services/FrontLineWebServices</string>-->
-    <string name="alert_accleng">16</string>
+
     <string name="alert_sup">The Application Does Not Support This Device.</string>
     <string name="bank_name">Shri Nagari Sahkari Pat Sanstha Maryadit,Dapodi</string>
     <string name="app_name">Shri Nagari Mobile Banking</string>
@@ -504,7 +504,7 @@
     <string name="lbl_DepositRates">Deposit Rates</string>
     <string name="lbl_Interest_Rates1">Interest Rates</string>
     <string name="lbl_mobile_no">Registered Mobile No.</string>
-    <string name="lbl_validate">Validate &amp; Send OTP</string>
+    <string name="lbl_validate">Validate</string>
     <string name="lbl_validateOTP">Validate</string>
     <string name="resend_OTP">Resend</string>
     <string name="lbl_ref_id">Reference Id</string>
@@ -808,4 +808,10 @@
     <string name="OTP_Generate_FUNCTION">callWebservice</string>
     <string name="OTP_Validate_FUNCTION">callWebservice</string>
     <string name="ans_here">Answer Here</string>
+    <string name="lbl_012">Register</string>
+    <string name="lbl_007">Do You Want To Exit From App?</string>
+    <string name="lbl_apptype">F</string>
+    <string name="tran_mpin">Enter 6 Digit Tran MPIN</string>
+    <string name="re_tran_mpin">Retype 6 Digit Tran MPIN</string>
+    <string name="alert_accleng">16</string>
 </resources>

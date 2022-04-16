@@ -81,8 +81,8 @@ public class BranchDetailShow  extends Activity implements OnClickListener{
 		txt_heading.setText(getString(R.string.lbl_branch_det));
 		btn_home1 = (ImageView) findViewById(R.id.btn_home1);
 		btn_logout = (ImageView) findViewById(R.id.btn_logout);
-		btn_home1.setVisibility(View.INVISIBLE);
-		btn_logout.setVisibility(View.INVISIBLE);
+		btn_home1.setVisibility(View.VISIBLE);
+		btn_logout.setVisibility(View.GONE);
 		btn_home1.setOnClickListener(null);
 		btn_logout.setOnClickListener(null);
 		//btn_back=(ImageButton)findViewById(R.id.btn_back);

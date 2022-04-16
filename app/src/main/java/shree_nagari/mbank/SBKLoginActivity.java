@@ -18,6 +18,8 @@ import mbLib.DatabaseManagement;
 import mbLib.DialogBox;
 import mbLib.ListEncryption;
 import mbLib.MBSUtils;
+
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
@@ -112,9 +114,13 @@ public class SBKLoginActivity extends CustomWindow implements OnClickListener,On
 		btn_mpin = (Button) findViewById(R.id.btn_mpin);
 		btn_password = (Button) findViewById(R.id.btn_password);
 		pass_layout = (LinearLayout) findViewById(R.id.pass_layout);
+
+//
 		
 		btn_mpin.setOnClickListener(this);
 		btn_password.setOnClickListener(this);
+
+
 		
 		dbms = new DatabaseManagement("shree_nagari.mbank", "listMobileBanking");
 		Cursor cust1 = dbms.selectFromTable("SHAREDPREFERENCE", "", null);
@@ -146,9 +152,9 @@ public class SBKLoginActivity extends CustomWindow implements OnClickListener,On
 
 		// et_custid.setText(custId);
 		createSharedPrefTable();
-		if(customerId.length()==0)
+		/*if(customerId.length()==0)
 			setPasswordView();
-		else
+		else*/
 			setMpinView();
 		
 		if(var1.toString().length()==0 || var3.toString().length()==0)
@@ -156,6 +162,7 @@ public class SBKLoginActivity extends CustomWindow implements OnClickListener,On
 			retMess = getString(R.string.alert_restart);
 			showAlert(retMess);
 		}
+		setMpinView();
 	}
 
 	public void setKeyValues() {
@@ -216,6 +223,7 @@ public class SBKLoginActivity extends CustomWindow implements OnClickListener,On
 
 	public void onBackPressed() {
 		CustomDialogClass alert = new CustomDialogClass(SBKLoginActivity.this, getString(R.string.lbl_do_you_want_to_exit)) {
+			@SuppressLint("NonConstantResourceId")
 			@Override
 			public void onClick(View v) {
 				switch (v.getId()) {
@@ -258,7 +266,7 @@ public class SBKLoginActivity extends CustomWindow implements OnClickListener,On
 			loginAs="PASSWORD";
 			pass_layout.removeView(mpinChild);
 			pass_layout.removeView(passwordChild);
-			setPasswordView();
+			//setPasswordView();
 			break;
 		case R.id.button_1:
 			setPinValues(button_1.getText().toString());
@@ -517,6 +525,10 @@ public class SBKLoginActivity extends CustomWindow implements OnClickListener,On
 		button_0 = (Button) findViewById(R.id.button_0);
 		button_erase_pin = (Button) findViewById(R.id.button_erase_pin);
 		button_view_pin = (Button) findViewById(R.id.button_view_pin);
+		txt_forgot_pass = (TextView) findViewById(R.id.txt_forgot_pass);
+		txt_register = (TextView) findViewById(R.id.txt_register);
+		contactus = (ImageButton) findViewById(R.id.contactus);
+		locateus = (ImageButton) findViewById(R.id.locateus);
 
 		edt_1 = (EditText) findViewById(R.id.edt_1);
 		edt_2 = (EditText) findViewById(R.id.edt_2);
@@ -537,6 +549,10 @@ public class SBKLoginActivity extends CustomWindow implements OnClickListener,On
 		button_0.setOnClickListener(this);
 		button_erase_pin.setOnClickListener(this);
 		button_view_pin.setOnClickListener(this);
+		contactus.setOnClickListener(this);
+		locateus.setOnClickListener(this);
+		txt_forgot_pass.setOnClickListener(this);
+		txt_register.setOnClickListener(this);
 		setKeyValues();
 	}
 
@@ -551,19 +567,14 @@ public class SBKLoginActivity extends CustomWindow implements OnClickListener,On
 		mpinChild.setLayoutParams(params);
 		pass_layout.addView(mpinChild);
 
-		txt_forgot_pass = (TextView) findViewById(R.id.txt_forgot_pass);
-		txt_register = (TextView) findViewById(R.id.txt_register);
+
 		etCustId = (EditText) findViewById(R.id.etCustId);
 		etMpin = (EditText) findViewById(R.id.etMpin);
 		buttonLogin = (Button) findViewById(R.id.buttonLogin);
-		contactus = (ImageButton) findViewById(R.id.contactus);
-		locateus = (ImageButton) findViewById(R.id.locateus);
+
 		
 		buttonLogin.setOnClickListener(this);
-		contactus.setOnClickListener(this);
-		locateus.setOnClickListener(this);
-		txt_forgot_pass.setOnClickListener(this);
-		txt_register.setOnClickListener(this);
+
 	}
 
 	public void showAlert1(final String str) {
@@ -2000,7 +2011,7 @@ public class SBKLoginActivity extends CustomWindow implements OnClickListener,On
 		case R.id.btn_mpin:
 			if(customerId.length()==0)
 			{
-				setPasswordView();
+				//setPasswordView();
 				Toast.makeText(this, "Please Login Using Password For First Time", Toast.LENGTH_SHORT).show();
 			}
 			else

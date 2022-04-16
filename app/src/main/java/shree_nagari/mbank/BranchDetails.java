@@ -78,8 +78,8 @@ public class BranchDetails extends Activity implements OnClickListener {
 		img_heading.setImageResource(R.mipmap.contact_us);
 		btn_home1 = (ImageView) findViewById(R.id.btn_home1);
 		btn_logout = (ImageView) findViewById(R.id.btn_logout);
-		btn_home1.setVisibility(View.INVISIBLE);
-		btn_logout.setVisibility(View.INVISIBLE);
+		btn_home1.setVisibility(View.VISIBLE);
+		btn_logout.setVisibility(View.GONE);
 		btn_home1.setOnClickListener(null);
 		btn_logout.setOnClickListener(null);
 		Cursor c1 = dbms.selectFromTable("SHAREDPREFERENCE", "", null);// ("select * from ",

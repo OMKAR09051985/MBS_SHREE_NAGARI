@@ -103,6 +103,7 @@ FundTransferMenuActivity extends Fragment implements
         img_heading = (ImageView) rootView.findViewById(R.id.img_heading);
         btn_home = (ImageView) rootView.findViewById(R.id.btn_home1);
         btn_logout = (ImageView) rootView.findViewById(R.id.btn_logout);
+btn_logout.setVisibility(View.GONE);
         btn_home.setOnClickListener(this);
         btn_logout.setOnClickListener(this);
         txt_heading.setText(getString(R.string.lbl_fund_transfer));

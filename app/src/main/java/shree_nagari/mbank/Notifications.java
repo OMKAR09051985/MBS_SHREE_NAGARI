@@ -94,6 +94,7 @@ public class Notifications extends Fragment implements OnClickListener
         notification_layout = (LinearLayout)rootView.findViewById(R.id.notification_layout);
         btn_home1 = (ImageView) rootView.findViewById(R.id.btn_home1);
 		btn_logout = (ImageView) rootView.findViewById(R.id.btn_logout);
+btn_logout.setVisibility(View.GONE);
 		btn_deptintrates = (Button) rootView.findViewById(R.id.btn_deptintrates);
 		btn_loanintrates = (Button) rootView.findViewById(R.id.btn_loanintrates);
 		btn_home1.setOnClickListener(this);

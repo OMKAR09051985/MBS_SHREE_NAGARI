@@ -210,6 +210,7 @@ public class ChangeMpinActivity extends Fragment implements OnClickListener {
 		btnChangeMpin.setOnClickListener(this);
 		btn_home1 = (ImageView) rootView.findViewById(R.id.btn_home1);
 		btn_logout = (ImageView) rootView.findViewById(R.id.btn_logout);
+btn_logout.setVisibility(View.GONE);
 		btn_home1.setOnClickListener(this);
 		btn_logout.setOnClickListener(this);
 		// btnChangeMpin.setTypeface(tf_calibri);

@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndriodStudioSetupfiles/Android/Sdk/platforms/android-30/data/res/layout/simple_spinner_dropdown_item.xml" value="0.18923076923076923" />
         <entry key="..\:/AndriodStudioSetupfiles/Android/Sdk/platforms/android-30/data/res/layout/simple_spinner_item.xml" value="0.1921875" />
         <entry key="..\:/Shubham/Android Projects/MBS/MBS_BHINGAR_New/app/src/main/res/layout/activity_main.xml" value="0.1921875" />
         <entry key="..\:/Shubham/Android Projects/MBS/MBS_BHINGAR_New/app/src/main/res/layout/add_samebank_beneficiary.xml" value="0.1921875" />
@@ -22,6 +23,20 @@
         <entry key="..\:/Shubham/Android Projects/MBS/MBS_BHINGAR_New/app/src/main/res/layout/sbk_login.xml" value="0.1921875" />
         <entry key="..\:/Shubham/Android Projects/MBS/MBS_BHINGAR_New/app/src/main/res/layout/spinner_dropdown_item.xml" value="0.1921875" />
         <entry key="..\:/Shubham/Android Projects/MBS/MBS_BHINGAR_New/app/src/main/res/layout/spinner_item.xml" value="0.1921875" />
+        <entry key="..\:/Shubham/Android Projects/MBS/MBS_SHREE_NAGARI/app/src/main/res/layout/branch_details.xml" value="0.1921875" />
+        <entry key="..\:/Shubham/Android Projects/MBS/MBS_SHREE_NAGARI/app/src/main/res/layout/change_mpin.xml" value="0.1921875" />
+        <entry key="..\:/Shubham/Android Projects/MBS/MBS_SHREE_NAGARI/app/src/main/res/layout/contact_us.xml" value="0.1921875" />
+        <entry key="..\:/Shubham/Android Projects/MBS/MBS_SHREE_NAGARI/app/src/main/res/layout/header.xml" value="0.1921875" />
+        <entry key="..\:/Shubham/Android Projects/MBS/MBS_SHREE_NAGARI/app/src/main/res/layout/mini_statement.xml" value="0.1921875" />
+        <entry key="..\:/Shubham/Android Projects/MBS/MBS_SHREE_NAGARI/app/src/main/res/layout/mpin_login.xml" value="0.1921875" />
+        <entry key="..\:/Shubham/Android Projects/MBS/MBS_SHREE_NAGARI/app/src/main/res/layout/password_login.xml" value="0.1921875" />
+        <entry key="..\:/Shubham/Android Projects/MBS/MBS_SHREE_NAGARI/app/src/main/res/layout/register.xml" value="0.1824074074074074" />
+        <entry key="..\:/Shubham/Android Projects/MBS/MBS_SHREE_NAGARI/app/src/main/res/layout/sbk_dash.xml" value="0.2" />
+        <entry key="..\:/Shubham/Android Projects/MBS/MBS_SHREE_NAGARI/app/src/main/res/layout/sbk_login.xml" value="0.1921875" />
+        <entry key="..\:/Shubham/Android Projects/MBS/MBS_SHREE_NAGARI/app/src/main/res/layout/sendviaqrcode.xml" value="0.12" />
+        <entry key="..\:/Shubham/Android Projects/MBS/MBS_SHREE_NAGARI/app/src/main/res/layout/set_mpin.xml" value="0.2" />
+        <entry key="..\:/Shubham/Android Projects/MBS/MBS_SHREE_NAGARI/app/src/main/res/layout/spinner_dropdown_item.xml" value="0.1921875" />
+        <entry key="..\:/Shubham/Android Projects/MBS/MBS_SHREE_NAGARI/app/src/main/res/layout/spinner_item.xml" value="0.18923076923076923" />
         <entry key="..\:/Shubham/Android Projects/MBS/MBS_Shree_Nagari/app/src/main/res/drawable/banner_shreenagari.xml" value="0.1405" />
         <entry key="..\:/Shubham/Android Projects/MBS/MBS_Shree_Nagari/app/src/main/res/drawable/border_ui.xml" value="0.1805" />
         <entry key="..\:/Shubham/Android Projects/MBS/MBS_Shree_Nagari/app/src/main/res/drawable/button_style.xml" value="0.11" />

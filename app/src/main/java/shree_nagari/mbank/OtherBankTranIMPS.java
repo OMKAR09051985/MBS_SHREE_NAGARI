@@ -165,6 +165,7 @@ public class OtherBankTranIMPS extends Fragment implements View.OnClickListener 
         // btn_submit.setTypeface(tf_calibri);
         btn_home1 = (ImageView) rootView.findViewById(R.id.btn_home1);
         btn_logout = (ImageView) rootView.findViewById(R.id.btn_logout);
+btn_logout.setVisibility(View.GONE);
         //  btn_back = (ImageButton)rootView.findViewById(R.id.btn_back);
         spinner_btn = (ImageButton) rootView.findViewById(R.id.spinner_btn);
         spinner_btn2 = (ImageButton) rootView.findViewById(R.id.spinner_btn2);

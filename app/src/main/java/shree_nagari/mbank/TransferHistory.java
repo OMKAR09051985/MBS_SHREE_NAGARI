@@ -115,6 +115,7 @@ public class TransferHistory extends Fragment implements OnClickListener {
         txt_heading.setText(getString(R.string.lbl_transfer_history));
         btn_home1 = (ImageView) rootView.findViewById(R.id.btn_home1);
         btn_logout = (ImageView) rootView.findViewById(R.id.btn_logout);
+btn_logout.setVisibility(View.GONE);
         spinner_btn1 = (ImageButton) rootView.findViewById(R.id.spinner_btn1);
         spinner_btn2 = (ImageButton) rootView.findViewById(R.id.spinner_btn2);
         spinner_btn3 = (ImageButton) rootView.findViewById(R.id.spinner_btn3);

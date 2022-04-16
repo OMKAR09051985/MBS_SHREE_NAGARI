@@ -109,6 +109,7 @@ public class HomeFragment extends Fragment implements OnClickListener {
 
         btn_home1 = (ImageView) rootView.findViewById(R.id.btn_home1);
         btn_logout = (ImageView) rootView.findViewById(R.id.btn_logout);
+btn_logout.setVisibility(View.GONE);
 
         //	btn_home=(ImageButton)rootView.findViewById(R.id.btn_home);
         /*btn_back=(ImageButton)rootView.findViewById(R.id.btn_back);*/
@@ -119,6 +120,7 @@ public class HomeFragment extends Fragment implements OnClickListener {
         //btn_back.setOnClickListener(this);
         btn_home1.setOnClickListener(this);
         btn_logout.setOnClickListener(this);
+        btn_logout.setVisibility(View.GONE);
         btn_show_details = (Button) rootView.findViewById(R.id.btnShowDetails);
         btn_show_details.setOnClickListener(this);
 

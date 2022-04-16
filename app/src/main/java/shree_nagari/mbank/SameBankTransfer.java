@@ -146,6 +146,7 @@ public class SameBankTransfer extends Fragment implements OnClickListener {
 		
 		btn_home1 =  rootView.findViewById(R.id.btn_home1);
 		btn_logout =  rootView.findViewById(R.id.btn_logout);
+		btn_logout.setVisibility(View.GONE);
 		confirm_layout = (LinearLayout) rootView
 				.findViewById(R.id.confirm_layout);
 		same_bnk_layout = (LinearLayout) rootView
@@ -291,16 +292,12 @@ public class SameBankTransfer extends Fragment implements OnClickListener {
                         
 						str=spi_debit_account.getSelectedItem().toString();
 						Log.e("arg2= ","arg2="+arg2);
-						Log.e("arg2= ","arg2="+arg2);
-						Log.e("arg2= ","arg2="+arg2);
 						if (arg2 == 0)
 						{
 							txtBalance.setText("");
 						}
 							
 						else if (arg2 != 0) {
-						Log.e("str= ","str="+str);
-						Log.e("str= ","str="+str);
 						Log.e("str= ","str="+str);
                         if(str.equalsIgnoreCase("Select Debit Account"))
 						{

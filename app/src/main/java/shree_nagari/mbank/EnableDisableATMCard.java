@@ -214,6 +214,7 @@ public class EnableDisableATMCard extends Fragment implements OnClickListener {
 		
 		btn_home1 = (ImageView) rootView.findViewById(R.id.btn_home1);
 		btn_logout = (ImageView) rootView.findViewById(R.id.btn_logout);
+btn_logout.setVisibility(View.GONE);
 		btn_home1.setOnClickListener(this);
 		btn_logout.setOnClickListener(this);
 		List<String> interest = new ArrayList<String>();

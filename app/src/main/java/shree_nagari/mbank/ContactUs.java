@@ -90,6 +90,7 @@ public class ContactUs extends Activity implements OnClickListener
 		/*btn_back = (ImageButton) findViewById(R.id.btn_back);*/
 		//btn_back.setImageResource(R.drawable.backover);
 		btn_home = (ImageButton) findViewById(R.id.btn_home);
+
 		
 		img_heading=(ImageView)findViewById(R.id.img_heading);
         img_heading.setBackgroundResource(R.mipmap.contact_us);
@@ -100,8 +101,8 @@ public class ContactUs extends Activity implements OnClickListener
 		branch_dtls = (LinearLayout) findViewById(R.id.branch_dtls);
 		btn_home1 = (ImageView) findViewById(R.id.btn_home1);
 		btn_logout = (ImageView) findViewById(R.id.btn_logout);
-		btn_home1.setVisibility(View.INVISIBLE);
-		btn_logout.setVisibility(View.INVISIBLE);
+		btn_home1.setVisibility(View.VISIBLE);
+		btn_logout.setVisibility(View.GONE);
 		btn_home1.setOnClickListener(null);
 		btn_logout.setOnClickListener(null);
 		branch_dtls.setOnClickListener(this);

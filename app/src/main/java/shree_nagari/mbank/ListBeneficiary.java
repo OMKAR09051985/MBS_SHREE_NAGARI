@@ -112,6 +112,7 @@ public class ListBeneficiary extends Fragment implements OnClickListener {
 		img_heading = (ImageView) rootView.findViewById(R.id.img_heading);
 		btn_logout =  rootView.findViewById(R.id.btn_logout);
 		btn_home1 =  rootView.findViewById(R.id.btn_home1);
+		btn_logout.setVisibility(View.GONE);
 		/*btn_back = (ImageButton) rootView.findViewById(R.id.btn_back);*/
 		//btn_home.setImageResource(R.drawable.ic_home_d);
 		//btn_back.setImageResource(R.drawable.backover);

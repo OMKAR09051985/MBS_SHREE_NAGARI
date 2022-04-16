@@ -5,7 +5,7 @@
     android:layout_alignParentTop="true"
     android:background="@color/bg_color"
     android:orientation="vertical"
-    android:weightSum="2" >
+    android:weightSum="2">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
         android:background="@color/bg_color"
         android:orientation="horizontal"
         android:visibility="gone"
-        android:weightSum="6" >
+        android:weightSum="6">
 
         <!--
         <ImageButton
@@ -70,14 +70,14 @@
         android:layout_weight="1.8"
         android:background="@mipmap/sub_header_bg"
         android:orientation="horizontal"
-        android:weightSum="8" >
+        android:weightSum="8">
 
         <LinearLayout
             android:layout_width="0dip"
             android:layout_height="fill_parent"
             android:layout_weight="2"
             android:orientation="horizontal"
-            android:weightSum="2" >
+            android:weightSum="2">
 
             <TextView
                 android:layout_width="0dip"
@@ -109,44 +109,46 @@
             android:textColor="@color/white"
             android:textSize="18dip"
             android:textStyle="bold" />
-        
+
         <LinearLayout
             android:layout_width="0dip"
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:orientation="horizontal"
-            android:weightSum="1" >
+            android:weightSum="1">
+
 
             <ImageView
-            android:id="@+id/btn_home1"
-            android:layout_width="0dip"
-            android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:padding="2dip"
-            android:layout_margin="2dip"
-            android:src="@mipmap/cat_home" />
-
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="0dip"
-            android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:weightSum="1" >
-
-             <ImageView
                 android:id="@+id/btn_logout"
                 android:layout_width="0dip"
                 android:layout_height="fill_parent"
+                android:layout_margin="3dip"
                 android:layout_weight="1"
                 android:padding="3dip"
-                android:layout_margin="3dip"
                 android:src="@mipmap/log_out" />
-        
+
 
         </LinearLayout>
-        
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <ImageView
+                android:id="@+id/btn_home1"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_margin="2dip"
+                android:layout_weight="1"
+                android:padding="2dip"
+                android:src="@mipmap/cat_home" />
+
+
+        </LinearLayout>
+
     </LinearLayout>
 
 </LinearLayout>

@@ -83,6 +83,7 @@ public class ShowAccForQrcode extends Fragment implements OnClickListener,
         btn_get_stmt = (Button) rootView.findViewById(R.id.btnGetStmt);
         btn_home1 = (ImageView) rootView.findViewById(R.id.btn_home1);
         btn_logout = (ImageView) rootView.findViewById(R.id.btn_logout);
+        btn_logout.setVisibility(View.GONE);
         //btn_back = (ImageButton) rootView.findViewById(R.id.btn_back);
         //btn_home.setImageResource(R.drawable.ic_home_d);
         //btn_back.setImageResource(R.drawable.backover);

@@ -88,6 +88,7 @@ public class PPS_history_report extends Fragment implements View.OnClickListener
 
         btn_home1 = (ImageView) rootView.findViewById(R.id.btn_home1);
         btn_logout = (ImageView) rootView.findViewById(R.id.btn_logout);
+btn_logout.setVisibility(View.GONE);
         //back = (ImageButton) rootView.findViewById(R.id.btn_back);
         btn_home=(ImageButton)rootView.findViewById(R.id.btn_home);
 

@@ -126,6 +126,7 @@ public class PPSChequeIntimation extends Fragment implements View.OnClickListene
         btn_home.setOnClickListener(this);
         btn_home1 = (ImageView) rootView.findViewById(R.id.btn_home1);
         btn_logout = (ImageView) rootView.findViewById(R.id.btn_logout);
+btn_logout.setVisibility(View.GONE);
 
         img_heading = (ImageView) rootView.findViewById(R.id.img_heading);
         img_heading.setBackgroundResource(R.mipmap.pps_menu);

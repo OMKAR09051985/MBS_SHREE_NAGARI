@@ -127,6 +127,7 @@ public class BalanceRep extends Fragment implements OnClickListener
 		
 		btn_home1= (ImageView) rootView.findViewById(R.id.btn_home1);
 		btn_logout = (ImageView) rootView.findViewById(R.id.btn_logout);
+btn_logout.setVisibility(View.GONE);
 		txt_heading=(TextView) rootView.findViewById(R.id.txt_heading);
 		txt_heading.setText(getString(R.string.lbl_acc_details));
 		//btn_home.setImageResource(R.drawable.ic_home_d);

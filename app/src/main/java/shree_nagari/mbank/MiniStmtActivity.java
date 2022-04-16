@@ -130,6 +130,8 @@ public class MiniStmtActivity extends Fragment implements OnClickListener,
         /*btn_back = (ImageButton) rootView.findViewById(R.id.btn_back);*/
         btn_home1 = (ImageView) rootView.findViewById(R.id.btn_home1);
         btn_logout = (ImageView) rootView.findViewById(R.id.btn_logout);
+btn_logout.setVisibility(View.GONE);
+        btn_logout.setVisibility(View.GONE);
         //btn_home.setImageResource(R.drawable.ic_home_d);
         //btn_back.setImageResource(R.drawable.backover);
 
@@ -559,10 +561,11 @@ public class MiniStmtActivity extends Fragment implements OnClickListener,
                 retval = "";
                 respdesc = "";
                 loadProBarObj.show();
+                Log.e("SHUbham", "AccCustId123: "+AccCustId+" custId"+custId );
 
                 all_str = acnt_inf;
                // jsonObj.put("CUSTID", custId);
-				jsonObj.put("CUSTID", custId + "#~#" + AccCustId);
+				jsonObj.put("CUSTID", custId);
 				jsonObj.put("ACCNO", accountNo);
                 jsonObj.put("NOOFTRAN", "" + noOfTran);
                 jsonObj.put("IMEINO", MBSUtils.getImeiNumber(act));
@@ -686,7 +689,7 @@ public class MiniStmtActivity extends Fragment implements OnClickListener,
         try {
             respcode = "";
             respdesc = "";
-            String values[] = retval.split("~@~");
+            String[] values = retval.split("~@~");
 
             balnaceamnt = MBSUtils.amountFormat(values[1], true, act);
             avil_bal = MBSUtils.amountFormat(values[2], true, act);
@@ -701,9 +704,7 @@ public class MiniStmtActivity extends Fragment implements OnClickListener,
                     all_str, retval, balnaceamnt, avil_bal);
 
             FragmentManager fragmentManager = getFragmentManager();
-            fragmentManager.beginTransaction()
-                    .replace(R.id.frame_container, miniStmtRepFragment)
-                    .commit();
+            fragmentManager.beginTransaction().replace(R.id.frame_container, miniStmtRepFragment).commit();
             act.frgIndex = 41;
 
         } catch (Exception e) {

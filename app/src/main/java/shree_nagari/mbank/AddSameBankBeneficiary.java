@@ -103,6 +103,7 @@ public class AddSameBankBeneficiary extends Fragment implements OnClickListener 
 		p_wait = (ProgressBar) rootView.findViewById(R.id.pro_bar);
 		btn_home1 = (ImageView) rootView.findViewById(R.id.btn_home1);
 		btn_logout = (ImageView) rootView.findViewById(R.id.btn_logout);
+btn_logout.setVisibility(View.GONE);
 		/*btn_back = (ImageButton) rootView.findViewById(R.id.btn_back);*/
 		img_heading = (ImageView) rootView.findViewById(R.id.img_heading);
 		img_heading.setBackgroundResource(R.mipmap.benefeciary);	//btn_home.setImageResource(R.drawable.ic_home_d);

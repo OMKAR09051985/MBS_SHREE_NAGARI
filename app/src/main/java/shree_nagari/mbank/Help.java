@@ -87,6 +87,7 @@ public class Help extends Fragment implements OnClickListener{
 		txt_heading.setText(act.getString(R.string.lbl_app_info));
 		btn_home1 = (ImageView) rootView.findViewById(R.id.btn_home1);
 		btn_logout = (ImageView) rootView.findViewById(R.id.btn_logout);
+btn_logout.setVisibility(View.GONE);
 		btn_home1.setOnClickListener(this);
 		btn_logout.setOnClickListener(this);
 		return rootView;

@@ -81,8 +81,7 @@ public class SplashPage extends Activity implements OnClickListener {
 	static PublicKey var4=null;	  
 	SecretKeySpec var2=null;
 	int flag = 0;
-	private final GestureDetector detector = new GestureDetector(
-			new SwipeGestureDetector());
+	private final GestureDetector detector = new GestureDetector(new SwipeGestureDetector());
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) 
@@ -316,7 +315,7 @@ public class SplashPage extends Activity implements OnClickListener {
 			{
 				Intent in = new Intent(this, SBKLoginActivity.class);
 				in.putExtra("VAR1", var1);
-				in.putExtra("VAR3", var4);
+				in.putExtra("VAR3", var3);
 				startActivity(in);
 				finish();
 				

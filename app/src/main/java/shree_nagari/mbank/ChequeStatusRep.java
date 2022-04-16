@@ -132,6 +132,7 @@ public class ChequeStatusRep extends Fragment implements OnClickListener {
 			img_heading.setBackgroundResource(R.mipmap.checkbkstatus);
 			btn_home1 = (ImageView) rootView.findViewById(R.id.btn_home1);
 			btn_logout = (ImageView) rootView.findViewById(R.id.btn_logout);
+btn_logout.setVisibility(View.GONE);
 			btn_home1.setOnClickListener(this);
 			btn_logout.setOnClickListener(this);
 			//btn_home.setImageResource(R.drawable.ic_home_d);

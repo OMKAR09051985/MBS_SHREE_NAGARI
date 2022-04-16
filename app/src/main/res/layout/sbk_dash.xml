@@ -5,7 +5,7 @@
     android:layout_height="fill_parent"
     android:background="#A9A9A9"
     android:orientation="vertical"
-    android:weightSum="6.6" >
+    android:weightSum="6.6">
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -14,14 +14,14 @@
         android:background="@mipmap/sbk_header"
         android:orientation="vertical"
         android:paddingLeft="10dip"
-        android:weightSum="2" >
+        android:weightSum="2">
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="0dip"
             android:layout_weight="1.6"
             android:orientation="horizontal"
-            android:weightSum="3" >
+            android:weightSum="3">
 
             <ImageView
                 android:layout_width="0dip"
@@ -35,7 +35,7 @@
                 android:layout_height="fill_parent"
                 android:layout_weight="2.1"
                 android:orientation="vertical"
-                android:weightSum="4" >
+                android:weightSum="4">
 
                 <LinearLayout
                     android:layout_width="fill_parent"
@@ -43,7 +43,7 @@
                     android:layout_weight="0.7"
                     android:gravity="right"
                     android:orientation="horizontal"
-                    android:weightSum="5" >
+                    android:weightSum="5">
 
                     <TextView
                         android:layout_width="0dip"
@@ -101,18 +101,17 @@
                     android:layout_weight="1"
                     android:background="@drawable/rounded_corner_spinner"
                     android:orientation="horizontal"
-                    android:weightSum="4" >
+                    android:weightSum="4">
 
                     <Spinner
                         android:id="@+id/select_accnt"
                         style="@style/spinnerStyle"
-                        android:background="@color/shreenagri_blue"
                         android:layout_width="0dip"
-                        android:spinnerMode="dropdown"
                         android:layout_height="fill_parent"
                         android:layout_gravity="top"
                         android:layout_weight="3.5"
-                         />
+                        android:background="@color/shreenagri_blue"
+                        android:spinnerMode="dropdown" />
 
                     <ImageButton
                         android:id="@+id/spinner_btn"
@@ -123,14 +122,14 @@
                         android:background="@color/shreenagri_blue"
                         android:src="@mipmap/spinner_down" />
                 </LinearLayout>
-               <!-- <Spinner
-                    android:id="@+id/select_accnt"
-                    android:layout_width="fill_parent"
-                    android:layout_height="0dip"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:textColor="@android:color/white"
-                    android:textSize="16sp" />-->
+                <!-- <Spinner
+                     android:id="@+id/select_accnt"
+                     android:layout_width="fill_parent"
+                     android:layout_height="0dip"
+                     android:layout_weight="1"
+                     android:gravity="center"
+                     android:textColor="@android:color/white"
+                     android:textSize="16sp" />-->
             </LinearLayout>
         </LinearLayout>
 
@@ -151,8 +150,7 @@
         android:layout_width="fill_parent"
         android:layout_height="0dip"
         android:layout_weight="0.3"
-        android:background="@mipmap/sbk_sub_header" >
-    </LinearLayout>
+        android:background="@mipmap/sbk_sub_header"></LinearLayout>
 
     <View
         android:layout_width="fill_parent"
@@ -163,20 +161,20 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dip"
-        android:layout_weight="3.5" >
+        android:layout_weight="3.5">
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:weightSum="3" >
+            android:weightSum="3">
 
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="0dip"
                 android:layout_weight="1"
                 android:orientation="horizontal"
-                android:weightSum="3" >
+                android:weightSum="3">
 
                 <LinearLayout
                     android:id="@+id/btn_saving_and_current"
@@ -186,7 +184,7 @@
                     android:layout_weight="1"
                     android:background="@mipmap/sbk_block"
                     android:orientation="vertical"
-                    android:weightSum="1" >
+                    android:weightSum="1">
 
                     <TextView
                         android:layout_width="fill_parent"
@@ -199,9 +197,9 @@
                         android:layout_width="fill_parent"
                         android:layout_height="0dip"
                         android:layout_gravity="bottom"
-                        android:layout_weight="0.50"
                         android:layout_marginLeft="7dip"
                         android:layout_marginRight="7dip"
+                        android:layout_weight="0.50"
                         android:src="@mipmap/savings" />
 
                     <mbLib.CusFntTextView
@@ -223,7 +221,7 @@
                     android:layout_weight="1"
                     android:background="@mipmap/sbk_block"
                     android:orientation="vertical"
-                    android:weightSum="1" >
+                    android:weightSum="1">
 
                     <TextView
                         android:layout_width="fill_parent"
@@ -256,7 +254,7 @@
                     android:layout_weight="1"
                     android:background="@mipmap/sbk_block"
                     android:orientation="vertical"
-                    android:weightSum="1" >
+                    android:weightSum="1">
 
                     <TextView
                         android:layout_width="fill_parent"
@@ -288,7 +286,7 @@
                 android:layout_height="0dip"
                 android:layout_weight="1"
                 android:orientation="horizontal"
-                android:weightSum="3" >
+                android:weightSum="3">
 
                 <LinearLayout
                     android:layout_width="0dip"
@@ -297,14 +295,15 @@
                     android:layout_weight="1"
                     android:background="@mipmap/sbk_block"
                     android:orientation="vertical"
-                    android:weightSum="1" 
-                    android:visibility="gone">
+                    android:visibility="gone"
+                    android:weightSum="1">
 
                     <TextView
                         android:layout_width="fill_parent"
                         android:layout_height="0dip"
                         android:layout_gravity="bottom"
                         android:layout_weight="0.1" />
+
                     <ImageView
                         android:layout_width="fill_parent"
                         android:layout_height="0dip"
@@ -330,14 +329,15 @@
                     android:layout_weight="1"
                     android:background="@mipmap/sbk_block"
                     android:orientation="vertical"
-                    android:weightSum="1"
-                    android:visibility="gone" >
+                    android:visibility="gone"
+                    android:weightSum="1">
 
                     <TextView
                         android:layout_width="fill_parent"
                         android:layout_height="0dip"
                         android:layout_gravity="bottom"
                         android:layout_weight="0.1" />
+
                     <ImageView
                         android:layout_width="fill_parent"
                         android:layout_height="0dip"
@@ -363,19 +363,20 @@
                     android:layout_weight="1"
                     android:background="@mipmap/sbk_block"
                     android:orientation="vertical"
-                    android:weightSum="1" >
+                    android:weightSum="1">
 
                     <TextView
                         android:layout_width="fill_parent"
                         android:layout_height="0dip"
                         android:layout_gravity="bottom"
                         android:layout_weight="0.1" />
+
                     <ImageView
                         android:layout_width="fill_parent"
                         android:layout_height="0dip"
-                        android:layout_weight="0.50"
                         android:layout_marginLeft="15dip"
                         android:layout_marginRight="15dip"
+                        android:layout_weight="0.50"
                         android:src="@mipmap/ministmnt" />
 
                     <mbLib.CusFntTextView
@@ -397,19 +398,20 @@
                     android:layout_weight="1"
                     android:background="@mipmap/sbk_block"
                     android:orientation="vertical"
-                    android:weightSum="1"
-                    android:visibility="visible">
+                    android:visibility="visible"
+                    android:weightSum="1">
 
                     <TextView
                         android:layout_width="fill_parent"
                         android:layout_height="0dip"
                         android:layout_gravity="bottom"
                         android:layout_weight="0.1" />
+
                     <ImageView
                         android:layout_width="fill_parent"
                         android:layout_height="0dip"
                         android:layout_weight="0.50"
-                        android:src="@mipmap/fund_trnsfer"/>
+                        android:src="@mipmap/fund_trnsfer" />
 
                     <mbLib.CusFntTextView
                         android:layout_width="fill_parent"
@@ -438,6 +440,7 @@
                         android:layout_height="0dip"
                         android:layout_gravity="bottom"
                         android:layout_weight="0.1" />
+
                     <ImageView
                         android:layout_width="fill_parent"
                         android:layout_height="0dip"
@@ -461,7 +464,7 @@
                 android:layout_height="0dip"
                 android:layout_weight="1"
                 android:orientation="horizontal"
-                android:weightSum="3" >
+                android:weightSum="3">
 
                 <LinearLayout
                     android:id="@+id/btn_changempin"
@@ -471,24 +474,24 @@
                     android:layout_weight="1"
                     android:background="@mipmap/sbk_block"
                     android:orientation="vertical"
-                    android:weightSum="1" 
-                  >
+                    android:weightSum="1">
 
                     <TextView
                         android:layout_width="fill_parent"
                         android:layout_height="0dip"
                         android:layout_gravity="bottom"
                         android:layout_weight="0.1" />
+
                     <ImageView
                         android:layout_width="fill_parent"
                         android:layout_height="0dip"
                         android:layout_weight="0.50"
-                        android:src="@mipmap/changempin"
-                        android:padding="7dp"/> 
-                        <!--  <ImageView
-                        android:layout_width="fill_parent"
-                        android:layout_height="0dip"
-                        android:layout_weight="0.45" /> -->
+                        android:padding="7dp"
+                        android:src="@mipmap/changempin" />
+                    <!--  <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="0.45" /> -->
 
                     <mbLib.CusFntTextView
                         android:layout_width="fill_parent"
@@ -496,10 +499,10 @@
                         android:layout_weight="0.40"
                         android:gravity="center"
                         android:padding="2dip"
-                      android:text="@string/lbl_title_change_mpin"
+                        android:text="@string/lbl_title_change_mpin"
                         android:textSize="15sp"
                         android:textStyle="bold" />
-                      <!-- android:text="@string/lbl_cheque_related" -->
+                    <!-- android:text="@string/lbl_cheque_related" -->
                 </LinearLayout>
 
                 <LinearLayout
@@ -510,13 +513,14 @@
                     android:layout_weight="1"
                     android:background="@mipmap/sbk_block"
                     android:orientation="vertical"
-                    android:weightSum="1" >
+                    android:weightSum="1">
 
                     <TextView
                         android:layout_width="fill_parent"
                         android:layout_height="0dip"
                         android:layout_gravity="bottom"
                         android:layout_weight="0.1" />
+
                     <ImageView
                         android:layout_width="fill_parent"
                         android:layout_height="0dip"
@@ -542,13 +546,14 @@
                     android:layout_weight="1"
                     android:background="@mipmap/sbk_block"
                     android:orientation="vertical"
-                    android:weightSum="1" >
+                    android:weightSum="1">
 
                     <TextView
                         android:layout_width="fill_parent"
                         android:layout_height="0dip"
                         android:layout_gravity="bottom"
                         android:layout_weight="0.1" />
+
                     <ImageView
                         android:layout_width="fill_parent"
                         android:layout_height="0dip"
@@ -583,28 +588,29 @@
                         android:layout_height="0dip"
                         android:layout_gravity="bottom"
                         android:layout_weight="0.1" />
-                  <!--   <ImageView
-                        android:layout_width="fill_parent"
-                        android:layout_height="0dip"
-                        android:layout_weight="0.50"
-                        android:src="@drawable/other_services" /> -->
-                   <ImageView
+                    <!--   <ImageView
+                          android:layout_width="fill_parent"
+                          android:layout_height="0dip"
+                          android:layout_weight="0.50"
+                          android:src="@drawable/other_services" /> -->
+                    <ImageView
                         android:layout_width="fill_parent"
                         android:layout_height="0dip"
                         android:layout_weight="0.45" />
+
                     <mbLib.CusFntTextView
                         android:layout_width="fill_parent"
                         android:layout_height="0dip"
                         android:layout_weight="0.40"
                         android:gravity="center"
                         android:padding="2dip"
-                       
+
                         android:textSize="15sp"
                         android:textStyle="bold" />
                     <!--  android:text="@string/lbl_other_srvce" -->
                 </LinearLayout>
 
-               
+
             </LinearLayout>
 
             <LinearLayout
@@ -612,9 +618,8 @@
                 android:layout_height="0dip"
                 android:layout_weight="1"
                 android:orientation="horizontal"
-                android:weightSum="3"
                 android:visibility="gone"
-                >
+                android:weightSum="3">
 
                 <LinearLayout
                     android:id="@+id/btn_recharge"
@@ -624,27 +629,27 @@
                     android:layout_weight="1"
                     android:background="@mipmap/sbk_block"
                     android:orientation="vertical"
-                    android:weightSum="1" >
+                    android:weightSum="1">
 
                     <TextView
                         android:layout_width="fill_parent"
                         android:layout_height="0dip"
                         android:layout_gravity="bottom"
                         android:layout_weight="0.1" />
+
                     <ImageView
                         android:id="@+id/rechargeImgfhf"
                         android:layout_width="fill_parent"
                         android:layout_height="0dip"
-                        android:layout_weight="0.50"
-                         />
-<!-- android:src="@drawable/bill" -->
+                        android:layout_weight="0.50" />
+                    <!-- android:src="@drawable/bill" -->
                     <mbLib.CusFntTextView
                         android:layout_width="fill_parent"
                         android:layout_height="0dip"
                         android:layout_weight="0.40"
                         android:gravity="center"
                         android:padding="2dip"
-                        
+
                         android:textSize="15sp"
                         android:textStyle="bold" />
                     <!-- android:text="@string/lbl_recharge" -->
@@ -658,13 +663,14 @@
                     android:layout_weight="1"
                     android:background="@mipmap/sbk_block"
                     android:orientation="vertical"
-                    android:weightSum="1" >
+                    android:weightSum="1">
 
                     <TextView
                         android:layout_width="fill_parent"
                         android:layout_height="0dip"
                         android:layout_gravity="bottom"
                         android:layout_weight="0.1" />
+
                     <ImageView
                         android:layout_width="fill_parent"
                         android:layout_height="0dip"
@@ -689,13 +695,14 @@
                     android:layout_weight="1"
                     android:background="@mipmap/sbk_block"
                     android:orientation="vertical"
-                    android:weightSum="1" >
+                    android:weightSum="1">
 
                     <TextView
                         android:layout_width="fill_parent"
                         android:layout_height="0dip"
                         android:layout_gravity="bottom"
                         android:layout_weight="0.1" />
+
                     <ImageView
                         android:layout_width="fill_parent"
                         android:layout_height="0dip"
@@ -727,14 +734,14 @@
         android:layout_weight="0.45"
         android:background="@mipmap/sbk_footer"
         android:orientation="vertical"
-        android:weightSum="1" >
+        android:weightSum="1">
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="0dip"
             android:layout_weight="0.7"
             android:orientation="horizontal"
-            android:weightSum="3" >
+            android:weightSum="3">
 
             <ImageView
                 android:id="@+id/help"
@@ -761,8 +768,7 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="0dip"
-            android:layout_weight="0.3" >
-        </LinearLayout>
+            android:layout_weight="0.3"></LinearLayout>
     </LinearLayout>
 
 </LinearLayout>
