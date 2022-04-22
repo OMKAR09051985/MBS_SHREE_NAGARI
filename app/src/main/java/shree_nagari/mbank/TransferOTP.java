@@ -221,8 +221,6 @@ public class TransferOTP extends Fragment implements OnClickListener
 			strOTP = txt_otp.getText().toString().trim();
 			strRefId=txt_ref_id.getText().toString().trim();
 			strRefId=strRefId.substring(strRefId.indexOf(":")+1).trim();
-			 
-
 			try
 			{
 				jObj.put("OTPVAL", strOTP);

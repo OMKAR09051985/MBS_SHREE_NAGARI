@@ -537,20 +537,12 @@ btn_logout.setVisibility(View.GONE);
         return flag;
     }// end chkConnectivity
 
-    class CallWebService_fetch_all_beneficiaries extends
-            AsyncTask<Void, Void, Void> {
-
+    class CallWebService_fetch_all_beneficiaries extends AsyncTask<Void, Void, Void> {
         LoadProgressBar loadProBarObj = new LoadProgressBar(act);
-        // String[] xmlTags = {"CUSTID","SAMEBNK","IMEINO"};
-
-
         JSONObject jsonObj = new JSONObject();
-
 
         protected void onPreExecute() {
             try {
-
-                // pb_wait.setVisibility(ProgressBar.VISIBLE);
                 loadProBarObj.show();
 
                 jsonObj.put("CUSTID", custId);
@@ -993,19 +985,8 @@ btn_logout.setVisibility(View.GONE);
                 // pb_wait.setVisibility(ProgressBar.VISIBLE);
                 loadProBarObj.show();
                 accNo = txtAccNo.getText().toString().trim();
-                //Log.e("ohtertranImpsbtn_submit",						" spnr size= " + arrListTemp.size());
-                //Log.e("ohtertranImpsbtn_submit", " spnr index "						+ spi_sel_beneficiery.getSelectedItemPosition());
-
-                //..debitAccno = spi_debit_account.getSelectedItem().toString();
-                //debitAccno = spi_debit_account.getItemAtPosition(spi_debit_account.getSelectedItemPosition()-1).toString();
                 debitAccno = spi_debit_account.getItemAtPosition(spi_debit_account.getSelectedItemPosition()).toString();
                 debitAccno = debitAccno.substring(0, 16);
-
-                //Log.e("debitAccno","debitAccno11111===="+debitAccno);
-                //debitAccno=debitAccno.substring(0, 16);
-
-                ////Log.e("debitAccno","debitAccno222===="+debitAccno);
-
                 benAcNo = spi_sel_beneficiery.getSelectedItem().toString();
 
                 tranType = spi_payment_option.getItemAtPosition(
@@ -1038,7 +1019,7 @@ btn_logout.setVisibility(View.GONE);
                 jsonObj.put("SIMNO", MBSUtils.getSimNumber(act));
                 jsonObj.put("BENFSRNO", benSrno);
                 jsonObj.put("METHODCODE", "28");
-                Log.e("jsonObj", "jsonObj====" + jsonObj);
+                Log.e("Shubham", "IMPS_Request: " + jsonObj.toString());
             } catch (JSONException je) {
                 je.printStackTrace();
             }
@@ -1087,7 +1068,7 @@ btn_logout.setVisibility(View.GONE);
                 Log.e("DSP", "strRTGS=====" + str);
                 String decryptedAccounts = str.trim();
                 jsonObj = new JSONObject(str.trim());
-
+                Log.e("Shubham", "IMPS_Responce: " + jsonObj.toString());
                 if (jsonObj.has("RESPCODE")) {
                     respcode = jsonObj.getString("RESPCODE");
                 } else {

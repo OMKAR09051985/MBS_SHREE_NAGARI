@@ -257,8 +257,7 @@ public class SetMPIN extends Activity implements OnClickListener {
                             } else if (isValidUser && !validusernm.equals(txt_user_id.getText().toString().trim())) {
                                 showAlert(getString(R.string.alert_154_01));
                             } else if (isValidUser && validusernm.equals(txt_user_id.getText().toString().trim())) {
-                                CallWebServiceSetMPIN c = new CallWebServiceSetMPIN();
-                                c.execute();
+                                new CallWebServiceSetMPIN().execute();
                             }
                         }
                     } else if (fromAct.equalsIgnoreCase("FORGOT")) {

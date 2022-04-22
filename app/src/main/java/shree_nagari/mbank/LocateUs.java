@@ -378,7 +378,7 @@ public class LocateUs extends FragmentActivity implements LocationListener,
 
 	public void onBackPressed() {
 		//locManager.removeUpdates(this);
-		Intent in = new Intent(this, SBKLoginActivity.class);
+		Intent in = new Intent(this, LoginActivity.class);
 		in.putExtra("VAR1", var1);
 		in.putExtra("VAR3", var3);
 		startActivity(in);

@@ -50,6 +50,7 @@
                         android:id="@+id/sameBnkTranspi_debit_account"
                         style="@style/spinnerStyle"
                         android:layout_width="0dip"
+                        android:spinnerMode="dropdown"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center|center_horizontal"
                         android:layout_weight="3.2"
@@ -107,6 +108,7 @@
                         style="@style/spinnerStyle"
                         android:layout_width="0dip"
                         android:layout_height="wrap_content"
+                        android:spinnerMode="dropdown"
                         android:layout_gravity="center|center_horizontal"
                         android:layout_weight="3.2"
                         android:background="@drawable/rounded_corner_spinner" />

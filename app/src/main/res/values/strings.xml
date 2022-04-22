@@ -814,4 +814,8 @@
     <string name="tran_mpin">Enter 6 Digit Tran MPIN</string>
     <string name="re_tran_mpin">Retype 6 Digit Tran MPIN</string>
     <string name="alert_accleng">16</string>
+    <string name="enter_tran">Enter MPIN</string>
+    <string name="mpin">MPIN</string>
+    <string name="signin">Sign In</string>
+
 </resources>

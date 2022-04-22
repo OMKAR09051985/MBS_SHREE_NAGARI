@@ -576,8 +576,7 @@ public class OtherBankTranIFSC extends Fragment implements OnClickListener
 		return flag;
 	}// end chkConnectivity
 
-	class CallWebService_fetch_all_beneficiaries extends
-			AsyncTask<Void, Void, Void> {
+	class CallWebService_fetch_all_beneficiaries extends AsyncTask<Void, Void, Void> {
 
 		String retval = "";
 		LoadProgressBar loadProBarObj = new LoadProgressBar(act);

@@ -97,31 +97,27 @@ public class SBKLoginActivity extends CustomWindow implements OnClickListener,On
 		super.onCreate(savedInstanceState);
 		getWindow().setFlags(LayoutParams.FLAG_SECURE, LayoutParams.FLAG_SECURE);
 		setContentView(R.layout.sbk_login);
-		/*if (!new DeviceUtils().isEmulator()) {
-			MBSUtils.ifGooglePlayServicesValid(SBKLoginActivity.this);
-		} else {
-			MBSUtils.showAlertDialogAndExitApp(getString(R.string.alert_sup),SBKLoginActivity.this);
-		}*/
+		//setContentView(R.layout.login1);
 		try {
 			var1 = (PrivateKey) getIntent().getSerializableExtra("VAR1");
 			var3 = (String) getIntent().getSerializableExtra("VAR3");
 		}catch (Exception e){
 			e.printStackTrace();
 		}
+//		btn_mpin = (Button) findViewById(R.id.btn_mpin);
+//		btn_password = (Button) findViewById(R.id.btn_password);
+//		pass_layout = (LinearLayout) findViewById(R.id.pass_layout);
+//		btn_mpin.setOnClickListener(this);
+//     	btn_password.setOnClickListener(this);
+		contactus = (ImageButton) findViewById(R.id.contactus);
+		locateus = (ImageButton) findViewById(R.id.locateus);
+		txt_forgot_pass = (TextView) findViewById(R.id.txt_forgot_pass);
+		txt_register = (TextView) findViewById(R.id.txt_register);
+//		contactus.setOnClickListener(this);
+//		locateus.setOnClickListener(this);
+//		txt_forgot_pass.setOnClickListener(this);
+//		txt_register.setOnClickListener(this);
 
-		Log.e("strvarlognew","----"+var1);
-		Log.e("strvarlognew","----"+var3);
-		btn_mpin = (Button) findViewById(R.id.btn_mpin);
-		btn_password = (Button) findViewById(R.id.btn_password);
-		pass_layout = (LinearLayout) findViewById(R.id.pass_layout);
-
-//
-		
-		btn_mpin.setOnClickListener(this);
-		btn_password.setOnClickListener(this);
-
-
-		
 		dbms = new DatabaseManagement("shree_nagari.mbank", "listMobileBanking");
 		Cursor cust1 = dbms.selectFromTable("SHAREDPREFERENCE", "", null);
 		if (cust1 != null) {
@@ -155,14 +151,15 @@ public class SBKLoginActivity extends CustomWindow implements OnClickListener,On
 		/*if(customerId.length()==0)
 			setPasswordView();
 		else*/
-			setMpinView();
+			//setMpinView();
 		
-		if(var1.toString().length()==0 || var3.toString().length()==0)
+		/*if(var1.toString().length()==0 || var3.toString().length()==0)
 		{
 			retMess = getString(R.string.alert_restart);
 			showAlert(retMess);
-		}
-		setMpinView();
+		}*/
+		//setMpinView();
+		//setLoginView();
 	}
 
 	public void setKeyValues() {
@@ -502,6 +499,15 @@ public class SBKLoginActivity extends CustomWindow implements OnClickListener,On
 		}
 	}
 
+	public void setLoginView(){
+		mpinChild = getLayoutInflater().inflate(R.layout.login1, null);
+		LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+				LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
+		params.setMargins(120, 0, 120, 0);
+		mpinChild.setLayoutParams(params);
+		pass_layout.addView(mpinChild);
+	}
+
 	public void setMpinView() {
 		btn_mpin.setTextColor(Color.parseColor("#fff8ad"));
 		btn_password.setTextColor(Color.parseColor("#ffffff"));
@@ -675,7 +681,8 @@ public class SBKLoginActivity extends CustomWindow implements OnClickListener,On
 							in.putExtra("VAR3", var3);
 							loginAct.startActivity(in);
 							loginAct.finish();
-						} *//*else if (retMess == getString(R.string.alert_oldversion)) {
+						} */
+	/*else if (retMess == getString(R.string.alert_oldversion)) {
 
 							try {
 								Intent viewIntent = new Intent(
@@ -688,7 +695,8 @@ public class SBKLoginActivity extends CustomWindow implements OnClickListener,On
 										Toast.LENGTH_LONG).show();
 								e.printStackTrace();
 							}
-						} *//*else if ((retMess
+						} */
+	/*else if ((retMess
 								.equalsIgnoreCase(getString(R.string.alert_mpinexp)
 										+ " "
 										+ expdt
@@ -706,7 +714,8 @@ public class SBKLoginActivity extends CustomWindow implements OnClickListener,On
 							loginAct.startActivity(in);
 							loginAct.finish();
 						}
-						*//*else if(retMess.equalsIgnoreCase(getString(R.string.login_alert_009)))
+						*/
+	/*else if(retMess.equalsIgnoreCase(getString(R.string.login_alert_009)))
 						{
 							//Toast.makeText(SBKLoginActivity.this, "in", Toast.LENGTH_SHORT).show();
 							Intent in = new Intent(loginAct,ValidateSecQueActivity.class);
@@ -719,8 +728,8 @@ public class SBKLoginActivity extends CustomWindow implements OnClickListener,On
 							in.putExtra("VAR3", var3);
 							loginAct.startActivity(in);
 							loginAct.finish();
-						}*//*
-					}
+						}*/
+	/*				}
 				});
 		dbs.get_adb().show();
 	}*/
@@ -874,8 +883,7 @@ public class SBKLoginActivity extends CustomWindow implements OnClickListener,On
 				obj.put("MPIN", mpin);
 				obj.put("IMEINO", imeiNo);// + "~" + mobNo
 				obj.put("SIMNO", MBSUtils.getSimNumber(SBKLoginActivity.this));
-				obj.put("MOBILENO",
-						MBSUtils.getMyPhoneNO(SBKLoginActivity.this));
+				obj.put("MOBILENO",MBSUtils.getMyPhoneNO(SBKLoginActivity.this));
 				obj.put("IPADDRESS", MBSUtils.getLocalIpAddress());
 				obj.put("OSVERSION", Build.VERSION.RELEASE);
 				obj.put("LATITUDE", location.split("~")[0]);
@@ -1532,6 +1540,7 @@ public class SBKLoginActivity extends CustomWindow implements OnClickListener,On
 			new CallfetchaccWebService().execute();
 		}
 	}
+
 
 	class CallfetchaccWebService extends AsyncTask<Void, Void, Void> {
 

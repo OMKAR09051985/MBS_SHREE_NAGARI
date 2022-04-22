@@ -593,6 +593,7 @@ public class NewDashboard extends Activity implements OnClickListener, OnTouchLi
                 jsonObj.put("IMEINO", MBSUtils.getImeiNumber(NewDashboard.this));
                 jsonObj.put("SIMNO", MBSUtils.getSimNumber(NewDashboard.this));
                 jsonObj.put("METHODCODE", "29");
+                Log.e("Shubham", "CallWebService_Exit_Request: "+jsonObj.toString() );
                 //ValidationData=MBSUtils.getValidationData(NewDashboard.this,jsonObj.toString());
 
             } catch (JSONException je) {
@@ -629,6 +630,7 @@ public class NewDashboard extends Activity implements OnClickListener, OnTouchLi
                 var5 = envelope.bodyIn.toString().trim();
                 int i = envelope.bodyIn.toString().trim().indexOf("=");
                 var5 = var5.substring(i + 1, var5.length() - 3);
+                Log.e("Shubham", "CallWebService_Exit_Response: "+var5);
 
             }// end try
             catch (Exception e) {

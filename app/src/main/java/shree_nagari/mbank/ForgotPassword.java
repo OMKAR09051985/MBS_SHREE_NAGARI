@@ -888,7 +888,7 @@ public class ForgotPassword extends Activity implements OnClickListener
 	@Override
 	public void onBackPressed() { 
 		
-		Intent in=new Intent(this,SBKLoginActivity.class);
+		Intent in=new Intent(this,LoginActivity.class);
 		in.putExtra("VAR1", var1);
 		in.putExtra("VAR3", var3);
 		startActivity(in);
