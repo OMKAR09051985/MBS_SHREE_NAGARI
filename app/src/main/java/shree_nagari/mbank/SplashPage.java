@@ -316,7 +316,7 @@ public class SplashPage extends Activity implements OnClickListener {
                         Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED)) {
             //Intent in = new Intent(this, SBKLoginActivity.class);
             Log.e("Shubham", "---------------------in SplashPage Activity on click----------1------");
-            Intent in = new Intent(this, LoginActivity1.class);
+            Intent in = new Intent(this, LoginActivity.class);
             in.putExtra("VAR1", var1);
             in.putExtra("VAR3", var3);
             startActivity(in);
@@ -543,7 +543,7 @@ public class SplashPage extends Activity implements OnClickListener {
 
                     case R.id.btn_cancel: {
                         Log.e("Shubham", "---------------------in SplashPage Activity----------2------");
-                        Intent intent = new Intent(SplashPage.this, LoginActivity1.class);
+                        Intent intent = new Intent(SplashPage.this, LoginActivity.class);
                         intent.putExtra("VAR1", var1);
                         intent.putExtra("VAR3", var3);
                         startActivity(intent);
@@ -970,8 +970,9 @@ public class SplashPage extends Activity implements OnClickListener {
             public void onClick(View v) {
                 switch (v.getId()) {
                     case R.id.btn_ok:
-                        finish();
-                        System.exit(0);
+//                        finish();
+//                        System.exit(0);
+                        restart();
                         dismiss();
                         break;
                 }
@@ -980,6 +981,15 @@ public class SplashPage extends Activity implements OnClickListener {
             }
         };
         alert.show();
+    }
+
+    public void restart(){
+        Intent i = getBaseContext().getPackageManager().
+                getLaunchIntentForPackage(getBaseContext().getPackageName());
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(i);
+        finish();
     }
 
 }

@@ -81,7 +81,7 @@ public class BranchDetailShow  extends Activity implements OnClickListener{
 		txt_heading.setText(getString(R.string.lbl_branch_det));
 		btn_home1 = (ImageView) findViewById(R.id.btn_home1);
 		btn_logout = (ImageView) findViewById(R.id.btn_logout);
-		btn_home1.setVisibility(View.VISIBLE);
+		btn_home1.setVisibility(View.GONE);
 		btn_logout.setVisibility(View.GONE);
 		btn_home1.setOnClickListener(null);
 		btn_logout.setOnClickListener(null);
@@ -107,8 +107,8 @@ public class BranchDetailShow  extends Activity implements OnClickListener{
 		}
 		flag = chkConnectivity();
 		if (flag == 0) {
-			CallWebServiceGetFetchBranchesdet C = new CallWebServiceGetFetchBranchesdet();
-			C.execute();
+
+			new CallWebServiceGetFetchBranchesdet().execute();
 		}
 		
 	}
@@ -137,7 +137,7 @@ public class BranchDetailShow  extends Activity implements OnClickListener{
 						MBSUtils.getImeiNumber(BranchDetailShow.this));
 				jsonObj.put("SIMNO", MBSUtils.getSimNumber(BranchDetailShow.this));
 				jsonObj.put("METHODCODE","70");
-				Log.e("DSP","Branchdetails===="+jsonObj);
+				Log.e("Shubham", "CallWebServiceGetFetchBranchesdet_Request-->"+jsonObj.toString());
 				//ValidationData = MBSUtils.getValidationData(BranchDetailShow.this,jsonObj.toString());
 
 			} catch (JSONException je) {
@@ -192,7 +192,7 @@ public class BranchDetailShow  extends Activity implements OnClickListener{
 				
 				String str=CryptoClass.Function6(var5,var2);
 				 jsonObj = new JSONObject(str.trim());
-				 Log.e("DSP","Branchdetails===="+str);
+				Log.e("Shubham", "CallWebServiceGetFetchBranchesdet_Responce-->"+jsonObj);
 				/* ValidationData=xml_data[1].trim();
 				if(ValidationData.equals(MBSUtils.getValidationData(BranchDetailShow.this, xml_data[0].trim()))) 
 				{

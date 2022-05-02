@@ -125,6 +125,11 @@ public class LoginActivity extends CustomWindow implements OnClickListener, Loca
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
+        var1 = (PrivateKey) getIntent().getSerializableExtra("VAR1");
+        var3 = (String) getIntent().getSerializableExtra("VAR3");
+        if (var1.toString().length() == 0 || var3.toString().length() == 0) {
+            showAlert(getString(R.string.alert_restartapp));
+        }
         //Log.e("Shubham", "---------------------in Login Activity loadOldView----------------");
         et_custid = (EditText) findViewById(R.id.etCustId);
         et_mpin = (EditText) findViewById(R.id.etMpin);
@@ -186,8 +191,7 @@ public class LoginActivity extends CustomWindow implements OnClickListener, Loca
         txt_register.setOnClickListener(this);
         txt_forgot_pass.setOnClickListener(this);
 
-        var1 = (PrivateKey) getIntent().getSerializableExtra("VAR1");
-        var3 = (String) getIntent().getSerializableExtra("VAR3");
+
         dbms = new DatabaseManagement("shree_nagari.mbank", "listMobileBanking");
         Cursor cust1 = dbms.selectFromTable("SHAREDPREFERENCE", "", null);//("select * from ", null);
         if (cust1 != null) {
@@ -484,6 +488,8 @@ public class LoginActivity extends CustomWindow implements OnClickListener, Loca
 
             case R.id.txt_register:
                 in = new Intent(this, Register.class);
+                in.putExtra("VAR1", var1);
+                in.putExtra("VAR3", var3);
                 startActivity(in);
                 finish();
                 break;
@@ -492,6 +498,8 @@ public class LoginActivity extends CustomWindow implements OnClickListener, Loca
                 Bundle b = new Bundle();
                 b.putString("FROMACT", "FORGOT");
                 in.putExtras(b);
+                in.putExtra("VAR1", var1);
+                in.putExtra("VAR3", var3);
                 loginAct.startActivity(in);
                 loginAct.finish();
                 break;
@@ -554,12 +562,16 @@ public class LoginActivity extends CustomWindow implements OnClickListener, Loca
                 break;
             case R.id.contactus:
                 in = new Intent(loginAct, ContactUs.class);
+                in.putExtra("VAR1", var1);
+                in.putExtra("VAR3", var3);
                 startActivity(in);
                 loginAct.finish();
                 break;
 
             case R.id.locateus:
                 in = new Intent(loginAct, LocateUs.class);
+                in.putExtra("VAR1", var1);
+                in.putExtra("VAR3", var3);
                 startActivity(in);
                 loginAct.finish();
                 break;
@@ -2055,7 +2067,11 @@ public class LoginActivity extends CustomWindow implements OnClickListener, Loca
 
                             this.dismiss();
                             //this.dismiss();
-                        } else
+                        } else if (str.equalsIgnoreCase(getString(R.string.alert_restartapp))) {
+//                            finish();
+//                            System.exit(0);
+                            restart();
+                        }else
                             this.dismiss();
                         break;
                     default:
@@ -2066,6 +2082,15 @@ public class LoginActivity extends CustomWindow implements OnClickListener, Loca
         };
         alert.show();
 
+    }
+
+    public void restart(){
+        Intent i = getBaseContext().getPackageManager().
+                getLaunchIntentForPackage(getBaseContext().getPackageName());
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(i);
+        finish();
     }
 
 

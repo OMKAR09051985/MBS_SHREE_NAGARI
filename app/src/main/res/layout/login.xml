@@ -44,8 +44,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.2"
             android:orientation="horizontal"
-            android:paddingLeft="10dip"
-            android:paddingRight="10dip"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip"
             android:layout_marginTop="20dp"
             android:weightSum="1">
 
@@ -53,7 +53,7 @@
                 android:layout_width="0dip"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:layout_weight="0.2"
+                android:layout_weight="0.1"
                 android:src="@mipmap/login_username" />
 
             <mbLib.CustomEditText
@@ -62,7 +62,7 @@
                 android:layout_width="0dip"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="25dip"
-                android:layout_weight="0.8"
+                android:layout_weight="0.9"
                 android:hint="@string/lbl_customer_id"
                 android:inputType="textNoSuggestions"
                 android:nextFocusUp="@+id/LoginButton"
@@ -76,15 +76,15 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.2"
             android:orientation="horizontal"
-            android:paddingLeft="10dip"
-            android:paddingRight="10dip"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip"
             android:weightSum="1">
 
             <ImageView
                 android:layout_width="0dip"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:layout_weight="0.2"
+                android:layout_weight="0.1"
                 android:src="@mipmap/login_password" />
 
             <mbLib.CustomEditText
@@ -93,12 +93,12 @@
                 android:layout_width="0dip"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dip"
-                android:layout_weight="0.8"
+                android:layout_weight="0.9"
                 android:hint="@string/lbl_mpin1"
                 android:inputType="numberPassword"
                 android:nextFocusUp="@id/LoginButton"
                 android:nextFocusDown="@id/Password"
-                android:text="111111" />
+                android:text="" />
 
         </LinearLayout>
 

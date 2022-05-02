@@ -100,9 +100,10 @@ public class OTPActivity extends Activity implements OnClickListener {
 		txt_heading=(TextView)findViewById(R.id.txt_heading);
 		txt_heading.setText(getString(R.string.lbl_otp_validtn));
 		img_heading = (ImageView) findViewById(R.id.img_heading);
-		img_heading.setBackgroundResource(R.mipmap.new_logo);
+		img_heading.setBackgroundResource(R.mipmap.otp);
 		btn_home1 = (ImageView) findViewById(R.id.btn_home1);
 		btn_logout = (ImageView) findViewById(R.id.btn_logout);
+		btn_logout.setVisibility(View.GONE);
 		btn_home1.setOnClickListener(this);
 		btn_logout.setOnClickListener(this);
 		btn_otp_submit.setOnClickListener(this);
@@ -515,12 +516,13 @@ public class OTPActivity extends Activity implements OnClickListener {
 			Intent in = new Intent(OTPActivity.this, ForgotPassword.class);
 			in.putExtra("VAR1", var1);
 			in.putExtra("VAR3", var3);
+			in.putExtra("FROMACT", "OTPACTIVITY");
 			startActivity(in);
 			finish();
 		}
 		else
 		{
-			Intent in = new Intent(this, SBKLoginActivity.class);
+			Intent in = new Intent(this, LoginActivity.class);
 			in.putExtra("VAR1", var1);
 			in.putExtra("VAR3", var3);
 			startActivity(in);
@@ -722,8 +724,8 @@ public class OTPActivity extends Activity implements OnClickListener {
 		{
 			
 			Bundle b1=new Bundle();
-			Intent in = new Intent(OTPActivity.this,
-					SetMPIN.class);
+			Intent in = new Intent(OTPActivity.this,SetMPIN.class);
+			//Intent in = new Intent(OTPActivity.this,LoginActivity.class);
 			b1.putString("CUSTID", strCustId);
 			b1.putString("OTPVAL", strOTP);
 			b1.putString("REFID", strRefId);

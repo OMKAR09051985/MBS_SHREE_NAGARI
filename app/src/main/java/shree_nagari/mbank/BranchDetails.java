@@ -78,7 +78,7 @@ public class BranchDetails extends Activity implements OnClickListener {
 		img_heading.setImageResource(R.mipmap.contact_us);
 		btn_home1 = (ImageView) findViewById(R.id.btn_home1);
 		btn_logout = (ImageView) findViewById(R.id.btn_logout);
-		btn_home1.setVisibility(View.VISIBLE);
+		btn_home1.setVisibility(View.GONE);
 		btn_logout.setVisibility(View.GONE);
 		btn_home1.setOnClickListener(null);
 		btn_logout.setOnClickListener(null);
@@ -250,6 +250,7 @@ public class BranchDetails extends Activity implements OnClickListener {
                 	  	branchbeansarr.get(i).getBrname();
                 	  	Intent in = new Intent(BranchDetails.this,BranchDetailShow.class);
 						Bundle b = new Bundle();
+					    Log.e("Shubham", "branchbeansarr.get(i).getBrcode():---->"+branchbeansarr.get(i).getBrcode());
 						b.putString("brcode", branchbeansarr.get(i).getBrcode());
 						in.putExtras(b);
 						in.putExtra("VAR1", var1);

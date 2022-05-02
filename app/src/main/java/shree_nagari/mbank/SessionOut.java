@@ -108,7 +108,7 @@ public class SessionOut extends Activity implements OnClickListener {
 		Log.e("sessionva3","----"+var3);
 
 		//System.exit(0);
-		Intent in = new Intent(this, SBKLoginActivity.class);
+		Intent in = new Intent(this, SplashPage.class);
 		in.putExtra("VAR1", var1);
 		in.putExtra("VAR3", var3);
 		startActivity(in);

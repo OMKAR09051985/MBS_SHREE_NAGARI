@@ -1245,15 +1245,18 @@ btn_logout.setVisibility(View.GONE);
 			
 			try 
 			{
-				obj.put("SIMNO", MBSUtils.getMyPhoneNO(act));
+
 				obj.put("CUSTID", custId);
 				obj.put("TRANTYPE", "OWN");
 				obj.put("DRACCNO", debitAccno);
 				obj.put("AMOUNT", amt);
 				obj.put("CRACCNO", creditAcc);
 				obj.put("IMEINO", MBSUtils.getImeiNumber(act));
-				
+				obj.put("SIMNO", MBSUtils.getSimNumber(act));
+				obj.put("BENFSRNO", benSrno);
 				obj.put("METHODCODE","28");
+				Log.e("Shubham", "CallWebServiceGetSrvcCharg_req: "+obj.toString());
+						
 				//ValidationData=MBSUtils.getValidationData(act,obj.toString());
 			} 
 			catch (JSONException e) 
@@ -1299,9 +1302,12 @@ btn_logout.setVisibility(View.GONE);
 
 		protected void onPostExecute(Void paramVoid) 
 		{
+			//Log.e("Shubham", "CallWebServiceGetSrvcCharg_var5: "+var5);
 			String str=CryptoClass.Function6(var5,var2);
 			// jsonObj = new JSONObject(str.trim());
 			String decryptedAccounts = str.trim();
+			Log.e("Shubham", "CallWebServiceGetSrvcCharg_responce: "+decryptedAccounts);
+
 			if (decryptedAccounts.indexOf("SUCCESS") > -1) 
 			{
 				

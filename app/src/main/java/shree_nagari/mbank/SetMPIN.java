@@ -323,7 +323,7 @@ public class SetMPIN extends Activity implements OnClickListener {
                         //Log.e("SetMPIN","SetMPIN...CASE trru="+isWSCalled);
                         if (textMessage.equalsIgnoreCase(SetMPIN.this.getString(R.string.alert_070))) {
                             //Log.e("SetMPIN","SetMPIN...mpin set");
-                            Intent in = new Intent(SetMPIN.this, SBKLoginActivity.class);
+                            Intent in = new Intent(SetMPIN.this, LoginActivity.class);
                             in.putExtra("VAR1", var1);
                             in.putExtra("VAR3", var3);
                             startActivity(in);
@@ -331,7 +331,7 @@ public class SetMPIN extends Activity implements OnClickListener {
                         } else if (textMessage.equalsIgnoreCase(SetMPIN.this.getString(R.string.alert_103))) {
                             //Log.e("SetMPIN","SetMPIN...mpin set");
                             Bundle bObj = new Bundle();
-                            Intent in = new Intent(SetMPIN.this, SBKLoginActivity.class);
+                            Intent in = new Intent(SetMPIN.this,LoginActivity.class);
                             bObj.putString("CUSTID", strCustId);
                             in.putExtra("VAR1", var1);
                             in.putExtra("VAR3", var3);

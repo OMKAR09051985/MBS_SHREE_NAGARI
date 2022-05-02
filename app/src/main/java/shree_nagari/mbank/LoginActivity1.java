@@ -261,7 +261,7 @@ public class LoginActivity1 extends CustomWindow implements OnClickListener, Loc
         });*/
 
 //	public void loadOldView()
-        txt_mpin6.setOnFocusChangeListener(new OnFocusChangeListener() {
+       // txt_mpin6.setOnFocusChangeListener(new OnFocusChangeListener() {
 		/*setContentView(R.layout.login);
 		et_custid = (EditText) findViewById(R.id.etCustId);
 		et_mpin = (EditText) findViewById(R.id.etMpin);
@@ -277,19 +277,19 @@ public class LoginActivity1 extends CustomWindow implements OnClickListener, Loc
 		txt_register.setOnClickListener(this);
 		txt_forgot_pass.setOnClickListener(this);*/
 
-            public void onFocusChange(View v, boolean hasFocus) {
-                Log.e("txt_mpin5", "onFocusChange 5555");
-                String txt1 = txt_mpin6.getText().toString();
-                if (hasFocus == true) {
-                    if (txt1.length() == 0) // default text
-                    {
-                        txt_mpin5.requestFocus();
-                    }
-                }
-
-
-            }
-        });
+//            public void onFocusChange(View v, boolean hasFocus) {
+//                Log.e("txt_mpin5", "onFocusChange 5555");
+//                String txt1 = txt_mpin6.getText().toString();
+//                if (hasFocus == true) {
+//                    if (txt1.length() == 0) // default text
+//                    {
+//                        txt_mpin5.requestFocus();
+//                    }
+//                }
+//
+//
+//            }
+//        });
 
     }
 

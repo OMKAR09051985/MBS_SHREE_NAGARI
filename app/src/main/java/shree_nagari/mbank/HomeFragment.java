@@ -109,7 +109,7 @@ public class HomeFragment extends Fragment implements OnClickListener {
 
         btn_home1 = (ImageView) rootView.findViewById(R.id.btn_home1);
         btn_logout = (ImageView) rootView.findViewById(R.id.btn_logout);
-btn_logout.setVisibility(View.GONE);
+        btn_logout.setVisibility(View.GONE);
 
         //	btn_home=(ImageButton)rootView.findViewById(R.id.btn_home);
         /*btn_back=(ImageButton)rootView.findViewById(R.id.btn_back);*/
@@ -304,8 +304,7 @@ btn_logout.setVisibility(View.GONE);
                         try {
 
                             View v = adapterView.getChildAt(i1);
-                            RadioButton radio = (RadioButton) v
-                                    .findViewById(R.id.radio);
+                            RadioButton radio = (RadioButton) v.findViewById(R.id.radio);
                             radio.setChecked(false);
 
                         } catch (Exception e) {
@@ -316,8 +315,7 @@ btn_logout.setVisibility(View.GONE);
                     }
 
                     try {
-                        RadioButton radio = (RadioButton) view
-                                .findViewById(R.id.radio);
+                        RadioButton radio = (RadioButton) view.findViewById(R.id.radio);
                         radio.setChecked(true);
                     } catch (Exception e) {
                         Log.e("radio button", "radio");
@@ -492,7 +490,7 @@ btn_logout.setVisibility(View.GONE);
                 Fragment LoanAccountDetail = new LoanAccountDetail(act);
                 LoanAccountDetail.setArguments(b);
                 android.app.FragmentManager fragmentManager = getFragmentManager();
-                fragmentManager.beginTransaction().replace(R.id.frame_container,LoanAccountDetail).commit();
+                fragmentManager.beginTransaction().replace(R.id.frame_container, LoanAccountDetail).commit();
             }
         }
     }

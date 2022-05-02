@@ -572,13 +572,14 @@ btn_logout.setVisibility(View.GONE);
             try {
                 obj.put("CUSTID", custId);
                 obj.put("FRMDATE", fromDt);
-                obj.put("TODATE", toDt);
+                obj.put("TODATE",toDt);
                 obj.put("DRACCNO", accNo);
                 obj.put("TRANTYPE", tranType);
                 obj.put("POSTSTATUS", postingStatus);
                 obj.put("IMEINO", MBSUtils.getImeiNumber(act));
                 obj.put("SIMNO", MBSUtils.getSimNumber(act));
                 obj.put("METHODCODE", "41");
+                Log.e("TAG", "CallWebServiceGetTranHistory_Req: "+obj.toString() );
                 //ValidationData=MBSUtils.getValidationData(act,obj.toString());
             } catch (JSONException e) {
                 // TODO Auto-generated catch block
@@ -627,6 +628,7 @@ btn_logout.setVisibility(View.GONE);
             try {
                 String str = CryptoClass.Function6(var5, var2);
                 jsonObj = new JSONObject(str.trim());
+                Log.e("TAG", "CallWebServiceGetTranHistory_Responce: "+jsonObj.toString() );
 					/*ValidationData=xml_data[1].trim();
 					if(ValidationData.equals(MBSUtils.getValidationData(act, xml_data[0].trim())))
 					{

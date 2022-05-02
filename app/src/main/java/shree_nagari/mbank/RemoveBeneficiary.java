@@ -74,7 +74,6 @@ public class RemoveBeneficiary extends Fragment implements OnClickListener {
     private static String METHOD_NAME1 = "";
     private static String METHOD_NAME2 = "";
     private MyThread t1;
-    int timeOutInSecs = 300;
 
     int cnt = 0, flag = 0;
     String custId = "", accNo = "", accNm = "", mobNo = "", nickNm = "", mailId = "";
@@ -228,7 +227,7 @@ btn_logout.setVisibility(View.GONE);
 	  }
         );
 
-        t1 = new MyThread(timeOutInSecs, act, var1, var3);
+        t1 = new MyThread(Integer.parseInt(getString(R.string.timeOutInSecs)), act, var1, var3);
         t1.start();
 
         return rootView;

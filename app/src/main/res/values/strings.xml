@@ -802,7 +802,7 @@
     <string name="alert_192">Fund Transfer Request Registered Successful</string>
     <string name="alert_InsufficentBalance">Insufficient Balance</string>
     <string name="alert_147_1">Please Enter Amount greater than 2 Lac For RTGS.</string>
-    <string name="timeOutInSecs">30000</string>
+    <string name="timeOutInSecs">10000</string>
     <string name="managebeneficiary">Manage Beneficiary</string>
     <string name="alert_bef_rmv_succ">Beneficiary Removed Successfully.</string>
     <string name="OTP_Generate_FUNCTION">callWebservice</string>
@@ -817,5 +817,6 @@
     <string name="enter_tran">Enter MPIN</string>
     <string name="mpin">MPIN</string>
     <string name="signin">Sign In</string>
-
+    <string name="canel_otp_process">Do you want to cancel the Process</string>
+    <string name="alert_restartapp">Please Restart The Application!</string>
 </resources>

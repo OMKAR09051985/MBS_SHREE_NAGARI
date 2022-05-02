@@ -460,7 +460,8 @@ try{
 	respdesc="";
 			loadProBarObj.show();
 			  
-			  jsonObj.put("CUSTID", custid+"#~#"+AccCustId);
+			 // jsonObj.put("CUSTID", custid+"#~#"+AccCustId);
+			  jsonObj.put("CUSTID", custid);
               jsonObj.put("ACCNO", accountNo);
               jsonObj.put("IMEINO", MBSUtils.getImeiNumber(act));
               jsonObj.put("SIMNO", MBSUtils.getSimNumber(act));
