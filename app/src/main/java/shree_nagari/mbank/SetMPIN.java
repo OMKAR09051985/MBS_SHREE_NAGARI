@@ -227,7 +227,7 @@ public class SetMPIN extends Activity implements OnClickListener {
 
                 else if(enterMPIN.equalsIgnoreCase(enterTranMPIN))
                 {
-                    showAlert(getString(R.string.alert_124));
+                    showAlert(getString(R.string.mpin_differet));
                 }
 			/*else if (!enterTranMPIN.equals(reEnteredTranMPIN)) {
 				showAlert(getString(R.string.alert_114));

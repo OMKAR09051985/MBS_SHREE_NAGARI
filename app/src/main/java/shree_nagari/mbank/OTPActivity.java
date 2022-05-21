@@ -17,6 +17,7 @@ import org.ksoap2.serialization.SoapObject;
 import org.ksoap2.serialization.SoapSerializationEnvelope;
 import org.ksoap2.transport.HttpTransportSE;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
@@ -142,6 +143,7 @@ public class OTPActivity extends Activity implements OnClickListener {
 		}
 	}
 
+	@SuppressLint("NonConstantResourceId")
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {

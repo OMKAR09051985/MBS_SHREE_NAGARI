@@ -42,7 +42,7 @@ import java.security.PrivateKey;
 public class QrcodeRcvActivity extends Fragment implements View.OnClickListener {
     MainActivity act;
     QrcodeRcvActivity receiveMoneyQRAct = null;
-    ImageView myImage;
+    ImageView myImage,btn_logout,btn_home1;
     TextView txt_heading, qr_str;
     ImageButton btn_home;//, btn_back;
     Button btn_share_qr;
@@ -53,6 +53,7 @@ public class QrcodeRcvActivity extends Fragment implements View.OnClickListener 
     PrivateKey var1 = null;
     String var5 = "", var3 = "";
     Key var2 = null;
+
 
     public QrcodeRcvActivity() {
     }
@@ -77,13 +78,16 @@ public class QrcodeRcvActivity extends Fragment implements View.OnClickListener 
         qr_str = (TextView) rootView.findViewById(R.id.qr_str);
         btn_share_qr = (Button) rootView.findViewById(R.id.btn_share_qr);
         img_heading = (ImageView) rootView.findViewById(R.id.img_heading);
+        btn_logout = (ImageView) rootView.findViewById(R.id.btn_logout);
+        btn_home1 = (ImageView) rootView.findViewById(R.id.btn_home1);
+        btn_logout.setVisibility(View.GONE);
         img_heading.setBackgroundResource(R.mipmap.fund_trnsfer);
         txt_heading.setText(R.string.lbl_qr_code);
         //btn_home.setImageResource(R.drawable.ic_home_d);
         //btn_back.setImageResource(R.drawable.backover);
 
         //btn_back.setOnClickListener(this);
-        btn_home.setOnClickListener(this);
+        btn_home1.setOnClickListener(this);
         btn_share_qr.setOnClickListener(this);
 
         accNo = getArguments().getString("ACCNO");
@@ -126,7 +130,7 @@ public class QrcodeRcvActivity extends Fragment implements View.OnClickListener 
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.btn_home) {
+        if (v.getId() == R.id.btn_home1) {
             Intent in = new Intent(act, NewDashboard.class);
             in.putExtra("VAR1", var1);
             in.putExtra("VAR3", var3);

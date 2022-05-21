@@ -18,7 +18,7 @@
             android:layout_height="fill_parent"
             android:layout_below="@id/inc_hd"
             android:orientation="vertical"
-            android:weightSum="16" >
+            android:weightSum="16">
 
             <!-- <mbLib.CusFntTextView
                 android:layout_width="fill_parent"
@@ -88,7 +88,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/border_logo"
                 android:gravity="left|center_vertical"
-                android:text="Dashboard" />
+                android:text="@string/dash" />
 
             <mbLib.CusFntTextView
                 android:layout_width="fill_parent"
@@ -96,7 +96,7 @@
                 android:layout_weight="1"
                 android:background="@color/bhingar_yellow"
                 android:gravity="left|center_vertical"
-                android:paddingLeft="30dip"
+                android:paddingLeft="30dp"
                 android:text="@string/lbl_demand_deposit" />
 
             <mbLib.CusFntTextView
@@ -106,7 +106,7 @@
                 android:background="@drawable/border_logo"
                 android:gravity="left|center_vertical"
                 android:paddingLeft="60dip"
-                android:text="Demand Deposit Details" />
+                android:text="@string/demand_deposit_details" />
 
             <mbLib.CusFntTextView
                 android:layout_width="fill_parent"
@@ -115,7 +115,7 @@
                 android:background="@color/bhingar_yellow"
                 android:gravity="left|center_vertical"
                 android:paddingLeft="30dip"
-                android:text="Deposit" />
+                android:text="@string/deposit" />
 
             <mbLib.CusFntTextView
                 android:layout_width="fill_parent"
@@ -124,7 +124,7 @@
                 android:background="@drawable/border_logo"
                 android:gravity="left|center_vertical"
                 android:paddingLeft="60dip"
-                android:text="Deposit Details" />
+                android:text="@string/Deposit_Details" />
 
             <mbLib.CusFntTextView
                 android:layout_width="fill_parent"
@@ -142,9 +142,9 @@
                 android:background="@drawable/border_logo"
                 android:gravity="left|center_vertical"
                 android:paddingLeft="60dip"
-                android:text="Loan Account Details" />
+                android:text="@string/Loan_Account_Details" />
 
-         <!--    <mbLib.CusFntTextView
+            <!--    <mbLib.CusFntTextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -306,13 +306,13 @@
                 android:paddingLeft="30dip"
                 android:text="@string/lbl_mini_statement" />
 
-            <mbLib.CusFntTextView
+            <!--  <mbLib.CusFntTextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@color/bhingar_yellow"
                 android:gravity="left|center_vertical"
-                android:paddingLeft="30dip"
+                android:paddingLeft="30dp"
                 android:text="@string/lbl_cheque_related" />
 
             <mbLib.CusFntTextView
@@ -340,7 +340,7 @@
                 android:background="@drawable/border_logo"
                 android:gravity="left|center_vertical"
                 android:paddingLeft="60dip"
-                android:text="@string/chq_bk_status" />
+                android:text="@string/chq_bk_status" />-->
 
             <mbLib.CusFntTextView
                 android:layout_width="fill_parent"
@@ -351,16 +351,16 @@
                 android:paddingLeft="30dip"
                 android:text="@string/lbl_atm" />
 
-            <mbLib.CusFntTextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/bhingar_yellow"
-                android:gravity="left|center_vertical"
-                android:paddingLeft="30dip"
-                android:text="@string/lbl_other_srvce" />
+<!--            <mbLib.CusFntTextView-->
+<!--                android:layout_width="fill_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@color/bhingar_yellow"-->
+<!--                android:gravity="left|center_vertical"-->
+<!--                android:paddingLeft="30dip"-->
+<!--                android:text="@string/lbl_other_srvce" />-->
 
-           <!-- <mbLib.CusFntTextView
+            <!-- <mbLib.CusFntTextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -368,30 +368,30 @@
                 android:gravity="left|center_vertical"
                 android:paddingLeft="60dip"
                 android:text="@string/alert_fd0" />-->
-            
-             <mbLib.CusFntTextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/border_logo"
-                android:gravity="left|center_vertical"
-                android:paddingLeft="60dip"
-                android:text="@string/lbl_title_email_registration" />
-             
+
+<!--            <mbLib.CusFntTextView-->
+<!--                android:layout_width="fill_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@drawable/border_logo"-->
+<!--                android:gravity="left|center_vertical"-->
+<!--                android:paddingLeft="60dip"-->
+<!--                android:text="@string/lbl_title_email_registration" />-->
+
+<!--            <mbLib.CusFntTextView-->
+<!--                android:layout_width="fill_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@drawable/border_logo"-->
+<!--                android:gravity="left|center_vertical"-->
+<!--                android:paddingLeft="60dip"-->
+<!--                android:text="@string/lbl_send_email" />-->
+
             <mbLib.CusFntTextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/border_logo"
-                android:gravity="left|center_vertical"
-                android:paddingLeft="60dip"
-                android:text="@string/lbl_send_email" />
-             
-             <mbLib.CusFntTextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                  android:background="@color/bhingar_yellow"
+                android:background="@color/bhingar_yellow"
                 android:gravity="left|center_vertical"
                 android:paddingLeft="30dip"
                 android:text="@string/lbl_change_mpin" />

@@ -52,8 +52,6 @@ import mbLib.DatePickerDailog;
 import mbLib.DialogBox;
 import mbLib.MBSUtils;
 //import mbLib.DialogBox;
-
-
 public class TransferHistory extends Fragment implements OnClickListener {
     MainActivity act;
     TransferHistory transferHistoryObj;
@@ -63,10 +61,9 @@ public class TransferHistory extends Fragment implements OnClickListener {
     ImageButton spinner_btn1, spinner_btn2, spinner_btn3;// btn_back;
     ImageView btn_home1, btn_logout;
     Button btn_show_history, btn_from_date, btn_to_date;
-    ArrayList<String> arrListTemp = new ArrayList<String>();
+    ArrayList<String> arrListTemp = new ArrayList<>();
     DialogBox dbs;
     boolean noAccounts;
-    private DatePicker datePicker;
     Calendar dateandtime;
     DatabaseManagement dbms;
     private static String NAMESPACE = "";
@@ -77,8 +74,9 @@ public class TransferHistory extends Fragment implements OnClickListener {
     //private static final String METHOD_NAME_TRANSFER_HISTORY = "get";
     SimpleDateFormat df;
     Date dt1, dt2, fromDate;
-    String tranType = "", postingStatus = "", fromDt = "", toDt = "", curDate = "", retMess = "", custId = "", str2 = "", stringValue = "", acnt_inf = "", all_acnts = "", accNo = "";
-    String respcode = "", retvalweb = "", fundTransferHistoryrespdesc = "";
+    String tranType = "", postingStatus = "", fromDt = "", toDt = "", curDate = "", retMess = "", custId = "",
+            str2 = "", stringValue = "", acnt_inf = "",  accNo = "",respcode = "", retvalweb = "",
+            fundTransferHistoryrespdesc = "";
     int cnt = 0, flag = 0;
     ImageView img_heading;
     PrivateKey var1 = null;
@@ -115,7 +113,7 @@ public class TransferHistory extends Fragment implements OnClickListener {
         txt_heading.setText(getString(R.string.lbl_transfer_history));
         btn_home1 = (ImageView) rootView.findViewById(R.id.btn_home1);
         btn_logout = (ImageView) rootView.findViewById(R.id.btn_logout);
-btn_logout.setVisibility(View.GONE);
+        btn_logout.setVisibility(View.GONE);
         spinner_btn1 = (ImageButton) rootView.findViewById(R.id.spinner_btn1);
         spinner_btn2 = (ImageButton) rootView.findViewById(R.id.spinner_btn2);
         spinner_btn3 = (ImageButton) rootView.findViewById(R.id.spinner_btn3);
@@ -154,6 +152,7 @@ btn_logout.setVisibility(View.GONE);
         return rootView;
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View arg0) {
         switch (arg0.getId()) {
@@ -246,6 +245,7 @@ btn_logout.setVisibility(View.GONE);
 
     }
 
+    @SuppressLint("StaticFieldLeak")
     public class CallWebServicelog extends AsyncTask<Void, Void, Void> {
         JSONObject jsonObj = new JSONObject();
         String ValidationData = "";
@@ -366,10 +366,10 @@ btn_logout.setVisibility(View.GONE);
     public void addAccounts(String str) {
         try {
             ArrayList<String> arrList = new ArrayList<String>();
-            String allstr[] = str.split("~");
+            String[] allstr = str.split("~");
 
             int noOfAccounts = allstr.length;
-            Accounts acArray[] = new Accounts[noOfAccounts];
+            Accounts[] acArray = new Accounts[noOfAccounts];
             for (int i = 0; i < noOfAccounts; i++) {
                 str2 = allstr[i];
                 acArray[i] = new Accounts(str2);
@@ -390,25 +390,24 @@ btn_logout.setVisibility(View.GONE);
             }
             String[] debAccArr = new String[arrList.size()];
             debAccArr = arrList.toArray(debAccArr);
-            ArrayAdapter<String> debAccs = new ArrayAdapter<String>(act, R.layout.spinner_item, debAccArr);
+            ArrayAdapter<String> debAccs = new ArrayAdapter<>(act, R.layout.spinner_item, debAccArr);
             //CustomeSpinnerAdapter debAccs = new CustomeSpinnerAdapter(act,android.R.layout.simple_spinner_item, debAccArr);
             debAccs.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spi_account_no.setAdapter(debAccs);
 
             String[] tranTypeArr = {"Same Bank", "NEFT", "RTGS", "IMPS", "All"};//"QRCODE",
-            ArrayAdapter<String> tranTypes = new ArrayAdapter<String>(act, R.layout.spinner_item, tranTypeArr);
+            ArrayAdapter<String> tranTypes = new ArrayAdapter<>(act, R.layout.spinner_item, tranTypeArr);
             //CustomeSpinnerAdapter tranTypes = new CustomeSpinnerAdapter(act,android.R.layout.simple_spinner_item, tranTypeArr);
             tranTypes.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spi_transfer_type.setAdapter(tranTypes);
 
             String[] postingStatusArr = {"Successful", "Failed", "Pending", "All"};
-            ArrayAdapter<String> postingStatus = new ArrayAdapter<String>(act, R.layout.spinner_item, postingStatusArr);
+            ArrayAdapter<String> postingStatus = new ArrayAdapter<>(act, R.layout.spinner_item, postingStatusArr);
             //CustomeSpinnerAdapter postingStatus = new CustomeSpinnerAdapter(act,android.R.layout.simple_spinner_item, postingStatusArr);
             postingStatus.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spi_status.setAdapter(postingStatus);
 
-            acnt_inf = spi_account_no.getItemAtPosition(
-                    spi_account_no.getSelectedItemPosition()).toString();
+            acnt_inf = spi_account_no.getItemAtPosition(spi_account_no.getSelectedItemPosition()).toString();
         } catch (Exception e) {
             System.out.println("" + e);
         }
@@ -467,10 +466,8 @@ btn_logout.setVisibility(View.GONE);
                 dateandtime.set(Calendar.MONTH, c.get(Calendar.MONTH));
                 dateandtime.set(Calendar.DAY_OF_MONTH,
                         c.get(Calendar.DAY_OF_MONTH));
-                String strDate = new SimpleDateFormat("dd/MM/yyyy")
-                        .format(c.getTime());
-                SimpleDateFormat formatter = new SimpleDateFormat(
-                        "dd/MM/yyyy");
+                String strDate = new SimpleDateFormat("dd/MM/yyyy").format(c.getTime());
+                SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
                 try {
                     dt1 = df.parse(curDate);
                     dt2 = formatter.parse(strDate);

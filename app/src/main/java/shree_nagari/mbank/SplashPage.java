@@ -80,8 +80,8 @@ public class SplashPage extends Activity implements OnClickListener {
     static PrivateKey var1 = null;
     static PublicKey var4 = null;
     SecretKeySpec var2 = null;
-    int flag = 0;
-    String custId="";
+    int flag = 0, restart_cnt = 0;
+    String custId = "";
     private final GestureDetector detector = new GestureDetector(new SwipeGestureDetector());
 
     @Override
@@ -194,7 +194,7 @@ public class SplashPage extends Activity implements OnClickListener {
         if (c1 != null) {
             while (c1.moveToNext()) {
                 custId = c1.getString(2);
-                Log.e("Shubham","Cust ID from SQLITE:- "+custId);
+                Log.e("Shubham", "Cust ID from SQLITE:- " + custId);
 
             }
         }
@@ -885,13 +885,13 @@ public class SplashPage extends Activity implements OnClickListener {
                 &&
                 (ContextCompat.checkSelfPermission(this,
                         Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED)) {
-           // if(custId.length()>0) {
-                Intent in = new Intent(this, LoginActivity.class);
-                in.putExtra("VAR1", var1);
-                in.putExtra("VAR3", var3);
-                startActivity(in);
-                finish();
-           // }
+            // if(custId.length()>0) {
+            Intent in = new Intent(this, LoginActivity.class);
+            in.putExtra("VAR1", var1);
+            in.putExtra("VAR3", var3);
+            startActivity(in);
+            finish();
+            // }
 
         } else {
             showAlert("Please grant all permissions");
@@ -962,7 +962,6 @@ public class SplashPage extends Activity implements OnClickListener {
 
     public void showAlertserver(String str) {
 
-        // Log.e("SAM","===ShowAlert ");
         ErrorDialogClass alert = new ErrorDialogClass(SplashPage.this, "" + str) {
             Intent in = null;
 
@@ -983,7 +982,9 @@ public class SplashPage extends Activity implements OnClickListener {
         alert.show();
     }
 
-    public void restart(){
+    public void restart() {
+        ++restart_cnt;
+        Log.e("Shubham", "restart_cnt_splash1:-" + restart_cnt);
         Intent i = getBaseContext().getPackageManager().
                 getLaunchIntentForPackage(getBaseContext().getPackageName());
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

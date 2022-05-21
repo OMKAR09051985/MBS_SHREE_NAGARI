@@ -103,7 +103,7 @@ public class OtherBankTranRTGS extends Fragment implements OnClickListener {
     PrivateKey var1 = null;
     String var5 = "", var3 = "";
     SecretKeySpec var2 = null;
-    String retvalwbs = "", respdesc = "";
+    String retvalwbs = "", respdesc = "",chrgsRetval="";
 
     public OtherBankTranRTGS() {
     }
@@ -1195,6 +1195,7 @@ public class OtherBankTranRTGS extends Fragment implements OnClickListener {
             debitAccno = arrListTemp.get(spi_debit_account.getSelectedItemPosition() - 1);
             benAcNo = spi_sel_beneficiery.getItemAtPosition(
                     spi_sel_beneficiery.getSelectedItemPosition()).toString();
+            Log.e("Shubham", "transferType_inWS-------------------->: " + transferType);
             Log.e("TAG", "debitAccno-------------------->: " + debitAccno);
             amt = txtAmt.getText().toString().trim();
             reMark = txtRemk.getText().toString().trim();
@@ -1203,13 +1204,19 @@ public class OtherBankTranRTGS extends Fragment implements OnClickListener {
 
                 obj.put("CUSTID", custId);
                 obj.put("TRANTYPE", "INTBANK");
+                if(transferType.equalsIgnoreCase("RTGS")){
+                    obj.put("PAYMODE", "RTGS");
+                }else if(transferType.equalsIgnoreCase("NEFT")){
+                    obj.put("PAYMODE", "NEFT");
+                }
                 obj.put("DRACCNO", debitAccno);
                 obj.put("AMOUNT", amt);
                 obj.put("CRACCNO", accNo);
                 obj.put("BENFSRNO", benSrno);
                 obj.put("IMEINO", MBSUtils.getImeiNumber(act));
                 obj.put("SIMNO", MBSUtils.getSimNumber(act));
-                obj.put("METHODCODE", "28");
+                obj.put("METHODCODE", "97");
+                //obj.put("METHODCODE", "28");
                 Log.e("Shubham", "RTGS_Request: " + obj.toString());
                 // ValidationData=MBSUtils.getValidationData(act,obj.toString());
             } catch (JSONException e) {
@@ -1279,16 +1286,16 @@ public class OtherBankTranRTGS extends Fragment implements OnClickListener {
                 } else {
                     getTransferChargesrespdesc = "";
                 }
-
-
                 if (getTransferChargesrespdesc.length() > 0) {
                     showAlert(getTransferChargesrespdesc);
                 } else {
                     // retval = "SUCCESS";
                     if (reTval.indexOf("SUCCESS") > -1) {
                         //act.frgIndex = 52;///511
+                        chrgsRetval=reTval;
+                       // post_successGetSrvcCharg(reTval);
+                        post_successGetSrvcCharg(chrgsRetval);
 
-                        post_successGetSrvcCharg(reTval);
 
                     } else {
                         if (reTval.indexOf("LIMIT_EXCEEDS") > -1) {
@@ -1523,26 +1530,16 @@ public class OtherBankTranRTGS extends Fragment implements OnClickListener {
 	}// end CallWebServiceGetSrvcCharg*/
 
     public void post_successGetSrvcCharg(String reTval) {
-
         respcode = "";
         getTransferChargesrespdesc = "";
-
         act.frgIndex = 52;
-        //loadProBarObj.dismiss();
-
         retStr = reTval.split("~")[1];
-
         String retStr1 = "";
         retStr1 = reTval.split("~")[2];
-        // Toast.makeText(act, "xml_data[0]="+xml_data[0],
-        // Toast.LENGTH_LONG).show();
-
-        // Toast.LENGTH_LONG).show();
         if (retStr1.equalsIgnoreCase("nextDay")) {
             proceedTransaction();
         } else {
             Log.e("HELL", retStr);
-
             other_bnk_layout.setVisibility(other_bnk_layout.INVISIBLE);
             confirm_layout.setVisibility(confirm_layout.VISIBLE);
             String[] val = retStr.split("#");
@@ -1552,29 +1549,24 @@ public class OtherBankTranRTGS extends Fragment implements OnClickListener {
             txt_from.setText(strFromAccNo);
             txt_to.setText(strToAccNo);
             txt_amount.setText("INR " + strAmount);
-            //txt_charges.setText("INR " + val[0]);
+
+            txt_charges.setText("INR " + val[0]);
             onlyCharge = val[0];
             chrgCrAccNo = val[1];
             tranId = val[2];
             servChrg = val[3];
             cess = val[4];
             gst = val[5];
-            Log.e("OTHERBNKTRAN", "servChrg===" + servChrg + "==cess=="
-                    + cess);
-            if (chrgCrAccNo.length() == 0
-                    || chrgCrAccNo.equalsIgnoreCase("null"))
+            Log.e("OTHERBNKTRAN", "servChrg===" + servChrg + "==cess=="+ cess);
+            if (chrgCrAccNo.length() == 0|| chrgCrAccNo.equalsIgnoreCase("null"))
                 chrgCrAccNo = "";
-
             if (servChrg.equalsIgnoreCase("null"))
                 servChrg = "0";
-
             if (cess.equalsIgnoreCase("null"))
                 cess = "0";
             if (gst.equalsIgnoreCase("null"))
                 gst = "0";
-
-            Log.e("OTHERBNKTRAN", "2222servChrg===" + servChrg
-                    + "==cess==" + cess);
+            Log.e("OTHERBNKTRAN", "2222servChrg===" + servChrg+ "==cess==" + cess);
 
             txt_charges.setText("INR " + (Float.parseFloat(val[0]) +
                     Float.parseFloat(servChrg) + Float.parseFloat(cess) +
@@ -1662,6 +1654,7 @@ public class OtherBankTranRTGS extends Fragment implements OnClickListener {
                 strAmount = txtAmt.getText().toString().trim().trim();
                 strRemark = txtRemk.getText().toString().trim().trim();
                 transferType = spi_payment_option.getSelectedItem().toString();
+                Log.e("Shubham", "transferType_inbtn-------------------->: " + transferType);
                 String balString = txtBalance.getText().toString().trim();
                 if (balString.length() > 0) {
                     balString = balString.substring(0, balString.length() - 2);
@@ -1899,7 +1892,7 @@ public class OtherBankTranRTGS extends Fragment implements OnClickListener {
                             this.dismiss();
                         }
                         if ((str.equalsIgnoreCase(getTransferChargesrespdesc)) && (respcode.equalsIgnoreCase("0"))) {
-                            post_successGetSrvcCharg(reTval);
+                            post_successGetSrvcCharg(chrgsRetval);
                         } else if ((str.equalsIgnoreCase(getTransferChargesrespdesc)) && (respcode.equalsIgnoreCase("1"))) {
                             this.dismiss();
                         } else if (noAccounts) {

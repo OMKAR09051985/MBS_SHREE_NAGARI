@@ -5,11 +5,11 @@
     android:layout_height="fill_parent"
     android:background="@mipmap/act_bg"
     android:fillViewport="true"
-    tools:context=".ChangeMpinActivity" >
+    tools:context=".ChangeMpinActivity">
 
     <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content">
 
         <include
             android:id="@+id/inc_id"
@@ -20,41 +20,40 @@
             android:layout_width="match_parent"
             android:layout_height="fill_parent"
             android:layout_below="@id/inc_id"
-            android:layout_marginBottom="10dip"
             android:layout_marginLeft="10dip"
             android:layout_marginRight="10dip"
-            android:orientation="vertical" >
+            android:layout_marginBottom="10dip"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dip"
                 android:orientation="horizontal"
-                android:weightSum="2" >
+                android:weightSum="2">
 
                 <RadioGroup
                     android:id="@+id/groupradio"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal">
 
                     <mbLib.CusFntRadioButton
                         android:id="@+id/radiobtn_mpin"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-			android:textSize="12dip"
-                        android:text="@string/lbl_radiompn" />
+                        android:text="@string/lbl_radiompn"/>
 
                     <mbLib.CusFntRadioButton
- 			android:id="@+id/radiobtn_pass"
+                        android:id="@+id/radiobtn_pass"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:visibility="gone"
-                        android:textSize="12dip"
-                        android:text="@string/lbl_radiopass" />
-		    <mbLib.CusFntRadioButton
+                        android:text="@string/lbl_radiopass"
+                        android:visibility="gone" />
+
+                    <mbLib.CusFntRadioButton
                         android:id="@+id/radiobtn_tranmpin"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
@@ -71,7 +70,7 @@
                 android:layout_marginTop="10dip"
                 android:orientation="vertical"
                 android:visibility="gone"
-                android:weightSum="6" >
+                android:weightSum="6">
 
                 <mbLib.CusFntTextView
                     android:id="@+id/txt1"
@@ -81,8 +80,7 @@
                     android:text="@string/lbl_old_mpin"
                     android:textColor="@color/sbk_text_clr"
                     android:textStyle="bold"
-                    tools:ignore="DuplicateIds">
-                </mbLib.CusFntTextView>
+                    tools:ignore="DuplicateIds"></mbLib.CusFntTextView>
 
                 <mbLib.CustomEditText
                     android:id="@+id/etOldMpin"
@@ -90,8 +88,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:inputType="numberPassword"
-                    android:text="" >
-                </mbLib.CustomEditText>
+                    android:text=""></mbLib.CustomEditText>
 
                 <mbLib.CusFntTextView
                     android:id="@+id/txt2"
@@ -99,10 +96,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/lbl_new_mpin"
-                    android:textColor="@color/sbk_text_clr" 
+                    android:textColor="@color/sbk_text_clr"
                     android:textStyle="bold"
-                    tools:ignore="DuplicateIds">
-                </mbLib.CusFntTextView>
+                    tools:ignore="DuplicateIds"></mbLib.CusFntTextView>
 
                 <mbLib.CustomEditText
                     android:id="@+id/etNewMpin"
@@ -110,8 +106,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:inputType="numberPassword"
-                    android:text="" >
-                </mbLib.CustomEditText>
+                    android:text=""></mbLib.CustomEditText>
 
                 <mbLib.CusFntTextView
                     android:id="@+id/txt3"
@@ -121,8 +116,7 @@
                     android:text="@string/lbl_retype_mpin"
                     android:textColor="@color/sbk_text_clr"
                     android:textStyle="bold"
-                    tools:ignore="DuplicateIds">
-                </mbLib.CusFntTextView>
+                    tools:ignore="DuplicateIds"></mbLib.CusFntTextView>
 
                 <mbLib.CustomEditText
                     android:id="@+id/etRetypeNewMpin"
@@ -130,18 +124,17 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:inputType="numberPassword"
-                    android:text="" >
-                </mbLib.CustomEditText>
+                    android:text=""></mbLib.CustomEditText>
             </LinearLayout>
 
-<LinearLayout
+            <LinearLayout
                 android:id="@+id/layout_pass"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dip"
                 android:orientation="vertical"
                 android:visibility="gone"
-                android:weightSum="6" >
+                android:weightSum="6">
 
                 <mbLib.CusFntTextView
                     android:id="@+id/txt1"
@@ -151,8 +144,7 @@
                     android:text="@string/lbl_old_pass"
                     android:textColor="@color/sbk_text_clr"
                     android:textStyle="bold"
-                    tools:ignore="DuplicateIds">
-                </mbLib.CusFntTextView>
+                    tools:ignore="DuplicateIds"></mbLib.CusFntTextView>
 
                 <mbLib.CustomEditText
                     android:id="@+id/etOldPass"
@@ -160,8 +152,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:inputType="numberPassword"
-                    android:text="" >
-                </mbLib.CustomEditText>
+                    android:text=""></mbLib.CustomEditText>
 
                 <mbLib.CusFntTextView
                     android:id="@+id/txt2"
@@ -169,10 +160,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/lbl_new_pass"
-                    android:textColor="@color/sbk_text_clr" 
+                    android:textColor="@color/sbk_text_clr"
                     android:textStyle="bold"
-                    tools:ignore="DuplicateIds">
-                </mbLib.CusFntTextView>
+                    tools:ignore="DuplicateIds"></mbLib.CusFntTextView>
 
                 <mbLib.CustomEditText
                     android:id="@+id/etNewPass"
@@ -180,8 +170,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:inputType="numberPassword"
-                    android:text="" >
-                </mbLib.CustomEditText>
+                    android:text=""></mbLib.CustomEditText>
 
                 <mbLib.CusFntTextView
                     android:id="@+id/txt3"
@@ -191,8 +180,7 @@
                     android:text="@string/lbl_retype_pass"
                     android:textColor="@color/sbk_text_clr"
                     android:textStyle="bold"
-                    tools:ignore="DuplicateIds">
-                </mbLib.CusFntTextView>
+                    tools:ignore="DuplicateIds"></mbLib.CusFntTextView>
 
                 <mbLib.CustomEditText
                     android:id="@+id/etRetypeNewPass"
@@ -200,9 +188,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:inputType="numberPassword"
-                    android:text="" >
-                </mbLib.CustomEditText>
+                    android:text=""></mbLib.CustomEditText>
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/layout_tranmpin"
                 android:layout_width="fill_parent"
@@ -210,7 +198,7 @@
                 android:layout_marginTop="10dip"
                 android:orientation="vertical"
                 android:visibility="gone"
-                android:weightSum="6" >
+                android:weightSum="6">
 
                 <mbLib.CusFntTextView
                     android:id="@+id/txt1"
@@ -220,8 +208,7 @@
                     android:text="@string/lbl_old_tran_mpin"
                     android:textColor="@color/sbk_text_clr"
                     android:textStyle="bold"
-                    tools:ignore="DuplicateIds">
-                </mbLib.CusFntTextView>
+                    tools:ignore="DuplicateIds"></mbLib.CusFntTextView>
 
                 <mbLib.CustomEditText
                     android:id="@+id/etOldTranMpin"
@@ -229,8 +216,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:inputType="numberPassword"
-                    android:text="" >
-                </mbLib.CustomEditText>
+                    android:text=""></mbLib.CustomEditText>
 
                 <mbLib.CusFntTextView
                     android:id="@+id/txt2"
@@ -240,8 +226,7 @@
                     android:text="@string/lbl_new_tran_mpin"
                     android:textColor="@color/sbk_text_clr"
                     android:textStyle="bold"
-                    tools:ignore="DuplicateIds">
-                </mbLib.CusFntTextView>
+                    tools:ignore="DuplicateIds"></mbLib.CusFntTextView>
 
                 <mbLib.CustomEditText
                     android:id="@+id/etNewTranMpin"
@@ -249,8 +234,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:inputType="numberPassword"
-                    android:text="" >
-                </mbLib.CustomEditText>
+                    android:text=""></mbLib.CustomEditText>
 
                 <mbLib.CusFntTextView
                     android:id="@+id/txt3"
@@ -260,8 +244,7 @@
                     android:text="@string/lbl_retype_tran_mpin"
                     android:textColor="@color/sbk_text_clr"
                     android:textStyle="bold"
-                    tools:ignore="DuplicateIds">
-                </mbLib.CusFntTextView>
+                    tools:ignore="DuplicateIds"></mbLib.CusFntTextView>
 
                 <mbLib.CustomEditText
                     android:id="@+id/etRetypeNewTranMpin"
@@ -269,8 +252,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:inputType="numberPassword"
-                    android:text="" >
-                </mbLib.CustomEditText>
+                    android:text=""></mbLib.CustomEditText>
             </LinearLayout>
 
             <LinearLayout
@@ -280,7 +262,7 @@
                 android:layout_marginTop="10dip"
                 android:orientation="vertical"
                 android:visibility="gone"
-                android:weightSum="3" >
+                android:weightSum="3">
 
                 <mbLib.CusFntTextView
                     android:id="@+id/txtotp"
@@ -292,8 +274,7 @@
                     android:text="@string/lbl_OTP"
                     android:textColor="@color/sbk_text_clr"
                     android:textSize="20sp"
-                    android:textStyle="bold" >
-                </mbLib.CusFntTextView>
+                    android:textStyle="bold"></mbLib.CusFntTextView>
 
                 <mbLib.CustomEditText
                     android:id="@+id/etotptxt"
@@ -301,8 +282,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:inputType="number"
-                    android:text="" >
-                </mbLib.CustomEditText>
+                    android:text=""></mbLib.CustomEditText>
 
                 <LinearLayout
                     android:layout_width="fill_parent"
@@ -311,7 +291,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:orientation="horizontal"
-                    android:weightSum="3" >
+                    android:weightSum="3">
 
                     <TextView
                         android:layout_width="0dip"
@@ -327,8 +307,8 @@
                         android:gravity="center"
                         android:text="@string/lbl_ref_id"
                         android:textColor="@color/sbk_text_clr"
-                        android:textStyle="bold"
-                        android:textSize="15dip" />
+                        android:textSize="15dip"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="0dip"
@@ -343,7 +323,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="20dip"
                 android:orientation="horizontal"
-                android:weightSum="3" >
+                android:weightSum="3">
 
                 <TextView
                     android:layout_width="0dip"
@@ -360,8 +340,7 @@
                     android:background="@drawable/roundedbutton"
                     android:gravity="center"
                     android:text="@string/lbl_change_btn"
-                    android:textSize="20dip" >
-                </mbLib.CustomButton>
+                    android:textSize="20dip"></mbLib.CustomButton>
 
                 <ProgressBar
                     android:id="@+id/pb_wait4"
@@ -369,8 +348,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="0.6"
-                    android:visibility="invisible" >
-                </ProgressBar>
+                    android:visibility="invisible"></ProgressBar>
             </LinearLayout>
         </LinearLayout>
 

@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <string name="hello">Hello World!</string>
-    <!-- sbk static ip -->
-    <!-- OUR 54 <string name="url">http://172.100.30.56:8086/axis2/services/MobileInterWebService</string>
-     -->
-    <!-- UAT Bhingar BANK
-    <string name="url">http://117.242.10.113:8285/axis2/services/MobileWebServicesSequrity</string>-->
-    <!--     <string name="url">http://listsoftware.zapto.org:8087/axis2/services/FrontLineWebServices</string> -->
-    <!---->
-    <string name="url">http://listspl.ddns.net:8087/axis2/services/FrontLineWebServices</string>
-    <!--   live -->
-    <!--  <string name="url">https://www.bhingarbank.co.in:11032/axis2/services/FrontLineWebServices</string>-->
+    <!--Our-->
+    <!--<string name="url">http://listspl.ddns.net:8087/axis2/services/FrontLineWebServices</string>-->
+<!--     <string name="url">http://172.100.30.96:8087/axis2/services/FrontLineWebServices</string>-->
+    <!--<string name="url">http://listsoftware.zapto.org:8087/axis2/services/FrontLineWebServices</string> -->
+
+    <!--live-->
+    <string name="url">http://117.248.110.15:15001/axis2/services/FrontLineWebServices</string>
 
     <string name="alert_sup">The Application Does Not Support This Device.</string>
     <string name="bank_name">Shri Nagari Sahkari Pat Sanstha Maryadit,Dapodi</string>
@@ -802,7 +799,7 @@
     <string name="alert_192">Fund Transfer Request Registered Successful</string>
     <string name="alert_InsufficentBalance">Insufficient Balance</string>
     <string name="alert_147_1">Please Enter Amount greater than 2 Lac For RTGS.</string>
-    <string name="timeOutInSecs">10000</string>
+    <string name="timeOutInSecs">300</string>
     <string name="managebeneficiary">Manage Beneficiary</string>
     <string name="alert_bef_rmv_succ">Beneficiary Removed Successfully.</string>
     <string name="OTP_Generate_FUNCTION">callWebservice</string>
@@ -817,6 +814,13 @@
     <string name="enter_tran">Enter MPIN</string>
     <string name="mpin">MPIN</string>
     <string name="signin">Sign In</string>
-    <string name="canel_otp_process">Do you want to cancel the Process</string>
+    <string name="canel_otp_process">Do you want to cancel the Process ?</string>
     <string name="alert_restartapp">Please Restart The Application!</string>
+    <string name="dash">Dashboard</string>
+    <string name="demand_deposit_details">Demand Deposit Details</string>
+    <string name="deposit">Deposit</string>
+    <string name="Deposit_Details">Deposit Details</string>
+    <string name="Loan_Account_Details">Loan Account Details</string>
+    <string name="mpin_differet">MPIN and Transaction MPIN Must Be Different.</string>
+
 </resources>

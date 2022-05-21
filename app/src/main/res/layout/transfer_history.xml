@@ -60,7 +60,7 @@
                     android:layout_gravity="center"
                     android:layout_weight="0.8"
                     android:background="@color/shreenagri_blue"
-                    android:src="@mipmap/spinner_down" />
+                    android:src="@mipmap/spinner_down"/>
             </LinearLayout>
 
             <mbLib.CusFntTextView

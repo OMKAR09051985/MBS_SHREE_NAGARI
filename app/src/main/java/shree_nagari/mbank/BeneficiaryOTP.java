@@ -396,9 +396,14 @@ public class BeneficiaryOTP extends Fragment implements OnClickListener {
                 jObj.put("OSVERSION", Build.VERSION.RELEASE);
                 jObj.put("LATITUDE", location.split("~")[0]);
                 jObj.put("LONGITUDE", location.split("~")[1]);
-                jObj.put("METHODCODE", "14");
+                //Added by Shubham
+                if(strFromAct.equalsIgnoreCase("ADDSAMBENF")){
+                    jObj.put("METHODCODE", "14");
+                }else {
+                    jObj.put("METHODCODE", "95");
+                }
+
                 Log.e("Shubham", "Ben_CallWebServiceValidateOTP2_Request--->" + jObj.toString());
-                //ValidationData=MBSUtils.getValidationData(act,jObj.toString());
             } catch (Exception e) {
                 e.printStackTrace();
             }

@@ -243,6 +243,7 @@ public class Register extends Activity implements OnClickListener {
                 jsonObj.put("APPTYPE", apptyp);
                 jsonObj.put("SIMNO", MBSUtils.getSimNumber(Register.this));
                 jsonObj.put("METHODCODE", "19");
+                Log.e("Shubham", "ValidateCustId_Req :" + jsonObj.toString());
                 // ValidationData=MBSUtils.getValidationData(Register.this,jsonObj.toString());
             } catch (JSONException e1) {
                 // TODO Auto-generated catch block
@@ -303,11 +304,11 @@ public class Register extends Activity implements OnClickListener {
                 try {
                     String str = CryptoClass.Function6(var5, var2);
                     jsonObj = new JSONObject(str.trim());
-				 
+                    Log.e("Shubham", "ValidateCustId_Resp :" + jsonObj.toString());
 				/* ValidationData=xml_data[1].trim();
 				if(ValidationData.equals(MBSUtils.getValidationData(Register.this, xml_data[0].trim())))
 				{*/
-                    Log.e("IN return", "dataregggg :" + jsonObj.toString());
+                   // Log.e("IN return", "dataregggg :" + jsonObj.toString());
                     if (jsonObj.has("RESPCODE")) {
                         respcode = jsonObj.getString("RESPCODE");
                     } else {

@@ -27,7 +27,7 @@ public class Accounts {
 		accNm="";
 		accType="";
 		balace="";
-		String str2[] = record.split("#");
+		String[] str2 = record.split("#");
 		/*
 		 * <br_cd>#<schm_cd>#<acc_type>#<acc_no>#<acc_name>
 			5#101#SB#1#KADEKAR KAVITA  KIRAN,-,

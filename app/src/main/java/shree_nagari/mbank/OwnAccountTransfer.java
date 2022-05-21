@@ -103,7 +103,7 @@ public class OwnAccountTransfer extends Fragment implements OnClickListener {
 	PrivateKey var1=null;	  
 	String var5="",var3="";
 	SecretKeySpec var2=null;
-	String respcode = "",retvalwbs = "",respdesc ="";
+	String respcode = "",retvalwbs = "",respdesc ="",name="";
 	
 	public OwnAccountTransfer() {
 		ownBnkTran = this;
@@ -673,6 +673,9 @@ btn_logout.setVisibility(View.GONE);
 
 		}// end onPostExecute
 	}// end callWbService2
+	public static void test_Fragment_Call(String name){
+		Log.e("Shubham", "test_Fragment_Call-------->Welcome : "+name);
+	}
 
 	class callValidateTranpinService extends AsyncTask<Void, Void, Void> 
 	{
@@ -949,6 +952,7 @@ btn_logout.setVisibility(View.GONE);
 
 	}// end click
 
+	@SuppressLint("StaticFieldLeak")
 	class CallWebServicelog extends AsyncTask<Void, Void, Void> {
 		JSONObject jsonObj = new JSONObject();
 		String ValidationData = "";

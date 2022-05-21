@@ -37,6 +37,7 @@
             <mbLib.CustomEditText
                 android:id="@+id/txtAccNo2"
                 android:layout_width="fill_parent"
+                android:inputType="number"
                 android:layout_height="wrap_content"
                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
                 android:text="" >
@@ -322,7 +323,7 @@
                 <ImageButton
                     android:id="@+id/spinner_btn2"
                     android:layout_width="0dip"
-                    android:layout_height="match_parent"
+                    android:layout_height="33dp"
                     android:layout_gravity="center"
                     android:layout_weight="0.8"
                     android:background="@color/spinner_bg_color"

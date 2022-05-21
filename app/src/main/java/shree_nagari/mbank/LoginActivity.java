@@ -31,7 +31,6 @@ import android.util.SparseArray;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -71,7 +70,7 @@ public class LoginActivity extends CustomWindow implements OnClickListener, Loca
     TelephonyManager telephonyManager;
     TextView txt_register, txt_forgot_pass;
     EditText txt_mpin1, txt_mpin2, txt_mpin3, txt_mpin4, txt_mpin5, txt_mpin6, etMpin;
-    int cnt = 0, flag = 0;
+    int cnt = 0, flag = 0, restart_cnt = 0;
     private static String NAMESPACE = "";
     private static String URL = "";
     private static String SOAP_ACTION = "";
@@ -117,7 +116,7 @@ public class LoginActivity extends CustomWindow implements OnClickListener, Loca
     EditText etCustId, edt_1, edt_2, edt_3, edt_4,
             edt_5, edt_6;
     private SparseArray<String> keyValues = new SparseArray<>();
-    LinearLayout layout_login,layout_mpin;
+    LinearLayout layout_login, layout_mpin;
     TextView txt_mpin;
     static int viewCnt = 0;
 
@@ -139,8 +138,8 @@ public class LoginActivity extends CustomWindow implements OnClickListener, Loca
 
         txt_mpin = (TextView) findViewById(R.id.txt_mpin);
 
-        layout_login= findViewById(R.id.layout_login);
-        layout_mpin= findViewById(R.id.layout_mpin);
+        layout_login = findViewById(R.id.layout_login);
+        layout_mpin = findViewById(R.id.layout_mpin);
 
         button_1 = (Button) findViewById(R.id.button_1);
         button_2 = (Button) findViewById(R.id.button_2);
@@ -293,7 +292,6 @@ public class LoginActivity extends CustomWindow implements OnClickListener, Loca
     }
 
 
-
     //
     public void setKeyValues() {
         Random random = new Random();
@@ -396,11 +394,11 @@ public class LoginActivity extends CustomWindow implements OnClickListener, Loca
         switch (v.getId()) {
 
             case R.id.txt_mpin:
-                if(!txt_mpin.getText().toString().equalsIgnoreCase("Sign In")){
+                if (!txt_mpin.getText().toString().equalsIgnoreCase("Sign In")) {
                     layout_login.setVisibility(View.GONE);
                     layout_mpin.setVisibility(View.VISIBLE);
                     txt_mpin.setText(R.string.signin);
-                }else{
+                } else {
                     layout_login.setVisibility(View.VISIBLE);
                     layout_mpin.setVisibility(View.GONE);
                     txt_mpin.setText(R.string.mpin);
@@ -974,8 +972,7 @@ public class LoginActivity extends CustomWindow implements OnClickListener, Loca
 
     }
 
-    class CallLoginWebService_new extends AsyncTask<Void, Void, Void>
-    {
+    class CallLoginWebService_new extends AsyncTask<Void, Void, Void> {
         LoadProgressBar loadProBarObj = new LoadProgressBar(LoginActivity.this);
         boolean isWSCalled = false, isWsCallSuccess = false;
         String ValidationData = "";
@@ -987,15 +984,12 @@ public class LoginActivity extends CustomWindow implements OnClickListener, Loca
             respcode = "";
             retvalweb = "";
             respdesc = "";
-            if(layOutFlag==1)
-            {
+            if (layOutFlag == 1) {
                 custid = etCustId.getText().toString().trim();
                 mpin = newMpin;
-            }
-            else
-            {
-                custid=customerId;
-                mpin=edt_1.getText().toString()+edt_2.getText().toString()+edt_3.getText().toString()+edt_4.getText().toString()+edt_5.getText().toString()+edt_6.getText().toString();
+            } else {
+                custid = customerId;
+                mpin = edt_1.getText().toString() + edt_2.getText().toString() + edt_3.getText().toString() + edt_4.getText().toString() + edt_5.getText().toString() + edt_6.getText().toString();
             }
             encrptdMpin = ListEncryption.encryptData(custid + mpin);
 
@@ -1007,22 +1001,24 @@ public class LoginActivity extends CustomWindow implements OnClickListener, Loca
                 obj.put("MPIN", mpin);
                 obj.put("IMEINO", imeiNo);// + "~" + mobNo
                 obj.put("SIMNO", MBSUtils.getSimNumber(LoginActivity.this));
-                obj.put("MOBILENO",MBSUtils.getMyPhoneNO(LoginActivity.this));
+                obj.put("MOBILENO", MBSUtils.getMyPhoneNO(LoginActivity.this));
                 obj.put("IPADDRESS", MBSUtils.getLocalIpAddress());
                 obj.put("OSVERSION", Build.VERSION.RELEASE);
                 obj.put("LATITUDE", location.split("~")[0]);
                 obj.put("LONGITUDE", location.split("~")[1]);
                 obj.put("REQSTATUS", "R");
                 obj.put("REQFROM", "MBS");
-                obj.put("METHODCODE","1");
+                obj.put("METHODCODE", "1");
 
-                Log.e("SessionTimeout===","obj==="+obj);
+                Log.e("SessionTimeout===", "obj===" + obj);
                 //ValidationData = MBSUtils.getValidationData(SBKLoginActivity.this, obj.toString());
             } catch (JSONException e) {
                 e.printStackTrace();
             }
 
-        };
+        }
+
+        ;
 
         @Override
         protected Void doInBackground(Void... arg0) {
@@ -1031,8 +1027,8 @@ public class LoginActivity extends CustomWindow implements OnClickListener, Loca
             String value6 = getString(R.string.url);
             final String value7 = "callWebservice";
             try {
-                String keyStr=CryptoClass.Function2();
-                var2=CryptoClass.getKey(keyStr);
+                String keyStr = CryptoClass.Function2();
+                var2 = CryptoClass.getKey(keyStr);
                 SoapObject request = new SoapObject(value4, value7);
 
                 request.addProperty("value1", CryptoClass.Function5(obj.toString(), var2));
@@ -1040,21 +1036,20 @@ public class LoginActivity extends CustomWindow implements OnClickListener, Loca
                 request.addProperty("value3", var3);
                 SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
                 envelope.setOutputSoapObject(request);
-                HttpTransportSE androidHttpTransport = new HttpTransportSE(value6,15000);
+                HttpTransportSE androidHttpTransport = new HttpTransportSE(value6, 15000);
                 String status = "";
                 try {
                     androidHttpTransport.call(value5, envelope);
                     status = envelope.bodyIn.toString().trim();
                     var5 = status;
-                    Log.e("login===","var5==="+var5);
+                    Log.e("login===", "var5===" + var5);
                     int pos = envelope.bodyIn.toString().trim().indexOf("=");
                     if (pos > -1) {
                         status = status.substring(pos + 1, status.length() - 3);
                         var5 = status;
                         isWSCalled = true;
                     }
-                }
-                catch (Exception e) {
+                } catch (Exception e) {
                     e.printStackTrace();
                     retMess = getString(R.string.alert_000);
                     cnt = 0;
@@ -1074,9 +1069,9 @@ public class LoginActivity extends CustomWindow implements OnClickListener, Loca
 
                 JSONObject jsonObj;
                 try {
-                    String str=CryptoClass.Function6(var5,var2);
+                    String str = CryptoClass.Function6(var5, var2);
                     jsonObj = new JSONObject(str.trim());
-                    Log.e("login===","str==="+str);
+                    Log.e("login===", "str===" + str);
 					/*ValidationData = xml_data[1].trim();
 					if (ValidationData.equals(MBSUtils.getValidationData(
 							SBKLoginActivity.this, xml_data[0].trim())))// if(jsonObj.getString("VALIDATIONDATA").equalsIgnoreCase(ValidationData))
@@ -1142,9 +1137,7 @@ public class LoginActivity extends CustomWindow implements OnClickListener, Loca
                     // TODO Auto-generated catch block
                     e.printStackTrace();
                 }
-            }
-
-            else {
+            } else {
                 retMess = getString(R.string.alert_000);
                 showAlert1(retMess);
                 //setAlert();
@@ -2071,7 +2064,7 @@ public class LoginActivity extends CustomWindow implements OnClickListener, Loca
 //                            finish();
 //                            System.exit(0);
                             restart();
-                        }else
+                        } else
                             this.dismiss();
                         break;
                     default:
@@ -2084,7 +2077,7 @@ public class LoginActivity extends CustomWindow implements OnClickListener, Loca
 
     }
 
-    public void restart(){
+    public void restart() {
         Intent i = getBaseContext().getPackageManager().
                 getLaunchIntentForPackage(getBaseContext().getPackageName());
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

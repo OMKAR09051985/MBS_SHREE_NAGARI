@@ -153,7 +153,11 @@ public class QrcodeSendActivity extends Fragment implements OnClickListener
 		noAccounts=false;
 		var1 = act.var1;
 		var3 = act.var3;
-		this.dbs = new DialogBox(act);
+		try {
+			this.dbs = new DialogBox(act);
+		}catch (Exception e){
+			e.printStackTrace();
+		}
         dbms = new DatabaseManagement("shree_nagari.mbank", "listMobileBanking");	
         Cursor c1=dbms.selectFromTable("SHAREDPREFERENCE", "", null);//("select * from ", null);
         if(c1!=null)
@@ -1471,6 +1475,7 @@ btn_logout.setVisibility(View.GONE);
 	public void onActivityResult(int requestCode, int resultCode, Intent data) 
 	{
 		super.onActivityResult(requestCode, resultCode, data);
+		Log.e("Shubham","Here onActivityResult QrcodeSendActivity");
 		Log.e("DEMOHOME","11====="+requestCode);
 		Log.e("DEMOHOME","22====="+resultCode);
 		Log.e("DEMOHOME","33====="+data);

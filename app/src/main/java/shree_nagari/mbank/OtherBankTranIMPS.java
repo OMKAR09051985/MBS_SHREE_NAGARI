@@ -97,7 +97,7 @@ public class OtherBankTranIMPS extends Fragment implements View.OnClickListener 
     private MyThread t1;
     //int timeOutInSecs=300;
     ImageView img_heading;
-    String retvalwbs = "",respdesc ="";
+    String retvalwbs = "",respdesc ="",chrgsRetval="";
 
     public void onBackPressed() {
 
@@ -1007,18 +1007,16 @@ btn_logout.setVisibility(View.GONE);
                     tranType = "IMPS";
                     transaction = "IMPS";
                 }
-
-
-                //Log.e("ohtertranImpsbtn_submit", " onPreExecute ");
                 jsonObj.put("CUSTID", custId);
                 jsonObj.put("TRANTYPE", tranType);
+                jsonObj.put("PAYMODE", "IMPS");
                 jsonObj.put("DRACCNO", debitAccno);
                 jsonObj.put("AMOUNT", amt);
                 jsonObj.put("CRACCNO", accNo);
                 jsonObj.put("IMEINO", MBSUtils.getImeiNumber(act));
                 jsonObj.put("SIMNO", MBSUtils.getSimNumber(act));
                 jsonObj.put("BENFSRNO", benSrno);
-                jsonObj.put("METHODCODE", "28");
+                jsonObj.put("METHODCODE", "97");
                 Log.e("Shubham", "IMPS_Request: " + jsonObj.toString());
             } catch (JSONException je) {
                 je.printStackTrace();
@@ -1089,7 +1087,8 @@ btn_logout.setVisibility(View.GONE);
                 } else {
                     if (retval.indexOf("SUCCESS") > -1) {
                         loadProBarObj.dismiss();
-                        post_GetSrvcCharg(retval);
+                        chrgsRetval=retval;
+                        post_GetSrvcCharg(chrgsRetval);
                     } else {
                         if (retval.indexOf("TRANAMTLIMIT") > -1) {
 
@@ -1525,7 +1524,7 @@ btn_logout.setVisibility(View.GONE);
                             this.dismiss();
                         }
                         if ((str.equalsIgnoreCase(respdesc_GetSrvcCharg)) && (respcode.equalsIgnoreCase("0"))) {
-                            post_GetSrvcCharg(retval);
+                            post_GetSrvcCharg(chrgsRetval);
                         } else if ((str.equalsIgnoreCase(respdesc_GetSrvcCharg)) && (respcode.equalsIgnoreCase("1"))) {
                             this.dismiss();
                         }

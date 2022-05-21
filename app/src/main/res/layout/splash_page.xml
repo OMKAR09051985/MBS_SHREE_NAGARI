@@ -13,11 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dip"
         android:layout_weight="1"
-        android:src="@drawable/splash_logo" />
-
-
-
-    -->
+        android:src="@drawable/splash_logo" /> -->
 
     <ImageView
         android:layout_width="fill_parent"

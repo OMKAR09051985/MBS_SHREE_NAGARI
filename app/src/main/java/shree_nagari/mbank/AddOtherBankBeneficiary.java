@@ -584,11 +584,12 @@ public class AddOtherBankBeneficiary extends Fragment implements
 				// p_wait.setVisibility(ProgressBar.VISIBLE);
 				loadProBarObj.show();
 
-					jsonObj.put("CUSTID", custId);
+				jsonObj.put("CUSTID", custId);
 				jsonObj.put("BANKNAME", spi_bank.getSelectedItem().toString());
 				jsonObj.put("IMEINO", MBSUtils.getImeiNumber(act));
 				jsonObj.put("SIMNO", MBSUtils.getSimNumber(act));
 				jsonObj.put("METHODCODE","35");
+				Log.e("Shubham", "CallWebServiceGetStates: "+jsonObj.toString() );
 				//ValidationData=MBSUtils.getValidationData(act,jsonObj.toString());
 				
 				
@@ -634,20 +635,18 @@ public class AddOtherBankBeneficiary extends Fragment implements
 		}// end doInBackground
 
 		protected void onPostExecute(Void paramVoid) {
-			String[] xml_data = CryptoUtil.readXML(retVal, new String[]{"PARAMS","CHECKSUM"});
-			String decryptedBeneficiaries = xml_data[0];
+
 			// Log.e("EDIT BENF", decryptedBeneficiaries);
 			loadProBarObj.dismiss();
 			JSONObject jsonObj;
 			try
 			{
-
-				jsonObj = new JSONObject(xml_data[0]);
+				String str=CryptoClass.Function6(var5,var2);
+				jsonObj = new JSONObject(str.trim());
 				Log.e("IN return", "data :" + jsonObj.toString());
-				ValidationData=xml_data[1].trim();
-				if(ValidationData.equals(MBSUtils.getValidationData(act, xml_data[0].trim())))
-				{
-               if (jsonObj.has("RESPCODE"))
+
+
+				if (jsonObj.has("RESPCODE"))
 				{
 					respcode = jsonObj.getString("RESPCODE");
 				}
@@ -668,27 +667,23 @@ public class AddOtherBankBeneficiary extends Fragment implements
 					respdescGetStates= jsonObj.getString("RESPDESC");
 				}
 				else
-				{	
+				{
 					respdescGetStates= "";
 				}
-				
-				
-			if(respdescGetStates.length()>0)
-			{
-				showAlert(respdescGetStates);
-			}
-			else{
-			if (retvalweb.indexOf("FAILED") > -1) {
-				showAlert(getString(R.string.alert_127));
-			} else {
-				post_successGetStates(retvalweb);
-			}}
+
+
+				if(respdescGetStates.length()>0)
+				{
+					showAlert(respdescGetStates);
 				}
 				else{
-					
-					MBSUtils.showInvalidResponseAlert(act);	
-				}
-			} catch (JSONException e) 
+					if (retvalweb.indexOf("FAILED") > -1) {
+						showAlert(getString(R.string.alert_127));
+					} else {
+						post_successGetStates(retvalweb);
+					}}
+
+			} catch (JSONException e)
 			{
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -700,7 +695,6 @@ public class AddOtherBankBeneficiary extends Fragment implements
 	public 	void post_successGetStates(String retvalweb)
 	{
 		respcode="";
-
 		respdescGetStates="";
 		int count = 0;
 		ArrayList<String> arrList = new ArrayList<String>();
@@ -1591,8 +1585,7 @@ public class AddOtherBankBeneficiary extends Fragment implements
 			act.frgIndex = 651;
 			flag = chkConnectivity();
 			if (flag == 0) {
-				CallWebServiceGetBanks C = new CallWebServiceGetBanks();
-				C.execute();
+				new CallWebServiceGetBanks().execute();
 			}
 			break;
 		case R.id.btn_submit2:

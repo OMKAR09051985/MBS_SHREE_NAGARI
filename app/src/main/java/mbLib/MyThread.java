@@ -52,6 +52,8 @@ public class MyThread extends Thread {
                 e.printStackTrace();
             }
             sec--;
+           // Log.e("Shubham", "sec: ------------------------->"+sec );
+
         }
         if (sec == 0) {
 

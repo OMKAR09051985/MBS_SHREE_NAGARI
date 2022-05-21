@@ -30,12 +30,11 @@ public class TransferHistoryRpt extends Fragment implements OnClickListener
 	MainActivity act;
 	TransferHistoryRpt transferHistoryRptObj;
 	ImageButton btn_home;
-	
 	String retMess,accNo;
 	ListView listView1 ;
 	List<HashMap<String, String>> fillMaps = new ArrayList<HashMap<String, String>>();
 	TextView txt_heading,txt_acc_no;
-	ImageView img_heading;
+	ImageView img_heading,btn_logout,btn_home1;
 	
 	public TransferHistoryRpt(){}
 	@SuppressLint("ValidFragment")
@@ -58,16 +57,20 @@ public class TransferHistoryRpt extends Fragment implements OnClickListener
 		img_heading = (ImageView) rootView.findViewById(R.id.img_heading);
 		img_heading.setBackgroundResource(R.mipmap.fund_trnsfer);
 		//back = (ImageButton) rootView.findViewById(R.id.btn_back);
-		btn_home=(ImageButton)rootView.findViewById(R.id.btn_home);
+		btn_logout=(ImageView)rootView.findViewById(R.id.btn_logout);
+		btn_home1=(ImageView)rootView.findViewById(R.id.btn_home1);
 		//btn_home.setImageResource(R.drawable.ic_home_d);
 		//back.setImageResource(R.drawable.backover);
-		btn_home.setOnClickListener(this);
+		btn_home1.setOnClickListener(this);
+		btn_logout.setOnClickListener(this);
+		btn_logout.setVisibility(View.GONE);
 		//back.setOnClickListener(this);
 		listView1 = (ListView) rootView.findViewById(R.id.listView1);
 		//Log.e("TransferHistoryRpt"," onCreateView");
 		setValues();
 		return rootView;
 	}
+	@SuppressLint("NonConstantResourceId")
 	@Override
 	public void onClick(View v) 
 	{
@@ -80,7 +83,7 @@ public class TransferHistoryRpt extends Fragment implements OnClickListener
 						.replace(R.id.frame_container, fragment).commit();
 				act.frgIndex=54;
 				break;*/
-			case R.id.btn_home:
+			case R.id.btn_home1:
 				Intent in=new Intent(act,NewDashboard.class);
 				startActivity(in);
 				act.finish();

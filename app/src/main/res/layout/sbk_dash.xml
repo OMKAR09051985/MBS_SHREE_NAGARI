@@ -464,6 +464,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:background="@mipmap/sbk_block"
                 android:layout_width="fill_parent"
                 android:layout_height="0dip"
                 android:layout_weight="1"
@@ -517,6 +518,7 @@
                     android:layout_weight="1"
                     android:background="@mipmap/sbk_block"
                     android:orientation="vertical"
+                    android:visibility="gone"
                     android:weightSum="1">
 
                     <TextView
@@ -553,6 +555,7 @@
                     android:background="@mipmap/sbk_block"
                     android:orientation="vertical"
                     android:weightSum="1"
+                    android:visibility="gone"
                     tools:ignore="DuplicateIds">
 
                     <TextView

@@ -150,6 +150,7 @@ public class NewDashboard extends Activity implements OnClickListener, OnTouchLi
         //btn_atm.setOnClickListener(this);
         btn_changempin.setOnClickListener(this);
 		btn_pps_menu.setOnClickListener(this);
+        btn_logout.setOnClickListener(this);
 
         btn_logout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -163,6 +164,8 @@ public class NewDashboard extends Activity implements OnClickListener, OnTouchLi
                                 flag = chkConnectivity();
                                 if (flag == 0) {
                                     new CallWebService().execute();
+                                    //startActivity(new Intent(NewDashboard.this,MainActivity.class));
+
                                 }
                                 break;
 
