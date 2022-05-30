@@ -799,7 +799,7 @@
     <string name="alert_192">Fund Transfer Request Registered Successful</string>
     <string name="alert_InsufficentBalance">Insufficient Balance</string>
     <string name="alert_147_1">Please Enter Amount greater than 2 Lac For RTGS.</string>
-    <string name="timeOutInSecs">300</string>
+    <string name="timeOutInSecs">30000</string>
     <string name="managebeneficiary">Manage Beneficiary</string>
     <string name="alert_bef_rmv_succ">Beneficiary Removed Successfully.</string>
     <string name="OTP_Generate_FUNCTION">callWebservice</string>
@@ -822,5 +822,7 @@
     <string name="Deposit_Details">Deposit Details</string>
     <string name="Loan_Account_Details">Loan Account Details</string>
     <string name="mpin_differet">MPIN and Transaction MPIN Must Be Different.</string>
+    <string name="vir_ac_no">Virtual Account Number</string>
+    <string name="vir_upa_ID">Virtual UPA ID</string>
 
 </resources>

@@ -1132,12 +1132,14 @@ public class TransferOTP extends Fragment implements OnClickListener {
                     retMess = getString(R.string.alert_116);
                     showAlert(retMess);// setAlert();
                     this.show();
-                }/* else if (str.length() != 6) {
+                }
+                /* else if (str.length() != 6) {
 					encrptdTranMpin="";
 					retMess = getString(R.string.alert_037);
 					showAlert(retMess);// setAlert();
 					this.show();
-				} */ else {
+				} */
+                else {
 				/*	int flag = comnObj.chkConnectivity();
 					if (flag == 0)
 					{

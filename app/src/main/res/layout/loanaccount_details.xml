@@ -8,7 +8,7 @@
         android:layout_height="match_parent"
         android:background="@mipmap/act_bg"
         android:orientation="vertical"
-        android:weightSum="16.7" >
+        android:weightSum="18.7" >
 
         <include
             android:id="@+id/inc_id"
@@ -287,6 +287,68 @@
 
             <mbLib.CustomEditText
                 android:id="@+id/txt_instlmnt_frq"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dip"
+                android:layout_weight="1"
+                android:editable="false"
+                android:padding="1dip"
+                android:textColor="@color/rep_txt_color" >
+            </mbLib.CustomEditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="15dip"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2" >
+
+            <mbLib.CusFntTextView
+                android:id="@+id/txtlbl_vir_ac_no"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:padding="1dip"
+                android:text="@string/vir_ac_no"
+                android:textColor="@color/sbk_text_clr"
+                android:gravity="bottom"
+                android:textStyle="bold" />
+
+            <mbLib.CusFntTextView
+                android:id="@+id/txtlbl_vir_upa_ID"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="@string/vir_upa_ID"
+                android:textColor="@color/sbk_text_clr"
+                android:gravity="bottom"
+                android:textStyle="bold" >
+            </mbLib.CusFntTextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2" >
+
+            <mbLib.CustomEditText
+                android:id="@+id/txt_vir_ac_no"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dip"
+                android:layout_weight="1"
+                android:editable="false"
+                android:padding="1dip"
+                android:textColor="@color/rep_txt_color"/>
+
+            <mbLib.CustomEditText
+                android:id="@+id/txt_vir_upa_ID"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_marginRight="10dip"

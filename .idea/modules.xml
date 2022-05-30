@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/MBS_SHREE_NAGARI.iml" filepath="$PROJECT_DIR$/.idea/modules/MBS_SHREE_NAGARI.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/MBS_SHREE_NAGARI.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/MBS_SHREE_NAGARI.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/MBS_SHREE_NAGARI.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/MBS_SHREE_NAGARI.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/MBS_SHREE_NAGARI.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/MBS_SHREE_NAGARI.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/MBS_SHREE_NAGARI.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/MBS_SHREE_NAGARI.app.unitTest.iml" />
     </modules>
   </component>
 </project>

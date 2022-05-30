@@ -79,7 +79,7 @@ public class OtherBankTranIMPS extends Fragment implements View.OnClickListener 
     String postingStatus = "", req_id = "", errorCode = "", gst = "";
     int frmno = 0, tono = 0, flag = 0, cnt = 0;
     String stringValue, str = "", retMess = "", cust_name = "", custId = "",
-            str2 = "", ifsCD = "", benSrno = null, tranPin = "", nickname = "";
+            str2 = "", ifsCD = "", benSrno = null,benfName="", tranPin = "", nickname = "";
     String mobPin = "", acnt_inf, all_acnts, bnCD, brCD, benAccountNumber = "",
             chrgCrAccNo = "", tranId = "", tranType = "", servChrg = "",
             cess = "", transaction = "";
@@ -97,7 +97,7 @@ public class OtherBankTranIMPS extends Fragment implements View.OnClickListener 
     private MyThread t1;
     //int timeOutInSecs=300;
     ImageView img_heading;
-    String retvalwbs = "",respdesc ="",chrgsRetval="";
+    String retvalwbs = "",respdesc ="",chrgsRetval="",PAYMODE="";
 
     public void onBackPressed() {
 
@@ -244,6 +244,9 @@ btn_logout.setVisibility(View.GONE);
                             for (int i = 1; i < allStr.length; i++) {
                                 String str1[] = allStr[i].split("#");
                                 nickname = str1[2] + "(" + str1[1] + ")";
+                                for(int ii = 1; ii < str1.length; ii++){
+                                    Log.e("Shubham", "Beneficiary List IMPS:- " + str1[ii]);
+                                }
 
                                 //System.out.println("==== str :" + str);
                                 //System.out									.println("Beneficiary serial number:=====>"											+ str1[0]);
@@ -253,7 +256,9 @@ btn_logout.setVisibility(View.GONE);
                                 //if (str.indexOf(str1[2]) > -1)
                                 if (str.equalsIgnoreCase(nickname)) {
                                     //System.out	.println("========== inside if ============");
-                                    benSrno = str1[0];
+                                   // benSrno = str1[0];
+                                    benSrno = str1[9];
+                                    benfName=str1[1];
                                     benAccountNumber = str1[3];
                                     otherIfsctxtIFSCCode = str1[4];
                                     ifsCD = otherIfsctxtIFSCCode;
@@ -1073,9 +1078,10 @@ btn_logout.setVisibility(View.GONE);
                     respcode = "-1";
                 }
                 if (jsonObj.has("RETVAL")) {
-                    retval = jsonObj.getString("RETVAL");
+                    chrgsRetval = jsonObj.getString("RETVAL");
+                    Log.e("Shubham","IMPS 0:- "+chrgsRetval);
                 } else {
-                    retval = "";
+                    chrgsRetval = "";
                 }
                 if (jsonObj.has("RESPDESC")) {
                     respdesc_GetSrvcCharg = jsonObj.getString("RESPDESC");
@@ -1084,10 +1090,12 @@ btn_logout.setVisibility(View.GONE);
                 }
                 if (respdesc_GetSrvcCharg.length() > 0) {
                     showAlert(respdesc_GetSrvcCharg);
-                } else {
-                    if (retval.indexOf("SUCCESS") > -1) {
+                }
+                else {
+                    if (chrgsRetval.indexOf("SUCCESS") > -1) {
                         loadProBarObj.dismiss();
-                        chrgsRetval=retval;
+                        Log.e("Shubham","IMPS 1:- "+chrgsRetval);
+                        //chrgsRetval=retval;
                         post_GetSrvcCharg(chrgsRetval);
                     } else {
                         if (retval.indexOf("TRANAMTLIMIT") > -1) {
@@ -1141,7 +1149,7 @@ btn_logout.setVisibility(View.GONE);
     }// end CallWebServiceGetSrvcCharg
 
     public void post_GetSrvcCharg(String retval) {
-
+        Log.e("Shubham","IMPS 3:- "+retval);
         respcode = "";
         respdesc_GetSrvcCharg = "";
         //act.frgIndex = 52;
@@ -1149,7 +1157,7 @@ btn_logout.setVisibility(View.GONE);
         retStr = retval.split("~")[1];
 
         String retStr1 = "";
-        retStr1 = retval.split("~")[2];
+        //retStr1 = retval.split("~")[2];
         if (retStr1.equalsIgnoreCase("nextDay")) {
             proceedTransaction();
         } else {
@@ -1524,6 +1532,7 @@ btn_logout.setVisibility(View.GONE);
                             this.dismiss();
                         }
                         if ((str.equalsIgnoreCase(respdesc_GetSrvcCharg)) && (respcode.equalsIgnoreCase("0"))) {
+                            Log.e("Shubham","IMPS 2:- "+chrgsRetval);
                             post_GetSrvcCharg(chrgsRetval);
                         } else if ((str.equalsIgnoreCase(respdesc_GetSrvcCharg)) && (respcode.equalsIgnoreCase("1"))) {
                             this.dismiss();
@@ -1647,13 +1656,17 @@ btn_logout.setVisibility(View.GONE);
         tranType = spi_payment_option.getItemAtPosition(spi_payment_option.getSelectedItemPosition()).toString();
 
         debitAccno = debitAccno.substring(0, 16);
-        if (tranType.equalsIgnoreCase("RTGS"))
+        if (tranType.equalsIgnoreCase("RTGS")) {
             tranType = "RT";
-        else if (tranType.equalsIgnoreCase("NEFT"))
+            PAYMODE="RTGS";
+        }
+        else if (tranType.equalsIgnoreCase("NEFT")) {
             tranType = "NT";
-        else if (tranType.equalsIgnoreCase("IMPS"))
+            PAYMODE="NEFT";
+        }else if (tranType.equalsIgnoreCase("IMPS")) {
             tranType = "IMPS";
-
+            PAYMODE="IMPS";
+        }
         String crAccNo = txt_to.getText().toString().trim();
         String charges = txt_charges.getText().toString().split(" ")[1];
         String drAccNo = txt_from.getText().toString().trim();
@@ -1663,6 +1676,7 @@ btn_logout.setVisibility(View.GONE);
         JSONObject jsonObj = new JSONObject();
         try {
             jsonObj.put("BENFSRNO", benSrno);
+            jsonObj.put("BENFNAME", benfName);
             jsonObj.put("CRACCNO", crAccNo);
             jsonObj.put("DRACCNO", drAccNo);
             jsonObj.put("AMOUNT", amt);
@@ -1677,6 +1691,7 @@ btn_logout.setVisibility(View.GONE);
             jsonObj.put("CESS", cess);
             jsonObj.put("TRANPIN", encrptdTranMpin);
             jsonObj.put("SIMNO", MBSUtils.getSimNumber(act));
+            jsonObj.put("PAYMODE", PAYMODE);
         } catch (JSONException je) {
             je.printStackTrace();
         }

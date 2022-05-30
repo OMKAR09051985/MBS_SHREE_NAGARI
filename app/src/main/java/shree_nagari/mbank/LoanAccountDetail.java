@@ -46,9 +46,13 @@ public class LoanAccountDetail extends Fragment implements OnClickListener {
     MainActivity act;
     LoanAccountDetail fdrddtl;
     LinearLayout layout_lable, layout_text1, layout_text2;
-    TextView txt_heading, cust_nm, rate_of_interest, sanction_limit, drawing_power, accNo, txt_cust_name, txtlbl_instlmnt_frq, txtlbl_instlmnt_amt, txtlbl_pnd_instlmnts, txtlbl_principal, txtlbl_interest;
+    TextView txt_heading, cust_nm, rate_of_interest, sanction_limit, drawing_power, accNo, txt_cust_name,
+            txtlbl_instlmnt_frq, txtlbl_instlmnt_amt, txtlbl_pnd_instlmnts, txtlbl_principal, txtlbl_interest;
+
     EditText txt_current_bal, txt_utilisable_amt, txt_instlmnt_frq, txt_instlmnt_amt, txt_pnd_instlmnts,
-            txt_pnd_interest, txt_instlmnt_interest, txt_pend_pinstlmntamt, lien_amt, ifsc_code;
+            txt_pnd_interest, txt_instlmnt_interest, txt_pend_pinstlmntamt, lien_amt, ifsc_code,txt_vir_upa_ID,
+            txt_vir_ac_no;
+
     Button btnChangeMpin;
     public Bundle getBundle = null;
     Cursor curSelectBankname;
@@ -587,6 +591,9 @@ public class LoanAccountDetail extends Fragment implements OnClickListener {
         }
         ifsc_code.setText(retValues[12]);
         lien_amt.setText(retValues[13]);
+
+        txt_vir_upa_ID.setText(retValues[14]);
+        txt_vir_ac_no.setText(retValues[15]);
 
     }
 
