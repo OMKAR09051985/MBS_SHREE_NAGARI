@@ -592,6 +592,7 @@ public class LoanAccountDetail extends Fragment implements OnClickListener {
         ifsc_code.setText(retValues[12]);
         lien_amt.setText(retValues[13]);
 
+        //Chnage Added Here
         txt_vir_upa_ID.setText(retValues[14]);
         txt_vir_ac_no.setText(retValues[15]);
 

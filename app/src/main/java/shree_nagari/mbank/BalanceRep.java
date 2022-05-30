@@ -255,6 +255,7 @@ public class BalanceRep extends Fragment implements OnClickListener {
         unclearbal.setText(retValues[4]);
         ifsccode.setText(retValues[5]);
         lienamt.setText(retValues[6]);
+        //Chnage Added Here
         txt_vir_ac_no.setText(retValues[7]);
         txt_vir_upa_no.setText(retValues[8]);
 

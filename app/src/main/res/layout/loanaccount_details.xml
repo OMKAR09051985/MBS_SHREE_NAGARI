@@ -347,6 +347,7 @@
                 android:padding="1dip"
                 android:textColor="@color/rep_txt_color"/>
 
+
             <mbLib.CustomEditText
                 android:id="@+id/txt_vir_upa_ID"
                 android:layout_width="fill_parent"
@@ -356,6 +357,7 @@
                 android:editable="false"
                 android:padding="1dip"
                 android:textColor="@color/rep_txt_color" >
+
             </mbLib.CustomEditText>
         </LinearLayout>
 
